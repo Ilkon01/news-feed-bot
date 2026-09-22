@@ -1,0 +1,73 @@
+name: News bot
+
+on:
+  schedule:
+    # Каждые 30 минут с 05:07 до 23:37 по Алматы.
+    # Время в расписании — по Гринвичу (Алматы = Гринвич + 5 часов):
+    # часы 0-18 по Гринвичу = 05:00-23:59 по Алматы.
+    # С 00:00 до 05:00 по Алматы бот не запускается.
+    # Минуты 7 и 37 — не в начале часа, когда GitHub перегружен
+    # и чаще опаздывает с запуском.
+    - cron: '7,37 0-18 * * *'
+  workflow_dispatch: {}       # позволяет запустить вручную кнопкой
+
+# БЕЗОПАСНОСТЬ. Бот запускается только по расписанию или вручную
+# владельцем. Посторонние не могут его запустить: у workflow нет
+# триггеров push и pull_request, а ручной запуск доступен только
+# тем, у кого есть права на запись в репозиторий.
+#
+# Права — минимально необходимые: только запись файлов
+# (чтобы сохранять state.json). Ничего больше.
+permissions:
+  contents: write
+
+# Не запускать два экземпляра одновременно: они мешают друг другу
+# записывать state.json. Новый запуск дождётся окончания предыдущего.
+concurrency:
+  group: news-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Установить зависимости
+        run: pip install -r requirements.txt
+
+      - name: Запустить бота
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python news_bot.py
+
+      - name: Сохранить state.json обратно в репозиторий
+        run: |
+          # В тихие часы бот ничего не создаёт — сохранять нечего
+          [ -f state.json ] || exit 0
+
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add state.json
+          git diff --quiet --cached && exit 0
+          git commit -m "update state"
+
+          # Если параллельный запуск уже записал свои изменения,
+          # подтягиваем их и пробуем снова. Три попытки.
+          for i in 1 2 3; do
+            if git push; then
+              echo "state.json сохранён"
+              exit 0
+            fi
+            echo "Репозиторий изменился, подтягиваю и пробую снова (попытка $i)"
+            git pull --rebase --autostash origin main || true
+            sleep 3
+          done
+          echo "Не удалось сохранить state.json — следующий запуск это исправит"
