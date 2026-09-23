@@ -4256,7 +4256,51 @@
     "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
     "https://www.aljazeera.com/video/doha-debates/2026/9/23/whos-future-is-it-china-or-the-west?traffic_source=rss",
     "https://inbusiness.kz/ru/last/islamskoe-strahovanie-mogut-sdelat-dostupnee-dlya-kazahstancev",
-    "https://www.aljazeera.com/news/2026/9/23/pakistan-seals-islamabad-roads-before-protests-for-imran-khans-release?traffic_source=rss"
+    "https://www.aljazeera.com/news/2026/9/23/pakistan-seals-islamabad-roads-before-protests-for-imran-khans-release?traffic_source=rss",
+    "https://www.aljazeera.com/news/2026/9/22/kamala-harris-campaigns-with-abdul-el-sayed-to-unify-democratic-voters?traffic_source=rss",
+    "https://techcrunch.com/2026/09/22/techcrunch-founder-summits-agenda-revealed-unlock-fundraising-hiring-and-ai-insights-in-boston-on-november-4/",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS2UyVWtwZEViSVRRNmY1cmota00xVmZzTmVtMFo0Rnl1MzY1aGRqQWhiNGY5eUxPSW1DWGlkNHBiRGpKZThUeVdoWktNQUU4R1E0Yjk0ZDR3ay1SN085ZnVvRlV5RU5BR3hsU3N4ZTJLRW1OZnNIOURlT0RJWkpmQmpJaTZwTkJIZHRWcTBsdDU1U0dkRHFRVHZ0RlVZbVhhWjVDazJFa0M4TG1ULS13U1VncGwzeVA1WkpRWVU1RHo?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT0VyMUVUXzRtenVFYzdKVDFKRktKWW1fYW4tSktzdmttY3h0TUZYcGQwd2d4RldmbHg0bUwxQXBlVG5YWTVfUmYwYi1jS0pDLUhNWTFMR2h3VHJnUmxqQjF6QlRzaXpVMjJIaE5VQ2g4Wk1lWXRYY2EyemxDaFRxcTAtLVdTYXBwbHgtTGh5bFl0WlQ4d3lDTGdqVTZwbVlZbXl3ZHlmdXBuMEY3VVBvRExhUDltZw?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQ25UbzdxdHRHV3pZYWdFSlptb3lkV0dSWmttdm10OGhOUmlOMXNxdWtqLWNmOGVoeHlWeWRReWIxTTRXNk56V0otTkpPT0pfRkk3VWROQ2NxNWRhXzRyRjFWek1HcExKcG9CX1dMUDBkZmJUakFSVTM1LXFxUS16cmRuLUdwQTFpNUNSWGd6X3pLRS0zYTk1c1VyZjktMi1SQ2gxY05n?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBTa3FGM3oyVjdHYUgzQXVHNU1CeHVrV1J0OENTMDZMWk1kMEw4WFR1S0VWdDhIWU1DZDVJSHNTTDRsaFFDWFhPMV9GZ3d5a2poTTlmMWVsZ0tEM3M?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdE81ZHkxRnNtcUJlOTNnZ29UVUJFMHROV2xiUUh1SGdxbDd2Q3l0cTlUX3BwY0dPRnJFSHA5THlHYnNuR2tsbjJRVnVxSjVyUlRkZXVwZ1lMU3I3NjlHUDV2dlphS1k1RDdmbjd3MjNub1BhTVk4OHQ3WnR1MDJud3RWSEJtdkRrZ1dKcUVjWUsyQ1dOOUFScFJDc2RwcXhyOFoyQw?oc=5",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZTJLRzc0ZDZhWHlWUUM5Smk1cE12YnFYQVp4VE9yUU1nUUktMlhGU25pbFVsbnJpUmxrSXNUaGF4aFV6UmRYdkhELUY3RWJlSnZjZTA1ZE0wRlJlbGJ1YzRUeXBOS3JnUldUNUJoTE90TWZRVDF2VlBKLUJvOWhUSmNrWjlQU2c?oc=5",
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE41Z2MzbkxnNHlCTHdyX3VfUzZVVVNJelBJNXM2RzhpNThkejQ5cmY4dmN5eUlpeTBpZDJ0ZHl5clB4TlR6SUFxVDFSekJRYXdJZTRGUWhBejFRY1NLREhaWmJQM1FLbFJn?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQekEyLWxjQ0djRnBLMHdaMHdWbUdUbFhBMVUxMEFqakJFbm40TjI4bW5OSDJjWFhaOHNzckhmWkpRc3RTeGJfUXZ6aVNNWG83bkFscGFNMWIzZDZCOFFxbTZkUmRQdnBMV1lmYnFaczQ3Z1NUWXl0amRaUlh2LVNmYlNNTHdDRVpySGJpcjZhcmEyZEZzbl90MVZZdkVmMTRDby1rN2lRQUdlQkZCQS1fME1Dc0Y1Y1VZS2FJ?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxNRW5sNWNBOW5VakRQcTk3OC1saVc3UlpMVzlxZkhvYjRLNEEwSjRJNXpHN3RtQmZlMHpLdi1vRHp3T0hicXo4LVM0N2dGdGtyc0NtLW9IR3VZVnJsbGdZeEFiRjBpTkJuY3RHT01fbzdtZ0VVR1dRdk5WT09Od1RLSzdiWFVDdTRLQ1F3d3U1dmRRNEI4?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOWs3c3RrbUhFZHJJb2M0dXE5MC1YTDZlNUFKUEVaUE9pVEVZb2FNMkdxNWs0U0t4cHAwbENsck8wT3pMMHJVYW90ZVdQZW5qZDZCOElNY1E3TFBiZFV0Qll0QllmZDZWcjd1dWtHX0FoWnpmWjJmRDBVVVBtT2xfSXM1cTQ3NlAwc2tN?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOVNnMG9nUE50Z2VNaGo4dGNxZ01Camk1c3FDbEgwQm0wTWV2T1JNV0NBem9vZFhNcW5XRmtVbkNrT19KS0FPZWFkeW05eVlRbVJZNnB1aXZ2QTRqX3RwbGJqcVJ0MlNnQlRVdlltYkFHbDRJTkhDQnROUDlENTVzQS1VMUt2dkFLTGtIQnltNXA?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQcHhuMGg4RFNpamRYY1BVelVwQzFUR1pDMk5DeWFmT0JXNDZjWmpqQU9vWXNuMGxROTY3NUdhR0hRdjhrR3Q5cHhtRTNKMkR1cWotd0FBOXpJalQwVlJNd0FvejBiX3JNY0RmY3FUX3NQaUtkeF9KMFJDUnl3U2hKYXlmSVkyYkNHdThkM1k2Q2NEWkJhdHBYTnpNcW1UMjZyU2lZZWtpbnhMOXgwUm5OcHJfb9IBuAFBVV95cUxOUVdreW41WW9QNUdiQjc2VHBJZmhSQWdFZHBmby1na0VzanltMzlTempfd21IRTlPd0Vtd0NiNDdnVmZyQ2xHSTlvYnl1U0lLTGZDSGgtUzk5cHd6OFRWTkt1SElGUDVwdkhEa0Z4SVVRT1FPenNRMW5YWTFCc3BuSWM3YUpkck05X0RJRHRyTG4zLWg1S0NZVTYzYWVyYVMweGpOa3AwdGRrb3p4VnZmbElabXJlZDlv?oc=5",
+    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOWWhYaDRGeFkydUlwUjNNeENxc2hwdWtUQjNnQUpOMG9ya0JiMHFaMk5FR0tJNW1uU25jcjhURkJNX3NSTjdUQW8xVVdzVlFiZ0VpclJ3cHBxQkpGRFJPbERndnZGWGR4QUhJUHdjSVdzS0xpYWZEWTVfb0oxa3otSFpKajFvQWgxbUNjNDZzVHoxajBuZ1lpNjdCeUZJWmJRUDRhcTdXR0tvZTRDLW5VQW8wR2lYMUZIWTFUeTl0Qml0MzU4YjBFWjdDRW0zZDJaRmJQS0V3?oc=5",
+    "https://www.theguardian.com/australia-news/2026/sep/23/missing-boy-gus-lamont-parents-video-message-1m-reward-announced-ntwnfb",
+    "https://www.aa.com.tr/en/economy/turkiyes-bist-100-down-at-open/4065819",
+    "https://www.scmp.com/news/hong-kong/law-and-crime/article/3368486/hong-kong-father-admits-repeatedly-raping-daughter-over-6-year-period?utm_source=rss_feed",
+    "https://asia.nikkei.com/spotlight/society/crime/cambodia-will-never-be-safe-haven-for-scammers-pm-promises",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOFZ2Vnp4aHVJWWhDdVZvR1pGSXVhNF9za25kaFkzT04ySDNFWktvNXowRVAzY3BKekNSZFgtSzZmZm5qcnRCQ2l1QVcxV1JtWHdTMm9VWm0wODhZbXJIZlVtNWt2N2Y1YWlFeHdYbWotMHVfU0hFMGpjSGlMQXhNc2dxQ2lYbVdYei1CQ09kdHY1Rktpc2xiQU4tR2xMZ1FKc19EUzNpZmN1RnljR2VWY3pMNlR3Zw?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWGw2WG1RbUtoaEJaRFJDMEdKSl9iMTFEdVdRVWVIajFMb1R0ejlPajlDemxIMDBNVl9RUy1UT3JjQmMxamZPTkJhMEtpbnVGTGVhbjZkUWlUYmNYMEgxZ3plZTlyRGZzTlBhRmdBN3kyWU9CQUtBeGJmSHg0NnVoMWhsSzhLTVQzcDBSTFhTLVAzMkh6cjc2SGtqUXdzY3liNy1wTzZXS3pvUmJ4MmNR?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSDlTcmNMWmdnTlVQdEhrZF9QakdmYm8wYVBzWG9iY3lwakN5UGlISkpwU19YVm9SYkpjMzRQTjY5NHd2bW82WUZORVhHdXlyR0h2akpDSjNoekVUNGJrWUNOUEd5U3h5WndoV1FodFliczRwN0puSjk5ZngxUnJhNGlZQTJYNERpTW54UC1pSk1RTEJuQS1XaUFrSTVJbzZN?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxNaWljM3RkVHJYbUpMTll0QmhVWFVRNXFKUDlZZXlRT1ByZFpDckFZaEU1M1REeGdjTzNpd2JJcnQ0dy1udmp5SUtqOXNtbVlQSE1XUmtzWWNNU0FLTW5KTlJ0X1AtMW5rNE1tZXlZRF9OcHFhT1FZc0xNMnhuNGd0MjEwVVowRXJZS1FNa19teXBvU2lDQ2RNVjFoRFVGdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVE1RMDZtRGZlTlFwTzluOE5pQ2Z4SzNObUxqblhKUk9jWXg2cjBKZnhWd191aTB6Q3NhV2ozVHVnMzJEOUFzdnI3WTZ4RVpXelRYTlJWVzhYbDZXbXlqbFBWOGQzUzFWM1NOQ21abEx6WDVfSDIyYk1BUmN0VGViQkpYSXRmdVQxN0x3RlJOX0VRMGhfVE1EQ0FDanozdUpITU0xRGFKR2ZwYlJQdmtsT1hVcWN5amx5TFE?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1iUUpQVW1QQjhaLWZOaDlzYkRMR25XbWV4SC1WaUN0UnRuLUhKbmVvMEdIenRGSzZVOXpiM1BjWWlseU1jS1U2YTdZNXltXzU4VWFnbHJEeldEaDY1TFpzRk50TXNIYnNhcDdVRXVJc2VaRjlC?oc=5",
+    "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBlTFRvVW5mbWQ0emlRTjRtbk9hZExQams2a0YtSThTLTM2YW92TF9la1lkek02R3N4WnY2VXZBb2pIdl9DemloV3lmY04zQnRMQkZNSV9kQUxwQnVsRmM0?oc=5",
+    "https://kz.kursiv.media/2026-09-23/aina-kak-restorany-almaty-popadayut-v-mezhdunarodnye-gastrogidy/?utm_source=rss&utm_medium=rss&utm_campaign=aina-kak-restorany-almaty-popadayut-v-mezhdunarodnye-gastrogidy",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVGJQRXJYeU9DaEItemh3YmVCOFNuSWExcFFSTGRvOHNEQkU2c1N0WFdmY1JMaGI2MlpmLVpvUHM0eHBnbnQtOV83WGwxNHlESHpuY2VZZ2Fjdk1uMWYxaWNPcGl5emFBbV9DTFJIRHRUMlJpM2xieXZaTXY5cWpOWTllNnp5YUdGTzF1STdMMldtT3BRN3BKcEJTek9ReU5oVk9iNFdRZXdndlRjNkxLQVZoa0JGdWd3XzVWTkh3Vy1uUDBk?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxPVERhZ3l6Y0lEOVpiTHRycjVyOTBPeTcyaHFJcXNScWZreHFUbkc4dW5GR0xMX05MSEVqcWQ1d2NLSUFtTHFiYXhOcWNnR3BxeFV6TFZEZ09Mc3FmcFpnNl9ncy1peTlNVllTSmRuQlNHZTh4ZkZNXzc4NTVCcFlBMEtKVU1rZ0g4dWc?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRXVCdTRNU095V1RPd0hfWndWakRBM3BZMGpwSDlQVmY1U3kzN2l3M196SWV1N1cxTDRPSkVKS0twRUxrMldyYkh2Si1LWWd4TTNOc2tBdGprRExRMDk5Rmxvb1Z0clpBM0o0VE5lNUVXS1VqZEpTckRmSGVES0dDYnBGRXJyTGVMaGhKSEY1RFRFWWZHMjlDSmZCcVd5blVmMFR0bVZHWGtjUjlzcVRFUjlLR1hhX0UtWHJ3Q2NCQjJDb1p3Q1VWTkdad090V2c?oc=5",
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQX1Fic1JXUEhTcmhEcDgxcmFTN01fZ1JXS0ZyVnRoblFwYmszdlVVdkVZZGx5cG0zZlFYUThSMG91Ymw5UVZLTWtZZUYwZTlYd014MGlnTlUtendRd1hZQTNIblpKNVNvT1NncG9JMll5alAtdmt3dGp2M3pqZDA5V2t5amgtdWNNX0lSSnpNRFVURGg4b1hselBYX3loZ3RvcVNOM1VjQWc2S1M4TnpvMnc4SzdyS3JFU2xQdWxlbGl3MEM2MllFbHdKNm1vbkd2?oc=5",
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9iS1BhRnFlZDBOVHVReVYwRlJoVXE0TkVTOGFQZ3ZzRnR4bGVJcVhTX3U1bDhOelhIUXpKbzBZZU1GeTItVWdMYW5RTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRHNnSUNNUmNPYkxMNy1nS1FpRllzTUFXeVhuZE9XUTg3NlVhemlFWWtwejVWSHBCdDlkMjFzeGk2Szg0Mm9wQzFWb3UzZUFuZEZKUlZkLVBsRlpzZU40aWFhMWlYT1NxWTlPNEVKbkV3cjAyMVFrc3FzMFMySTZOVlYtcVhfN3ByZVFkQ1RJSlhtbkJPSEZuMDBnaVAxcXdVNFRab0IxRQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTmszLWIwemlvRWR3N0tQS2k5bklxVGx5b2RWT2hCeDBleEhfYlZoX0Ntbm0wZ2l6WmJ6T3c2Uzl3NGJsanpBNy1oR3ZqbUtmMktJQzItUXlBWkhNYUtvYWM2MktiTGZiR1pWRlBIYnhLd1VISHIzd1htc2lRdXp6OFlFcThfand6Z3FYRlpmYnlIV0F2UjN4UWxrSGVScFJaYjYtcVJ2NzhFc2thZU55NDVqb0wyV3ZZa3JqdmtHWFk?oc=5",
+    "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4xU2wyMXlmWXlLRnd6LTd2N2ZKQUFqTTNIYTJVemZaNWtsQmJORDdCbU1raUpTSHZrMTVZME4zd3FOOEZmNGMteTlSMFByVzU5ZXNKMkhTWFFjMUR4dGpV?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQLTVSRXFTZHl1TV9zZlpReWNqQTE5d3JiTHktaXU4eXRqcWxCTmhKM1VDUWxjc0J2Tjhuc1NaRGdGdk80M2dvX0h1T2RZNEV6dGZWOFlsUzR2anpIWWdXQk9mNlRxdTN6SnJiQ2t6LWl0c1VYejhaeGpOSVNYcUQxdUpIQnhrZ295eXpjZ2VpaDhHZmJ6N2c0Ykg5Z2cyZw?oc=5",
+    "https://kz.kursiv.media/2026-09-23/mgpz-sbornaya-kazahstana-po-sportivnoi-gimnastike-ostanovilas-v-shage-ot-medali-aziady-2026/?utm_source=rss&utm_medium=rss&utm_campaign=mgpz-sbornaya-kazahstana-po-sportivnoi-gimnastike-ostanovilas-v-shage-ot-medali-aziady-2026",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9QT1Y4ZHFkV25jWXVkWjlWd1ZlSkVxUUhfT3h4Y3RZN2ZLTWotcTk5dlZ0aFZVOU5mOWh5MlBWQmlPZkZxR01WNUdWXzU3NkFoaHNCR19MOERyQUJCXzdWSTJMWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxQdXRKbER5aDRwU0xBR0oyYUloU0pZdEphQ0JnNnJwam5KYmNySGxnRElrNDA5NENBN2ltX3BsNC1oZmxhQmt6QUtoekZRUS1qdnpZSnBZLTNnVklyelpmcER0aVFWTVAtRHQ4UHp0YmF6aU56OXF2OExkbmdZZUt3eEU5djlzRWtFRkhhX04tbHFLaTZlLWhlM1hHaHJHazdpTDBZMk0zaXo2QUttQlBHOE1pOGpiZHM2ak8xVFplTGFRUGhVOU9fNW1R0gHPAUFVX3lxTE1VRUs4TmJTeW9iZWFLa3IyR3RLcGVwZm9oR1pMVl92TE9NN3M0VV84TFppS2FDdk83bW5wMThNMnd4Vm9DMW8wOUg2Qm1qcVhXcUlFX0N5YzFmUHNfVlhRQ3JBaTc0YkZFUkMwbENmd3ZJRmFuNzBIMU1QMzNTek9RNWxiclpYM01teUJ6Um5nYTNIMnNEQnp4bGF3alJxSDhEaVhkZjN5UUFUaGczS1JxRXVmdUdvNmNVd2xBR3VkOU9yRXFGZHRjNFRQN2pEVQ?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaUswVEozejNqc18tLUlqcnBVXzNDVDNkZHQyN25BdDhqYTVBN2NTNnVoODNxLTI0bXg3d00wWXY1NW1yUVpuM1FDLWFsZVYzVFVwbkNqbzdBd0JHaDk1UGg5NXVFQ2g2MFZwalBpYW9GRURiMVB4cnd5RWd3cXpmcktIalFsNFBxTU1YNTRBakx1NXRBaEJJWlo0Q280X1FIcFR3cWxfTTVsV2ZIUlBmX25na0E2U0JhdTF6M2dQMA?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQREI2aVl0N1piOVVON19DaldDeEtkUGkyeEhKQVpjQU5CdGV6NXBpWEpUNWdUZERwa1Y2NlA2RUpWclJKMXpyeFoyeEhJX3RMcF9od29yWG5sdTF5R1VXODZCeXpwYTBaamlCbW1tMVlOMGpEem5LRVhlb05wQXRRLVl0MTZERjY3Y09XLWdqYUlraElERzJ3MkNFSElwclZNU05Qc01EM01QMDA?oc=5",
+    "https://inbusiness.kz/ru/last/vnimatelno-sledim-za-tem-skolko-zanimaem-i-u-kogo-serik-zhumangarin",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVGROaTNUbzBNRWdvU1J1SVRKaURrN0FDVHMteG50VExEUUhKN3UyQ0pMZ3F0ZUtXRHoyc2c2aDgzRkFrTFhHR01OdVROSVBWVnRLWmhqSjNDdW5FVjdHeEptYW5fUFg1VFVnX0xXZURtemZqOVNqNmRqc19yVjdYX3BwM1I1T0M4VUIwdDNqdmxFcnlXX2pKS3VCNllNbEJTQkZxZTJkd1NpNDZwOGpBSw?oc=5",
+    "https://www.aljazeera.com/news/2026/9/22/iran-flights-to-baghdad-muscat-cancelled-ahead-of-us-aviation-sanctions?traffic_source=rss"
   ],
   "recent": [
     {
@@ -6378,6 +6422,73 @@
         "seals"
       ],
       "ts": 1790147868.5721378
+    },
+    {
+      "tokens": [
+        "brace",
+        "buyers",
+        "costs",
+        "drags",
+        "higher",
+        "russia",
+        "ukrain",
+        "war",
+        "wheat"
+      ],
+      "ts": 1790149462.0152745
+    },
+    {
+      "tokens": [
+        "ahead",
+        "ambass",
+        "china",
+        "human",
+        "lines",
+        "meetin",
+        "red",
+        "rights",
+        "taiwan",
+        "trump"
+      ],
+      "ts": 1790149466.88789
+    },
+    {
+      "tokens": [
+        "внимат",
+        "занима",
+        "кого",
+        "скольк",
+        "следим",
+        "тем"
+      ],
+      "ts": 1790149471.7035103
+    },
+    {
+      "tokens": [
+        "gold",
+        "higher",
+        "lacklu",
+        "longer",
+        "outloo",
+        "rate",
+        "sentim",
+        "weighs"
+      ],
+      "ts": 1790149475.8026888
+    },
+    {
+      "tokens": [
+        "aviati",
+        "baghda",
+        "cancel",
+        "effect",
+        "flight",
+        "iran",
+        "muscat",
+        "sancti",
+        "take"
+      ],
+      "ts": 1790149480.549977
     }
   ],
   "recent_ru": [
@@ -9601,6 +9712,105 @@
         "чтобы"
       ],
       "ts": 1790147868.5721426
+    },
+    {
+      "tokens": [
+        "готовя",
+        "дополн",
+        "затяну",
+        "зерна",
+        "конфли",
+        "покупа",
+        "пшениц",
+        "растут",
+        "расход",
+        "цены"
+      ],
+      "ts": 1790149462.015278
+    },
+    {
+      "tokens": [
+        "встреч",
+        "заявле",
+        "китай",
+        "кнр",
+        "линией",
+        "назвал",
+        "перед",
+        "посла",
+        "права",
+        "прозву",
+        "тайван",
+        "трампа",
+        "цзиньп",
+        "челове"
+      ],
+      "ts": 1790149466.887894
+    },
+    {
+      "tokens": [
+        "берет",
+        "вырос",
+        "госдол",
+        "жуманг",
+        "займы",
+        "зачем",
+        "казахс",
+        "каков",
+        "минист",
+        "национ",
+        "расска",
+        "серик",
+        "страна",
+        "текущи",
+        "тенге",
+        "трлн",
+        "уровен",
+        "эконом"
+      ],
+      "ts": 1790149471.7035134
+    },
+    {
+      "tokens": [
+        "reuter",
+        "агентс",
+        "высоки",
+        "данным",
+        "долгог",
+        "драгоц",
+        "замерл",
+        "золото",
+        "котиро",
+        "металл",
+        "ожидан",
+        "процен",
+        "сдержи",
+        "сохран",
+        "ставок",
+        "цены"
+      ],
+      "ts": 1790149475.8026927
+    },
+    {
+      "tokens": [
+        "авиаци",
+        "америк",
+        "багдад",
+        "вводят",
+        "власти",
+        "вступи",
+        "ирана",
+        "маскат",
+        "ограни",
+        "отмени",
+        "против",
+        "рейсы",
+        "санкци",
+        "силу",
+        "среду",
+        "сша"
+      ],
+      "ts": 1790149480.5499809
     }
   ],
   "weather_date": "2026-09-23"
