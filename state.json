@@ -1,20 +1,5 @@
 {
   "seen": [
-    "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTkNlcEdMTkhHSDBIUXlGTnFxTVQtVlU4Z2FPVDlleTduQ2RsT0dUQnJFWkdaVldjWkhVZXo4a203RVFOUVRyZzhaVVl5Mkt0eGVtZzg1S0ZwRDJqLURpSTFYaFZ0WHhOVm1Vdld1MGZid20tQlhvcmdIdWVZWWl5eHBCcG5oVHF4cm9jQmhzX3pqXzFhQ1JOLWcwR2VyUXRtdmNZMUwzVFQyMEttWENpUFVNYUw1UktnaTFmWlFIWU9zbk1qekHSAcsBQVVfeXFMT2FDekc0SHVhcWtqeWh4NG1RdTVGYkNvV254Y2s5Zkx5UXg0N0JZcFM4ZGYwS2tTcHkweHpYRWxha2VxdFdSa1hldkZsbWhBeFN1S0VKVEx2WGVHSW1UUWotR1JVZnFiMlg3Mk1Ubzh2MFdYa3RYcHNNS3pNNUpYMVR2X0hhbnBsSktITGVkdUc1T0JkRkJSb1ZmcUxrdlF6bWstN3M0ajE5RDgzNnVVbkcwcEIwNlhYeUdxX2hwcWRiTjUzSkhFd09aU2M?oc=5",
-    "https://kz.kursiv.media/2026-09-22/mlts-volejbolistki-kazahstana-proigrali-vetnamu-match-za-7-e-mesto-na-aziade/?utm_source=rss&utm_medium=rss&utm_campaign=mlts-volejbolistki-kazahstana-proigrali-vetnamu-match-za-7-e-mesto-na-aziade",
-    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMS0zSzVvRFRMNWFUbVo5MGl6VzdWczduUHhFTm40bmN2M3YwVkt4X0V1bkk5QlZGTHR0eGJVTXpENFdzR1JjUGE5d0JaLVhZeHFjN0NBa1RFS0dRYnpkSTZvcXBsWXZnUFdQU3dCQ19NTVgtRUdWUTY2UmxuRnZiZWwxSzluX2tZTmFuOW1aV3pRakVNRDVVWC12ckNvVlFaQXlv?oc=5",
-    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPU3JnUWZXVVZ4RFpwa1FLV0FDXzNJU1FlTzlrMldDZ2VDQXN3WlVySWtieG9RNFVTWm9MSUhKVFYxbU5WXzMyMEEzRWYwRDdiZDZLc3ZmMURCMFpCS1BBWjUzTmFrYnNMU2ZweWNXMURoNndJOUlKclE4SDB2X01qNThTWGQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYm9wVDhmOTJqYWxPNjYxZ2ozeDNMdlNVT1Zvdjk2bGQ1MVYtQVpnaExXMWNhN1ZlTlg1eGFlVVpjR3drNnRTSW9INDF2MUIxWEt2UzBfZjhOQUt3TTBBRnlBNGhGV181YjZTNGl4ZEpqT051X1o4TDdkMGoyaWVEVWg4LVE1ZFNCeEt5MzVtQVJwYVQ5eC01WlpvSGNoeVJkQmpj?oc=5",
-    "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSC1WRHRXN3FkWmd3UVg2aDl2d2RBblM2NFg0eExFLUJoZUotd1dGcXN5amJSNWJfSnZoUTZYbnZNTmEtUDMwQkotdWhycVBpYmVnQU0wWlR0LUdveGs4Y3R0YnpCeDREUUxLV3VORWFjd19HbDM2c3BwbXhuQlgxdnAwYUUyUdIBhAFBVV95cUxNSTQ3X2J3VHZCV2lRMWxoU2QwaEpZVjNkTkNYWF84R1NTS3A0RmN0eTNqSGVIMGRxMlRFNkVYTEpkQTZkeGFSOFRxbVN2WmZ3ZExBeXRhRDg2NXRjcFdoMjVPVC1BcVM4YmRBN0RtU244Z2JIT216NHA1MTVJaVlsNms1NVY?oc=5",
-    "https://news.google.com/rss/articles/CBMiogFBVV95cUxQLUkwODU3eUJQQ0NqQ08xTWNlQ0lDYkNobXJ4TWdDS2hOSm9NN05ZekcwVGpsMXZlOVdYTTFTTHQwTzFrX3lyWE8xcG5LcHNVaWtoUnk1a0U3VjUzNnFsSmV1VENWaXZfV0xFSHViUUIwbGgzRml4VE0tQ0tNYktOLU1UY3NfWnFfUjhoNFB1UzFfMENRYTR2YWtoRjJqdEcwVWc?oc=5",
-    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWTdyQmZnZE40bWcwUXZ5eVVqUEdkcjk1VDAwbWUzdW5OUU5BM1dYVWtzN2psN3ozRmZxaEFLSXZjUE5ndklidlBjQlRNR2o3M3hHT3NPVmJBNjNIdWFlQTlJLUlLNFRINTZmRU1qS0pCblVncmdwdG52d0tRbkJybjBCZjJXeENpc2UtSlA0TzBQZGJISVYwcGRhWVZNVmR1OXFrSHAwSTJrd0px?oc=5",
-    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRzN4WHlXSmNOUWI0eURvTzVLYVlIb3otWEZCSmUxb0N4YzMzTlJnM2dCWVh3UXNrQlN6TW1JU3MxZnRjT3NLdG5HYVFSbFZGUFRER2FwSjZoVTd4Smh2cnlwSjhVdTJwVy1jaWplU2FaaUIwT1UtRVppUmJlWFlFNnlhbE5OY0tma0RYOVc0QTVGeWxmMkoxbkRRamxPbV8zLUtEcm1Ca3hiMEdVcnNYOGFn?oc=5",
-    "https://www.aa.com.tr/en/economy/eu-philippines-near-conclusion-of-free-trade-agreement-talks/4064151",
-    "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMHVJQmtkamRVNTFUVWFxbXZRR0xsYUQxaUNUcjRza2FlSHNQYkVFVTNzVmVJbzBsZnVfRTFEbVlFdzFkVlBKZGU5VW5JQUxvd0tkSWhPU0xSdkgtR2x3QWx0SmU5RGhHRFJ0alNKVk1fX1lGTVA5Rm84TmRoamE1TjBvZEFfREJjZW03NWpoX19wMzMwMk5KTU9WUlVGVkptN0JqMVR2ZG1KUTR3NE9zetIBtgFBVV95cUxPd2hwMUM2VjhfUjJGdndKdmpMV0ZzYW1HelJUT3RMT01lR3hYek53ekoxWEVKX3JmbHM4cmhKcE9SRDNsMGNIcEpFNmRlTjBqb2NpN0VmUFptTUpORVFObTNGWkNXVC1iVUlvWUtMQlVLV2N5RWg1eE81bURwVW9YVWkteUxRdzU2RkdObWFZemFhQV92MGFuUGhLTkcyWEhHS0RrbzRFaUV4QmdDNkxSZ0ZlVElTZw?oc=5",
-    "https://www.aa.com.tr/en/middle-east/israeli-forces-arrest-palestinians-as-occupiers-attack-towns-across-occupied-west-bank/4064033",
-    "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSXFhYmFLS1J6TlZYa0VyNGctU1ZEOXBqQnBtelpiSXdoRTlIenU3VWJxQ0VUbVZoZ05wYTBOeXJoM3Y3aEtmODdOYWh3d2NpM3V5SkYwMUIzcXl6ZnJXLUREOHh0bFJDdGtiQ3FTaEt3NWFuVGFQM0tncS1uX0pEbmVwMGpPWGVzQ2g1YWY0S0VJMHYtS2lQRjl6RQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiogFBVV95cUxONHNqU1lHOHhHc190RndUdFJEVTc5Z1dhYzBRb1lhWVAtRE8wT1h2QXFMcy00RUZnV19wcWF4NFgwRWJ4Y1U2ZlM2ajU1SU5ibUxDSzJmSTQ1N044Y05YQmx2VTQ1VWpiVXE3T1E3a1pIVUpxOWxPMjhoNHlXYUdlQmJobklmUzZzNjlNbDZuTnR1VDlyYUNYVFZnVDhvZEFMS1E?oc=5",
-    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNREdwZXkxT1lJUVcwQ3EzblZaQ2NpeEk0dUJhMk9UU25ycTdxTGhXZkhudjBMUVFqb191aHVRUXh5TzViWUpCVTl6bEI2ZzhpRVdqZjhUTld4dWdSRUlOYl9WRjVwZ3hIUGRPRl9ROFZIQmZPYXhHdjN5N1g1Q2pVTW5lT29OZXUw0gGIAUFVX3lxTE1ER3BleTFPWUlRVzBDcTNuVlpDY2l4STR1QmEyT1RTbnJxN3FMaFdmSG52MExRUWpvX3VodVFReHlPNWJZSkJVOXpsQjZnOGlFV2pmOFROV3h1Z1JFSU5iX1ZGNXBneEhQZE9GX1E4VkhCZk9heEd2M3k3WDVDalVNbmVPb05ldTA?oc=5",
     "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTl85b2pMaUFEWTczRGtBSGJST2VDSTl2R0Z3aHRocVJXd1RXVWlJSmNqZS10QWRhRFl3LU5YVUN6UG1haEVZdFByb240dHY5TmRSOFY3bmE0RkN1d3lodk5ycmJLY01aUlNpeEQzQzQxUEQyOU5jME5RZzU1aTBuUGZVenBGbDhVQ2NQNTM0VXVlMHNHMGc?oc=5",
     "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSmJDajl5dUJDTnFJYkhFYVNGbFNVREdleUxkd2wxOXJ0X2NaZUVNRTBHWHM1V0tkX0pERUZHZ1pWdFE3TDhHVTk0a2dZRV9hMmRLTjVoS1M1SU5QRFNpakdoX1ZWYTVobzVNbUtaVDdjOWI0N0gxdFpvWHkzSmo4Q2ZnVjZ4UHVkSVZWc25Gc0ZlRGtkUXRSY2RpZw?oc=5",
     "https://news.google.com/rss/articles/CBMiowFBVV95cUxNXzVJLTJfc2t0bk56M3VUVkM5a1RWbG5ZUVBnc2Y2aGxvU0ZHRjNMU3dGaGxoZDItdUJnRF9zdl9kV0g5YkVEdDNnVzhIekNxeFVmYWg2NE1TZVlON0VqclJmOFJJRWlTeDRrblM3ZXVXVmFRdElNMWdkalJyMTl5WW14UGlzd0huY1BrYzdQUURUTnlaR1pDNWtHNFBTYkZkZ1E4?oc=5",
@@ -7999,7 +7984,22 @@
     "https://inbusiness.kz/ru/last/dmitriev-obsudil-s-uitkoffom-i-kushnerom-konflikt-na-ukraine",
     "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZFJVQlBiR2RFMnBLQWVXdm1pQ296N2FyTFR5c3didFRWaVZ5d3NkQ00yRk5jcFNkRUNPREh1N0ZpRno0OGIwdDJjeVZ5T1VMUThsblR2Yno0b0xuU3BsYUZUT0dHX2tuQ3VtUDh5LVNMMnlvTzR4RlNjN3ZRT0s2Y1VFNThrTFFLUUlGbGFzcm1YV3ZMYVhDNVRvWEZWR3BUSGgyb0lJaVdsSHdYZnc?oc=5",
     "https://www.bbc.co.uk/news/videos/cm790gjyw1qxo?at_medium=RSS&at_campaign=rss",
-    "https://kz.kursiv.media/2026-09-25/mlts-hokkeistka-lobanova-oformila-het-trik-v-vorota-bangladesh-na-aziade/?utm_source=rss&utm_medium=rss&utm_campaign=mlts-hokkeistka-lobanova-oformila-het-trik-v-vorota-bangladesh-na-aziade"
+    "https://kz.kursiv.media/2026-09-25/mlts-hokkeistka-lobanova-oformila-het-trik-v-vorota-bangladesh-na-aziade/?utm_source=rss&utm_medium=rss&utm_campaign=mlts-hokkeistka-lobanova-oformila-het-trik-v-vorota-bangladesh-na-aziade",
+    "https://www.theguardian.com/uk-news/2026/sep/24/met-chief-criticises-court-system-after-paedophile-granted-bail",
+    "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/hormuz-transits-fall-single-digits",
+    "https://www.aa.com.tr/en/world/morning-briefing-sept-25-2026/4068708",
+    "https://asia.nikkei.com/business/markets/global-bond-sell-off-intensifies-hitting-housing-markets",
+    "https://inbusiness.kz/ru/last/magnitnaya-burya-25-sentyabrya-pik-aktivnosti",
+    "https://inbusiness.kz/ru/last/razdelyaya-bol-utraty-sagintaev-obratilsya-k-semyam-pogibshih-voennyh",
+    "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
+    "https://www.aljazeera.com/economy/2026/9/25/oil-prices-jump-after-yemens-houthis-claim-attacks-on-saudi-facilities?traffic_source=rss",
+    "https://inbusiness.kz/ru/last/tokaev-poblagodaril-putina-za-soboleznovaniya",
+    "https://www.bbc.co.uk/news/articles/crlyqg2q3p10o?at_medium=RSS&at_campaign=rss",
+    "https://www.bbc.co.uk/news/articles/cr3wj04d88ywo?at_medium=RSS&at_campaign=rss",
+    "https://inbusiness.kz/ru/last/husity-vnov-udarili-po-saudovskoj-aravii-chto-pod-pricelom",
+    "https://www.aljazeera.com/video/newsfeed/2026/9/25/jewish-protestors-join-free-palestine-march-to-denounce-netanyahu?traffic_source=rss",
+    "https://www.aljazeera.com/news/2026/9/25/young-men-flee-tigray-amid-fears-of-forced-recruitment?traffic_source=rss"
   ],
   "recent": [
     {
@@ -14580,6 +14580,69 @@
         "хоккеи"
       ],
       "ts": 1790307881.2756186
+    },
+    {
+      "tokens": [
+        "cardio",
+        "deadli",
+        "gen",
+        "streng",
+        "swappi",
+        "traini",
+        "treadm",
+        "why"
+      ],
+      "ts": 1790309845.20013
+    },
+    {
+      "tokens": [
+        "brain",
+        "diagno",
+        "hours",
+        "rapid",
+        "test",
+        "transf",
+        "tumour",
+        "weeks"
+      ],
+      "ts": 1790309849.486696
+    },
+    {
+      "tokens": [
+        "аравии",
+        "вновь",
+        "под",
+        "прицел",
+        "саудов",
+        "ударил",
+        "хуситы"
+      ],
+      "ts": 1790309853.9435363
+    },
+    {
+      "tokens": [
+        "denoun",
+        "free",
+        "jewish",
+        "join",
+        "march",
+        "netany",
+        "palest",
+        "protes"
+      ],
+      "ts": 1790309858.1456301
+    },
+    {
+      "tokens": [
+        "fears",
+        "flee",
+        "forced",
+        "men",
+        "recrui",
+        "tigray",
+        "young"
+      ],
+      "ts": 1790309863.3259463
     }
   ],
   "recent_ru": [
@@ -24629,6 +24692,109 @@
         "хоккею"
       ],
       "ts": 1790307881.2756212
+    },
+    {
+      "tokens": [
+        "велико",
+        "всё",
+        "выбира",
+        "гантел",
+        "данным",
+        "здоров",
+        "исслед",
+        "кардио",
+        "меняет",
+        "молоде",
+        "поколе",
+        "ради",
+        "силовы",
+        "тренир",
+        "формы",
+        "чаще",
+        "штанги"
+      ],
+      "ts": 1790309845.2001352
+    },
+    {
+      "tokens": [
+        "nhs",
+        "англии",
+        "больни",
+        "время",
+        "два",
+        "мозга",
+        "начала",
+        "ноттин",
+        "операц",
+        "опухол",
+        "пилотн",
+        "примен",
+        "тест",
+        "тестир",
+        "технол",
+        "уже",
+        "часа"
+      ],
+      "ts": 1790309849.4867003
+    },
+    {
+      "tokens": [
+        "aramco",
+        "аллах",
+        "ансар",
+        "атаков",
+        "беспил",
+        "военны",
+        "движен",
+        "двух",
+        "заявил",
+        "объект",
+        "операц",
+        "примен",
+        "ракет",
+        "рияд",
+        "хуситы"
+      ],
+      "ts": 1790309853.9435396
+    },
+    {
+      "tokens": [
+        "активи",
+        "выступ",
+        "еврейс",
+        "израил",
+        "марша",
+        "минист",
+        "нетань",
+        "осудил",
+        "премье",
+        "пропал",
+        "протес",
+        "против",
+        "сша",
+        "участн"
+      ],
+      "ts": 1790309858.1456335
+    },
+    {
+      "tokens": [
+        "бегут",
+        "военны",
+        "где",
+        "люди",
+        "мобили",
+        "молоды",
+        "напряж",
+        "опасен",
+        "полити",
+        "принуд",
+        "причин",
+        "регион",
+        "сохран",
+        "тыграя",
+        "эфиопи"
+      ],
+      "ts": 1790309863.3259501
     }
   ],
   "weather_date": "2026-09-25"
