@@ -1,65 +1,5 @@
 {
   "seen": [
-    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWTZ3aVBLZGFSTUVhSm03bUhMdTdSWmpBM2tjV2lYMjhjRk9ZQ2U2RlNRRlpCRkZPSjVqN3laYmFvX1BZM3RNMHAxVWthT2ZCeThSUEFEN3FwaFF4bFFaOW16elBXenJLWjBpMU50dEdyVEdSOFc0elFKaTkyT1BEVmVDVDRQYlF5YjNsVkRVTkxteUJkN0thWjBPaTFJY0VBeWdBQ1BQeEJEMmloYWRzOG9sZlJZTldfZlFLMGo5RUxwSTQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFB1bHNHOHQ0REF4ZU1vc1JCV1NrNWFfbm45WW51eEFuQnd1czI3bHRpMDFsWXJEWDBITjZGekF5R25IRk0?oc=5",
-    "https://www.middleeasteye.net/live-blog/live-blog-update/morning-update-629",
-    "https://inbusiness.kz/ru/news/v-kazahstane-vspyhnul-spor-za-0-7-mln-ga-zemli",
-    "https://kz.kursiv.media/2026-09-25/mlts-shtangistka-ekaterina-alyakina-zanyala-pyatoe-mesto-na-aziade/?utm_source=rss&utm_medium=rss&utm_campaign=mlts-shtangistka-ekaterina-alyakina-zanyala-pyatoe-mesto-na-aziade",
-    "https://kz.kursiv.media/2026-09-25/mgpz-kazahstanskii-strelok-islam-satpaev-zavoeval-bronzu-aziady-2026/?utm_source=rss&utm_medium=rss&utm_campaign=mgpz-kazahstanskii-strelok-islam-satpaev-zavoeval-bronzu-aziady-2026",
-    "https://news.google.com/rss/articles/CBMimAFBVV95cUxOS2g5SEdmb21zU080SVhXaVRfd2FrV3NUMk1aN2NfU2lLM2dyUHVObV85c1Q1MkF3YUZFaWZPeTNlSlBhdDFTa21MRFhncUdkUGVpVENrUGt1UHhTWk80dkIyMk9Vd1d3TlVYZUdIazMycnhialg5VGVUdVY4QXJVbzFiWXpnTGhuUHF0ZU1VSjIwQnhsajFuSw?oc=5",
-    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUkFaZ3pKbTVJaFROSXhRUmJHSDdNamZBbmZjZjZHbnd4LUotckxlRWJkcE0tNmpVck5DcmNpM0VLT0JnaVVZeEhld1FkNE9OSm13c1FobFZDS3pMZXhJVmpNXzU4eUFWUm9KTGRnVTc3bFhTUVlyYjJDY0dPbFczZGdGSkFXY1FLV3RV?oc=5",
-    "https://news.google.com/rss/articles/CBMioAFBVV95cUxOQUNCeFRndmhMYTJ0blN4UUF0MV9xQ0JWTmZLUzVTRjVxb3BYR3R1Q2FxX0poUHNNV3QzLU9RSHkzcFBVblZxdzJoTFdFVG5FbWRJNHJVY19tS2ZfaTlndFVkMG9pblhNWXcwTlhuUmFmZU5LLXdwQzQyUlhKWHFnTU0xSlJwUnlvSkJkTE02OFVGVlRQTm45MUg5VGpiUEp0?oc=5",
-    "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSFZwWjNac2hzb2tWMEdlbU5uZ1RDQncwQzZpaU1mR1dGWU5CQmhHSmtTNW52QVVaNW9VZG9LbjBEMGtEcW5NYndoREVqRlpqZnJKRUdLY0twakczWmgtNVV2NFBsUjhHdWlPX005WFQ4LWoxdEtMVTlNUjR0QnZPaTFBa0o2YTdTZFJndzFR?oc=5",
-    "https://news.google.com/rss/articles/CBMiekFVX3lxTE1rVndkMWRtV0Vob1RjMVNsOUVWZ3JURVZfXzhCcWVBenlPVWh6YTFxUXl1V3IybWRoYlpTZGxMamFxVVJXelJ4Uk9YU1dGMmJuY1NvQWtGeDdJZTRvMzQ4TGdVRHpaWThPaFFMeUVHOHppOTdxeWM4dnVn?oc=5",
-    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZWJFVV80dXF3QXRCYlNHY0RSa2NwVzJ5V2dTQ2hjU0I0ZEVYT2xyVW9EeFZUZnJqclhEWkM0OW50eGVBWW5UaTZxQlZ4N2p1S2ViU0YzM3hJT0hMdmdNMUxSYnhXOWtHZFI0RmRhSUpTcXJNY0VpdzFhY3lzSnFaRXIxY2N5bThua1YtTU0xbDE0MjVjaUdhZWIxUjZYbEFDTzBCMXlxQjdndHhsUnlJa0VaYjdxZlZ5?oc=5",
-    "https://news.google.com/rss/articles/CBMiekFVX3lxTE1rVndkMWRtV0Vob1RjMVNsOUVWZ3JURVZfXzhCcWVBenlPVWh6YTFxUXl1V3IybWRoYlpTZGxMamFxVVJXelJ4Uk9YU1dGMmJuY1NvQWtGeDdJZTRvMzQ4TGdVRHpaWThPaFFMeUVHOHppOTdxeWM4dnVn?oc=5",
-    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaGwtOTRSaFhva3JSRGpPOUc3U0F3ODMzX2lWc1FJczVIS2QzV2JrQlFQVkxWbGVxNnM5Q0lKMUtMTlFDNkp4aTlMU2F5N3N6QjVRSnRULUhnbkh0X201Vi1ublBJaXVEOUZsMHBYVi1KOEItT2RDaUlpUmJ3dEQ5YkszcWJzTFF3YUdLNEN0QUNqNGx1Tm5sYU9va3JQWVdKd1dndHNB?oc=5",
-    "https://news.google.com/rss/articles/CBMiRkFVX3lxTFA3OHFZOVI4bTFZckdMRGdUTExOaWtYZHRKUUdoZU1CWE4wUkJfU3lXLTM2M0dteE5KY2hvTW80T0RsMDhiOWfSAUtBVV95cUxPUVducWpDMl9LblJXRHhiVy05RUtCdS1hODU0RjRBZnItOU15bDRxZ3ppSWlfREo0UUtRU0dwQ3hhbFBYaUNBdTh3TEk?oc=5",
-    "https://news.google.com/rss/articles/CBMif0FVX3lxTFBoU0ZER3ZOSVBfWG4zc0hKZENNLW01MVN3b3N3bDZySWsyeW1CTzgwT1lxRGxJR3BYUE1FWkh5dWpiZ19uY1h6OTJfMHQ3OXRxTXZTdnBNRzZXUWJubGE3SXRUNzR4S2tQaGdPSUhvY3RYcjRpSU5qazZtOUZCXzA?oc=5",
-    "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRTZCdnBRNkRSbEtuLXVZSWlvRm9qSXdra0poNi1zXzhFWUJ5eER4RDIwLUItX3VrR284U1NLcXJ6Wm9SMTk4bFZZbl9aZENheEZyNjJxdHRVYmRtd3d5Y2JtQW5UaUU4LXN6STJuUGlCbEptNXNMNUIwYThrWkdBSkdrLXkwSHlUY0VBQVN0T2Y0NUFxY0hpbFFaWFVVclBXRlcwcXV2ZXpjZnlESW1pcHJRNW5RSjVEMVVPWG03a05zTUFXWVE?oc=5",
-    "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYU4zZm9KNTNYZFEzUzZ0Tm9KbUpMSEg1aXBqNDFIUjBlYUFTR3RZVTFISW05Q1FyNUJITkZjUHUtNk1zZS1JMGJTYWpqZHlGMzRQeEtvaDZrekRSaHRoX1ZBSG1faDZpMlVyLTJibnJaWVdveTkyX0stVGFkdGxRa3Z0RQ?oc=5",
-    "https://inbusiness.kz/ru/last/v-mangistau-opredelili-edinyj-fond-pomoshi-semyam-pogibshih-voennosluzhashih",
-    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRG1BRVp6QjNMSmVsZEcwN1pwVDZDX1RoR2tBUG1DT2hhMFBQUHFhTnZZcWlOSHJVRThKamhGRkpFeWkyTFJaUG10ZW9tWDNSRzJUN3FDQnA1Qzd1aV9sS3hlUWtlSjJ3S0NQbXFISDN0Umc4Mnp0cDJQMVRsUEZjQS1hMnR5RTVqdlYyZE5fOWZQM0xxaDBsX2QwSUJHWnRkZ3d5OXN3dVQ?oc=5",
-    "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o?at_medium=RSS&at_campaign=rss",
-    "https://inbusiness.kz/ru/last/kazahstan-i-dogovorilis-s-eshe-odnoj-stranoj-ob-otmene-viz-dlya-diplomatov-i-gossluzhashih",
-    "https://www.aljazeera.com/news/2026/9/24/benjamin-netanyahu-attacks-israels-enemies-and-allies-in-un-speech?traffic_source=rss",
-    "https://www.scmp.com/news/china/diplomacy/article/3368723/china-us-new-joint-arrangement-ceo-arrivals-what-you-missed-overnight-xi-trump-summit?utm_source=rss_feed",
-    "https://www.scmp.com/news/us/article/3368725/pat-back-xi-and-trumps-body-language-speaks-volumes?utm_source=rss_feed",
-    "https://www.scmp.com/news/china/diplomacy/article/3368724/inside-melania-trump-and-peng-liyuans-visit-smithsonians-peacock-room?utm_source=rss_feed",
-    "https://arstechnica.com/health/2026/09/cdc-opens-state-ordering-for-covid-19-vaccines-after-unexplained-delay/",
-    "https://www.sciencedaily.com/releases/2026/09/260920222410.htm",
-    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORl92S0RhMXR3dzl4TzlTMmd1bm9MMXlMc0FHaGhpZUN0SzQyWjg2b1BHcE5GQWhuay1uY1gwV2EtUTl0elZwck4wMlNvVzFwQ25CaERSa2dPbTM2LU5MRDZHYnFhNkE3Z05oRHdfR19vODRJYzRCbHFJdHc0MXBaX2k4djRNWnZoaVJ2cDVuSHY3UmNTd0lyb1NwSUd2bF95Q2UwZ1pUMlM?oc=5",
-    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNem01a01PMURCRk9RZG52YkU5MVJuOUlxdk5ObEM5VDNDak40T0V3QVg5bDJmLThPQmktNDl1eTdNYzNUaTUzX1RQTmp2cWxNd3NOUF9zaHpIYUIwTjRuZzBSblZEWUlINlJqSE55T3B2YVhITFlnVm1HRlI3OWN0Zk9MMEpRSjJlaUlET3FNRDJwdGxod0VMLTNqNjllbWhIbUFUY2RVMXVLZjZDTWJNStIBtgFBVV95cUxPckNRQUNwVjJneWtrQlVyREhCcEhnTk9kUUI4UDhkQm9uTUxrdmlUeTFBMHRoa0xlQWdRWDZPTlptWkVYRUJXLVl1ZTNJZ2dHdHlvN1BhOVRQMUltTlRzaU5CYXlWdW1fUmJJT1hfNElXaTFhQ2hTaWw4a25VT2Vkdm5OQVF1VmFRQjhVaGh0VjVMZlJYclZiYWJxYjIwUFJGTnFFMWc4Y053d3FUd1FiR0JESGNwZw?oc=5",
-    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbnA4WGxWNmt5VEh0VFhweVoySzNsejVicmRXVVhrXzBzRkxXRzkwLWNzNGFGZ3MtaUtXV3Z4aG1qNVZqMUZYMzBrSWMxRXNSRFFZUTM5dFJId0QzRGo2aTdhcE1CSXVOdTJ1NTUzQ2xIMDlZSHRJU3VwQzhndUpLdWhMdTZDV0J2SXJoYkk0SUFZMjRxd0VsOUpKcHZaVExNSF9hRnVLY0R2bUZ0ZnhBcW8tWdIBuAFBVV95cUxNalVTQzhfSWRGZEtDeHdRUmluWjFZaXFmTF9iSFBuak5JVlo1ckRaa21QaGpQbTVTc1g1bGpLeGlUNk1BNFRZUGk0WThycWh4WUhQYUZDcEIxbEJZSXZnY1Y0Z0NmbnlGd19BUm9xbVlSbkdiUTgzRlByY2VzeVhIQm5oLWh1SEZEdWtWNV9EUm1mWDV2Skg4YmV2UnU2U0VtdHRyNXJDYm5HWkU4cnVDUVlzRWx5eDlp?oc=5",
-    "https://news.google.com/rss/articles/CBMifEFVX3lxTE00SjdpaDFzdVE0OXVWTzZLbmNybm0yXzhBSkRKMFo3UDYzeVVWMkZyQ2EtMWNiLXRXWUx4VVhZU0FkRGVOWWdDNHpQRGFuU0kzY1dkUUcyMzhSX19IanJmdmdHOEVvaE1kZkNaeG1EUDlLM1NWYnVHOXV6MDU?oc=5",
-    "https://news.google.com/rss/articles/CBMingFBVV95cUxPR1ZtaWJDMEwzRlNWVEJRcUw0VUFzTTBPRXU4aXdOUDBhS3MweTRwREs0OURaZm9RZWREVVExOVpOS0FrMDhyZXFkb2hQRWRGM25JMDJvMVQtdmZiVW1XREg5NzVDUjNsc3FYLU9NSUFKZEROcXJBTUFZM0wtWV9DZ0FTSTNFY3A3eldsOHc0V2NVSnZFZndIa3NEemRRQQ?oc=5",
-    "https://news.google.com/rss/articles/CBMingFBVV95cUxNOFdIdzlTRXRZNWREaklMSWJMQkhhdnBZSWNCWUNrWk01T0tEUHJBQ1VZZ2xkeVBDeWp1R0FvNWVVQzZlZE13MXlENUt3RUhxWEotUUtrY0xtekdfOVFXOVBmZkk2ZkpOdlNtSlVVZk5nX0ZOcjcybjJxWHdta21ueTRLaGdoYkJidzRQWHNHRGR6NFcxeXoyTE9ZSFpLZw?oc=5",
-    "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaXpud29NU0VYVUxJOEJTaUFaekh2dkx4S1F6UHdzMnVrWW9aTmd1LWFxUmRjNXlyWVlmd1A4VGo2SUlic05mUTF5VHYtSTgwaTk0QTRUXzZkaENsaHlHQ29ZYWZYVE5FOEl3NlQ5UDAtQWtRVTBadEFXSTZXVEpEZG9vc05TRUczNzBUM1ZORlg1V1BsWFV1SDl1RTRPS0VfY3QyRzJnZ2ZlSlRRdlE?oc=5",
-    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9WWDFodDRXX3NvLTZ0R2tJX0FISE52R0FDazBGM2t3TUhBeFV0bmt3cHljMmlsQWZ3R2h1NG1ET2pSWWxBaFdLclcwdXFzZl9GSi0xcA?oc=5",
-    "https://news.google.com/rss/articles/CBMioAFBVV95cUxObFhnLWRNOTF2c1JOTk4tWllJNmQ5N1FuSl9yVGVkWnNnaUI1VldxdkJGQmhzaDFYcGwxQnN6TWtBbkwwcTFkQUc1S0prLS1lODE5VUpneEY5dXZ3aTR4elNjVF9hc1UxTkVBWm1hMGdSWjR6Nkc0Mjd5S09qV1BlQ0FOMUViYlVHbUh3Q2lFU29QemVDWWQ5akp0bjRnZFE50gGmAUFVX3lxTFA3bnVmM1ZRTkFsSDA3X08tQkY4QmE0OExlaGxibG0yZElLbHZOdWQ1NkNVZ0RhUmVEY1ZkbFFTWVplX2JvNTUtN3k3RGtnWm9fbkE3TklCMjJCM0M1Z3kwYXo1NDBfZjI3LVNkTG1vVWVEQ2daLVJyTktyN0lfSEMwSFo3UWdkLV9uZUZNWDZkb2pEb3R1V3VFYlJNemI0S3FrbDRYMVE?oc=5",
-    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUk4zSS1ETHY3bmpWQ3E5VUI3Q3Rrb3RTSWpFTm55N21XN1o5VzY3N0tQcnJCX1E3MTY2ei1UWWFaYUVPRkxXcGhjT3VCLXBNb3FfaGJnbmY2ZDJMYUhpN3pOcWtzbF9rZ1pRZ3dhejlZclczVkNPOUJEeF9Jc3JpRnRENjhhNDZ1?oc=5",
-    "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZHJpRnUyYUhLcjA4YTI0RkVkYWRqdWdvei0wVkEyTUVsclowREFQOTZoUzJlaE01QzQ4U2kwVk84R3ZlTHlteVRROFVGMFRvdlRiOGx2SUJ1blJ1U0xJbDhVSFc3d1NySzJQTnBFVXh0MmE4RGc3WFVsdEJtN3pYMG1YWnRUQjBVUnozaXBPM1dKdkl4Wk0tdE1vVQ?oc=5",
-    "https://news.google.com/rss/articles/CBMingFBVV95cUxOVkp2SDBSczk4bjFqdlhtbkV2V0FfN2VPcDlmbU45YTFNY19mVV9WckVpZmNYVVpvbG1BblZCNjlqNG1zWUZjZWp0MXdhZ0VuUWlOYkFrdjl2QlVucExmY0ZOVVBzeGw0ZXhMQ1ppUmNvWU5tYUtnSUpVdkVyWXN6eW9wTFFMYldRVm9TTF90M2pNOE1PMXI1Smdzd0JxUQ?oc=5",
-    "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNVhjTWpwTndUYzBzbWpCRW85S2E0RnRSLWpZN2RVR2VNXzhIRUN0dno3QTdwTGt0Y2FFektaaVJmZy1kMUtzaHV4RTAwSVVTa2g1ZkR2OV94YnRmeHpoV25PVWZGVk9UM0ZmZm1qMjlOLVY0bE5xaXVQOXdjVDkwbGZsY1dBczlBLTN2V1VsZw?oc=5",
-    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeGhHRXNNSHd0VnN1UF9YSEY0OTh2Z3pMT1M5WlVrSXh2ZmQ1MFZ0ajZxVlRNTUVyTTI5aXpzWm5zRDJ6eDMzbDg3alVZU2xNNGNlWHFBZTZxTmdPTzNic3pGemZDOHZTc1dwYmhuT25CdnFQdjBFeUppRUJlWU80bWc0N3M3QmJpUXlQekRvYjhzZGpvS2RnTkRR?oc=5",
-    "https://news.google.com/rss/articles/CBMihAFBVV95cUxOekRsZ0NVY19YdjUzQzFHbEVrRHp3cHh5UzhyZ0M5WFM0VGhsczBFei1Yd05OVDBfd3VmNEhDSC11d1h6X3g0cWxBbV9DdGpyQlhBUjhGTWdqZXZYYkg1U1FHM1BCeV9meC1yOTZjVUpxTWpFdDNMMHRnMkQtekx2cTFaNzE?oc=5",
-    "https://kz.kursiv.media/opinions/gde-budut-zhit-lyudi-kotorye-nuzhny-vashemu-gorodu-i-vashej-kompanii/?utm_source=rss&utm_medium=rss&utm_campaign=gde-budut-zhit-lyudi-kotorye-nuzhny-vashemu-gorodu-i-vashej-kompanii",
-    "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZXFDTzBxRUNwS0tCV0ZKaDI2Wm5RRXdCLVBYLW12YVdIeDZCX09tV3RKcEhHQ0xEM0JVMXZ1UWpiVW9wMDlkU2Y0b2ozbmZyX1I4RHhyUWphREs3NDFhaTJhcTRTbFRiY2lTV0RVMEo3RlM4X2pBRlB2Y1AtSENKSGs1VUNKZXJTSnVfLUZWMjdYZTgzOTdMenZ1bFhjejRoQXBYUWowN05OeWZ4ZGloS09GLU1aTFZtSE51Qk9hVTBlX2VwSUE?oc=5",
-    "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNWJ5djVaemE2ZE1CZXFsOEkxaHROcEV1WkVyNWtOM3lFT2gzMzd0NWR3Szd4UWtSenZTbWo1SmV6SlFFMTA2ZmRJTllOM3N3X0dpcFprcUJVcl9mc3dfVEJDYjR2NEFkN1ZUYlRoNnhuX0dyQktBVGE0dVpPdjNpd2o0Z2NrQ2VMRGxpQ2hDMS1xcjlTbEtjYjRB?oc=5",
-    "https://news.google.com/rss/articles/CBMilwFBVV95cUxORHVTX1pnYm5vWWZBcl8yNGJJN3p4R2NDMzhmLS1MSjlpZWpXdlpBbEpidHRzU0FVa0xWU0MzSkV4U1Q5WVoyVlBCcjRMYVowNnozVGhwdmVVX2RJc2RxTmphb1E0WG1Nb1J3X1NycVFlbFZ6T2tUaUNNcl9Fb01xM3FKUHhiUFBaTnJhMk1EV1piNEJFeWp3?oc=5",
-    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNN3VnbjdnRVI5RkhULWFic3FXTk0ySXRhSGlyNlZXdGJuMWxQX3BtM28yQVdqUHEzRll3OE10XzVZZl83dzVkb3NFSEo1SmNEY0ZUaXNOLTRuS1k3d2Q3WFFPbElrb0JnX3NRLVg2aTRXQ2hManBvT1lzeVFuRTVieFVYYnNrXzQ1UVpWU0pCbXh3UWlkT0lWUFk5SW9QNEZTbGs2cFhtcmV2ZzB5dVNVTGRRc3BjOWxXQWg2Zmc2MERYUQ?oc=5",
-    "https://news.google.com/rss/articles/CBMirwFBVV95cUxQX2FlTmlaZFJzQUtRd2hWSDZyRkUtRy1leEZYY0JzZ1BjbmpBRVFWNDNjUk40cnA1UmdqOXhCZnFXZkw3ZUNWOFhJME83R0xITTF4WVBVX091RXVGaUNzN2l1NTZKMmd1RDV3cVhQd2V3VHV0VVkyT1d3bHkyTGQ0Z1BaTXRBVWYtRUE5WThDLXVWS1E5SWJnbWpJVTY0QnhNbkYxSi1XM3FqVGlGS1Mw?oc=5",
-    "https://www.scmp.com/news/world/united-states-canada/article/3368726/uk-will-not-tolerate-intimidation-foreign-secretary-tells-iran?utm_source=rss_feed",
-    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMzVKSHM5T29zUy1vWGNTa2dnNUM0dnlPbGhfSDllTjJVUThVU1VlXzhuWTJ4ek5kNS1KVnhkbEdkOVNlMDhwTlNvSkcwNjN0VmlKTE5MSW4yNDR0V01HazJKU0ZlcVZOQXd5M3plaEhLTnh3azEyRW41cmw4bURZWlowVE96Y3ZpWE5CWFRLOHZoWjlNODlZQW01UnRTd3BPQmU4R2hLZFJ2MkE?oc=5",
-    "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5SV1ktR0pQbFAzbklpWTlfSVU4NktQNkF5S25sMTVNTXlLekQ2VDNLMHR5REpyR2FfRUswRUw3Uk1tSGkwNVotQXJFMXRWZ0xTM1E?oc=5",
-    "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTjk1QS1TTk94a0lXX3Y5dFFZa3BlZ2h1OU15bEF6WXJNX3hzY3lJbXBMNGNYUjk3Y2dnaHVWdnd6eDFPMV8xQmJHZHlJbXQxX21tUDdvV1NWSV9zMkdHY1ZGM3BfWGxTckxjZ20tdnFhVGZNTXIwRFA2bEYwUHlraEtLUnVWX3d4Tk5vWlBmU1RTU3fSAZgBQVVfeXFMTmVIakF3MGh6enl5enRkZ3IzSUg5cTFGWXpkS3FnNHREeXRoU1NmYkMzbXdkVlJQdXpJTWg0ekRJSkh1N1k2dC14aDRiSTA2b3FjUlFGRVQ4M2Y3MEZYX1lkTU9VMEZHZjlSaUhocFU0QWNicWlveEhyMmU0ZUhRNGN5RTIzS1Rldm9LeWNZMGRGTHZFMU51Ujc?oc=5",
-    "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9tZnpUdmRqdkdZTDU2M19BRHdjNmtZbVo4VDRySzY4YUhaYnBfU1VJaElTWk9QVlBvc29wdW1wT2RMTWpGX1psZzUzVU04bERqNEN0NmRocjdkbkFKeXBN?oc=5",
-    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZTdDMDZSWFhwdk43WDh5VlFxaHdHcjl2Z2FwTFY2TmlJWG4wZDdVVDU1dDVMUVJUVTJDeGZLUVV5NURDTWxmUi1lYjUxM3dkdE5waE5pT1NQUnl3VXQ0NlBhX1lYZzgzcHhyUHAyX3BONG1OSXh3Y0hUVVZ1STUycm54ZVpGRVRzNmhsMHFNWmNEUFJuQUdudnVBUFFTLUY5bmYzdlFjUGg?oc=5",
-    "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBYQUZnT1paajFYOVNaTzVEZ1dCMDJrRnNDRy00WFVfR0pQajN2d3FySl9zMGt2Q095TjJHNy0wd2FhM0xVQjNZckdYcUQ1QdIBS0FVX3lxTE1xN2ZvUzg5RENweFptQTlRbUZqMll0c1FFcFdVbkx2OFNTV2h3OFFfVkZPT0ZfRXpJRXkzanFsQmxIcTVDZm00dTBtaw?oc=5",
-    "https://www.bbc.co.uk/news/videos/c9lykxx5zp70o?at_medium=RSS&at_campaign=rss",
-    "https://news.google.com/rss/articles/CBMizwFBVV95cUxOU3JqQ2JVRzk4VS1wUlMteFVMbHpGRHhoNXRYUTg5eGpwOXpldzhSNVhnYzFOVmIzMXJrLUhGcjNsbEJCWTNPSEJIeTYzMnlfQ0JsaEU0YVpsb3ZQa0lNdlpsQkNmUTNXQllwZWV4VkRmd0NxV2ZwSlhLZDBITHlNdVpqWENDUHFPbjFBUmExX011OHdIMkpSMTV1LUhlb2FLVFNjRXNObGF1bU43VmdJOUk4TGxaSGZ5WTA1ejRYTmJNLW5aWHRoNnBSdnAzQzDSAc8BQVVfeXFMTlNyakNiVUc5OFUtcFJTLXhVTGx6RkR4aDV0WFE4OXhqcDl6ZXc4UjVYZ2MxTlZiMzFyay1IRnIzbGxCQlkzT0hCSHk2MzJ5X0NCbGhFNGFabG92UGtJTXZabEJDZlEzV0JZcGVleFZEZndDcVdmcEpYS2QwSEx5TXVaalhDQ1BxT24xQVJhMV9NdTh3SDJKUjE1dS1IZW9hS1RTY0VzTmxhdW1ON1ZnSTlJOExsWkhmeVkwNXo0WE5iTS1uWlh0aDZwUnZwM0Mw?oc=5",
-    "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWldqcUZGQTBSWTV5dWtvZ2xhUS1XRnZoTzdiVVFEaHVWRTdUaExxTldhMll2VzFkazZQbkRHT0FZM2JzSzFXOHZhWncyM05lU3hYZzY4b1M4UEpEcTcwbkpHbmYtcm9UcWd5YkxXdXUtUnFodFRtVVZFUzlTaldPcGdIV1c4cmQxNG5wUXJkTXU5MWZyUUNJalo0cFQ?oc=5",
-    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQjkxcXpHeGVucEI2eHV5UEUwU2FLbXFTWjlWTmJDV00zTmMwM1hfODFnNnNiRzhNd3dEbUY5NlJpbmdPNmFENjBLMWl5YUtSSE0zU3FwMTJ5QXNtUWFvNmZvVGQxelJTOUNDaFF3U1JGREJBbHUweDNSVHZvOUVPRm9KUldleEphSlVfd0E1RHZaREF5OVhjSEhUQQ?oc=5",
     "https://news.google.com/rss/articles/CBMiywFBVV95cUxNbkdBV1hzMUp1aldXc3pFdVZBdE9WR3lrQUl6eklvSHppcnZRajR2R0NCNWxBQVRMVUh6aXRIdUc5a0VKVVBPNTBCYWxjTk1OdFIyU1dGRkl4RTZHYkNNbGVqRUc0VEMzeE1fWlhmakwtcVFPSHc4NHBqbEh0UXNVZXMwTnZHcXM2bW1LX2NLdnNuZ3BwTTlWVFZmMk5wTHVDQU9ubGU0aGd3ZUNRWUtjSHdfOW9YQVgtN1lySUhPb2VraHg0WHduUENpNNIB0AFBVV95cUxNRnFkd0RQM2dWSlo5TTE4dXQ3WTh2YlZKT3MwUFZLdG5YQ1E3MzRKYWVNQlF5b3F4U3hyTThXdThib1FDS2I3b09tdXlieXJMOUJDYTJjQWUwS3ZyMDV1Nk1VTGQ1Q3NnbXlzT0xFclJOVmV2NDExNHljUlQzcS1VV3EyYlhGY3o5WGM5OXBsdVp0N1IwMWpPRlU2RW1nUlRvTjY0eDNLc0kwSUpUNl9qbm9fZHE2bTFaaUR0ZUF1UzRpa3NiNERDUExjbkhMRF9n?oc=5",
     "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdWFWOE1qY19mcE5xbHp5b216YW5udXJFVTRZRHRRdFVNN1R0QjNpUTNpNDU2TEJhcWVFWUVqZlM4ejE2SkhCUGlJeVg0Q0tFeDhQamZnRHZLVDVRX0Q1amRNZllweFo3MHBzRm1td3R3dnY2VzFQcG5ZZ2hVLVJPNDV2eUY5dENTTmhJNdIBkgFBVV95cUxNdDR1b3ZOQ044VnM2LVhtT2wtejBQU2NyaEVuNHo5MDRFYzd4dEdOSnpfZXFwcTdzZlVfQzJGRlBTcjFHR0tydTJsRWdYLWwzc0RsQlB6NkJYUVphREw2NXp4UmhLdEJQaTBMSDdtVDVWYk1uNjlpakN6ZHRscG1SbWFEVVhnMkk4OHd1THhOYVFldw?oc=5",
     "https://news.google.com/rss/articles/CBMidEFVX3lxTE16N1NueVpDbWR6cDI1SVpjUzlUYW80SDBYSjZMVkEzajlIYl9jZXZFeWY0OE9ZVW9Lby0wczh6RkFjajBaNDd3eWpwQUU5aUZDaHRBWjFROTQzd1JJOWpSaWJwU3VzY3REM3Q3NWcwVEpmRkox?oc=5",
@@ -7999,74 +7939,69 @@
     "https://inbusiness.kz/ru/last/kak-poluchit-besplatnyj-ortez-dlya-rebenka-v-kazahstane",
     "https://www.scmp.com/week-asia/people/article/3369068/how-mary-jane-velosos-case-exposes-gaps-filipino-migrant-protection?utm_source=rss_feed",
     "https://www.scmp.com/news/hong-kong/law-and-crime/article/3369066/hong-kong-customs-arrests-2-seizes-hk290000-slimming-injections-japan?utm_source=rss_feed",
-    "https://inbusiness.kz/ru/last/kazahstan-povysit-predelnuyu-stavku-po-valyutnym-depozitam-do-2-5"
+    "https://inbusiness.kz/ru/last/kazahstan-povysit-predelnuyu-stavku-po-valyutnym-depozitam-do-2-5",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/iran-slams-israeli-killing-former-hezbollah-leader-second-anniversay",
+    "https://www.scmp.com/news/china/science/article/3368952/everyone-can-attend-university-china-unveils-sweeping-higher-education-reform?utm_source=rss_feed",
+    "https://www.scmp.com/news/people-culture/trending-china/article/3368945/elderly-resident-sparks-fury-china-after-cutting-workers-safety-rope-hang-laundry?utm_source=rss_feed",
+    "https://www.scmp.com/news/asia/east-asia/article/3368987/south-korea-plan-serve-deportees-airline-meals-splits-officials?utm_source=rss_feed",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNG80UE56Q1V1enBBQXNNdnRoQWdSUlFSOTA1YjVCVDJjSmplcUNNOWhvZ0djY2x3RHdneXZTOFB5a2w2NVFOa1VaWmZrUFNTN1hZenBvWU03ckt4aHFTVEl3RklWRUt5QjV2b0s4b3V3akhlaTNnQ0lZNnloMzV1RFRYOEVfNW9lS2QzMlplcWhOa19fTHZkdmJGVlQ3Z1UwS25HTDZTYmlrdDlGbnNzT0t6RFpvdw?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTE5YU0Y4VHdpSlNicEFTWk9IRGRsUXU0VklQUVAyQzQzZTBySXp3b3ZkU3VaNzFTdGloZzZreWRyRmQ1S3ZIcU9ydUlCbVN3c2JlUkNNV2d4R1N6Y0RwV3RvRU1CSXB2RGt0U3Zib1VEcFczcE5pSzBSS0hDWUxBUTN5dUxMb3dCX1BlOWR0bzVGNHZWRjFtOE9hUVprZDlCU25IZElYbUxDN1JaOHZTalZBWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5DOG1ReDd1aHJ2TjRXYVMzakdLTktZV3Nkd1RUV0V3TkNWUGM1RzlnQmUtWGxVQWd1WjRxZ2hMc3FOcGQtakhRbkVNbDNPblplTVZSY19qbWR0cWhxVVlpUndENXc?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAJBVV95cUxQRjJBRnQtMlNlMGsxNkEyLTlrVlgyQURpOWgtSmd2TzNxSkJZXzVFOGhxODVDOG1GcTl0ZDdWTUFJRF8tNUJpbk1zalJIeEROTHBwVkplanJIOFRQazMzWmFtb0NNZUwxV19nZmI3NXdvc1FKbVNlTEJoYnlCbEJ3S25FbUtPTUl6LU5iMFFkbEs5NG5KYUI0MHFlRFFPX25yNEpqY1dOWGRjc0hsVGpmb3lpQWxMNHVpTGxGZmUyQzBsNDdXa0VEYzdKaTJQMGg0S1pNOFZOb1JaS3lLSjVpamh4LVdPNGl3Zjd6bkRsVUZ6M0RzNWx5ZHdLUWNvaklhX1lrYWJNalVNNnVLZ3VnOWxwUFFBcWJGT2ZNNVJZSWhNWjdMMC03RGJMbVBLYkJSYnFmcGNGbVQtRnJSSWJPQmdvYk1Da25J?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMWtFcWpXcjRpTkcyZHhXcUVsZUZrMFNRTTlNcmRSdW5sX25YZDlZX2lqckxVQlpkMWRBMHlPYXU2S0pOaHhISkdnSHdubURLYkpQcEFmNTNiU3h3cVhtSF9QLXZtLWhHZk9VVmVuNGd3NXBJU1pmVzQ4WVJGazNPcDNzWXFTU2hyU0xv?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1qUDl4bXc0RjF0TVc2dUtEN29zbmpMQWZHbjlMWUtoT1ZYbWZmTVM0NFlwck1rTjJOY0toVHVlczFQdTNxb2lQNXZUZ3dOallkUnJYOU53eVVVZWhNMEJvRWxNUk04eUREVWRHV0pFRzBTdS1Gbmc?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcEIxOUtxQjRrUXR0MDd2NGFUanY2dVFiUVF2MHBJMXVQUjBLZ3d1dTNlU3ZibkhsRzBCek9sN1FidTQwTFhHTUlhUU5pQk45SUVMYzhMSlZEa0F2aVdfSU01aXBWRjJWdmZ5aEdpZU1lMWt4dE13OHpnbGUxWU8yTkNEVGhBY0o1dXB3enBQZHlHWVg3Rnc?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaGp2OFhSZGpaNG1JS3BKZ1h5OWdadDYxLWZpcmJlbFNGTUFsRXg4STEwTWRFNndGbHRWa3hTb1Via0hoWjZCZHJwcHBkRC1uNE92c1hZQTFKd2paVFRLekFvY3g4TVV5aE5kaGhqTlBqcktpYlU4N3loN0laTUZwaXZBb0d6LUpyVXo1bFd2WW5Pdw?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNYkx1QmN5VC1GQnZENm1VcTJ0SkVFa3NhenNyNE54ZTBPUy1NbE15Vno5c3NGcGhkb1k4UE5VM01mWFFIVzgtVHpuSUVUMWlFNTVzTkduWXBZMlI0eW9QZnNfYnFPalRwZm5BbDN5dFIwV3M5SVJmSTYzVmxqd0tvZUo5VURSdndWY213akVuQkZ1eFgxS2NROFMzUllveWlMQ3k0OU12Qmgybm40UTBhMkxMbWJNQkpzb1BpWTBfeTRvZnlkQ1lvRUh3TnZzZEt1VTBaN202ZEtpQVQ4MHBNQlVadVFjOFE?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMElLMEV4WnpNS2lRZTN6UmRPbXo3MUFnQjIxeU9Pd1hkaWdEdjdUU0pNMUNoampVNEl6QW5VWTZabmxCNHk4aG9FQzZXQjVGdEhzdFdOMk9fblk2TG9YamUtRVVEN21qVU54WDVqbE43WEQ0YVFaSjRFc1ZJUEJGbWNnVmRYRERkZFEyaGloYlVRaHJHRFgwcWpMTDVRMWV2eXZsUUw4amxiWUhGcjF0ZkwtNlZMQ28?oc=5",
+    "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNZ1ZVTHgtV01ma1RlTk5ZeXJmdFFISWlLUTBRcERFTEN1VElJcEZndFc3Ym9TU0lQWDEtVjZ3TkdWSnVOR1NoQTVyM1lFbXlITTJ6UEdTVmh6SDh2SEZaYVd2VDRKWmoxVHhQSEZ6V0ZKTFFjd3RnOGUxbzlydFoybVFMNWRLeDRiN0VlbWp4X2tzaUJuYXhBSi1BeFlZdURnWmpFWTdsRHVUWEF2OHUzX2VrWUg5ZzNrZzEybmpid2hJc0NRTUlpQ0U1VnpMem5qOEwxSGo1TkJtQnNnc2fSAeMBQVVfeXFMTVRPZFVxSFhZX29ESG5sVEMxaFU4M3ZiUHM0WWlhQ2ZDaE9DaXlueHo5V0hJczhEXzh0UzlxckluZ1RBXzcwUlgzMzhnWjYwN0FLM01weTlnaTRNcVliMXNwT3FZeFpLWWRoc0I3NWNlOGlVc2NKU0JhRUtKTnNvQXJTRTYtLUIwTTlDemEzRS1fRHdCcHFlcWx4RXBOTlVYTnRNYVh5aTZlcXhQaHJuVW93WGswcWljNzhWOGp2b3I5eVdRYnlJMnpYLUJISGVzampqTFFpTUVQYzR3OHN5dm11N00?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdHM4R3NjWURXNmwzUk9wVVEtMmptc2xnRGNKbm9pVlowMGxHMWRzaU15d0ZhUmFNNnpuMUZwbjRSLXl6V2tSY2RyTjNQR1pBc1NhdjFYSzhvamxGRmlKU2pSdEhjSklFQzhDVnMxT3dlSHhxSGlRNUVuT1FNejVrOE9n?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeGI1YkZlU2RmZ3FZY2dRMkN4VlBodUFiSHJpZkJNbnpMeENtbUcxVm9Rbl8xVVVsZmhnZ3A1WWRvOXR2Q3pUbXo4cldZaDl6aXNrOFVHWjdmVlBFMzFRVkR1d204TFROald1RGltQ3lQZTJuY2QtZEktb0c4WFlXZlp5R2dqZXdid2owVUJvcTR6Uy1fdFZPX1RsenhUSG1HMXFV?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTFBTbTNVWUxnMW5CS2pYTmpHRmo2RUM0S3RWaFJ5NTk1MFVLMERURU5LaEV4Y2NBNXJVWWpudUg0cU9oT0tDNWh2dVNqcS1VRmZHaGo1Z1NnZERWX2laZU4zN3NMRUxTNGJoQ3lKSDBtenBDSl9icjVR?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxPU013bTNXZ3Q0T2VIRE02bEFPUjdUcklmOGRGSjJOYmRxdl9lZ011c3RYTjhhM0JPdnJyckV5dHVTcUJMQVd3dG5Tdnd5MS1pRkRJdGJTMU53bnlKUjA4eEx3VFgxeU5mNWRTMV9KYm12NGx2VjV3VW05YW0zUWd3aXB4NWtfdy1DOWpTLW13Vzd6M2JvY25vMUFRM2pXUk90dmtjcjdwd1BBVjVOQXZPeXVTdHozMzh6SWtSR1RWUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY0VJX1hMa1VKVllGSnEzQ20tQ1cwMk1MbWV6MzhxWWRMczI1S0I5emlLLUxDUVN2cFEwVzB3MDEzTnlRWnJ2akxxR3Fxa3NIZWp3NzJDcXBRektCM3NiX3lWR3d0cHpEY29VM1g0WVMyQ2U1QUdQQ3V6UUpIUkJSUkN3YVljY2QzMzhDVHo3bV9LaW1wcmNkenptZHFqNzdFSkZKZEhB?oc=5",
+    "https://www.aljazeera.com/video/newsfeed/2026/9/28/al-jazeera-reports-from-near-front-line-in-ethiopias-afar-region?traffic_source=rss",
+    "https://www.theguardian.com/us-news/2026/sep/28/john-fetterman-gaffe-republican",
+    "https://www.aa.com.tr/en/europe/3-die-as-boat-capsizes-during-english-channel-crossing-off-france/4071441",
+    "https://www.aa.com.tr/en/europe/-french-far-right-wins-15-senate-seats-enough-to-form-group-for-1st-time/4071438",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxNaVpiX3RCa3c4TUo5d1VoeS0wV3RfR0VESks4ZnNKeWdkaE5aQ2NfdXItalF4ZlhYUHJ3ZjVpNVBOdFJJMG5FRmJUU1BpVllOeHZFbXY4bi1XRXhnZkQxTTBfQ2R1LVY4VmlwN2VWV2w0aU4zdVBhRW82d0dOUkx0WW9yaXZoMnNMOFNCSjVGN0VQUXJOZm94MDd0S1ZUUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPU2U1LWp4bWRueUVSM1ota0xrMFlvQkZIRGN6dnNFdTlmdVdRbklMS1lRaU9pUEhnTWFrVGlhSTg4Y0VHZm9RZVNaTEpBc0c3UW1iY25GWUFOd0pQd3FsbVJubGV5T2VOazZRZnM0UUprNW1QZk1kX0JxNUlLeW9oUjRmREtiNlJKdEoxcnZZUnpOQ1hyaTN6UmdXT29Wcm9zaGFpNC1BanJjZHVNVTl4VGFoZVY?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOS18ybGVlM0c4N0c5QmJLdGZ6UXppWkk4NnZqTjN6MW5GYU1WdWpZaTRIbU5tWnRFNWJxQVBKc0RNbnhjRExpZ1A3MUJWQ2VYYkJrcEc5bDR3Sm9HUlFBTTJTcjV3RS1oQTlrLWhfSkc0aEloT28tUjdFWWZzQjg3akRRNUpTMzlSMFVIQ0FJaFhrdXhsOUM4S2RuVmo2XzZuNThEYkJ3NXRUQUpYR2t3RFZJbXU?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPS1BfT04tajVCd2VDTWNJVHdRd19UMFdFYkpQMlhVY3hKcTk3MldpVlp4TUxxZU1jeDlSQmJhN0ktUnhBZ3FYZDNSR2V6Rm9TbFptZjlud2JvSGtlWGJvbEc1NzFINC1xN2tTb0FlSWgzWkpHb0g1T3R4RUZRQnNvSmNSRDJNdVk4TlpKQUJPRmE3cGlPckQzejk5Zk5yQlV6VGUxQkhQNTR2RUMyWE1OSjdHWXZpb3haOTdKX3lvbnp1QQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdDFyLXJJX3dCdzlDWjlVMk8xRVRYM1U1WE9oZmF0elB2WWt2dXNNajVBRi1kOWFtWW02UEFnZi1WekY4UlNqNHB3T2tldVJkNVU4YlBLLWV0OFh1c1o5Z19vYmhkZVE0d3Z0b0NkdmFzeWxodUlOZHJjMEFLUXV2ZzRVVUtiVUdjNnlhOFN4QlFHQ2gyNm9zLXZvVGxaa2NfRTM1TFFRM2RBelU?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWktUM1pqZC1vZ2c0bE9MekNUdHcxcTZLeEJoYzRpZ2dLZ2hDbkx6T0xZVklBY09VQXpzM056SWJoZEZiSFJyWWhIenZOdGEtclR5Y2hZa0pTX1BmdkhxTHotTGhrYXNXQkRITWlDVFp1TkhZNDF0VTJyNDVqV0NrSHVuZW9FQldXRjFWWXBjZ3FzNTZDam56VU1fTDYtZkNyTlljVER2Yk1KOHlna0RlZ01Gbw?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTEFkVmdhWXBTZmM1bUVwbGd0NjhIT1VxOU9TMGwySUpMdUQtQm16aWdVQk5JYVVTdGpnNF9fZHpmb0RHRnZFUzI1RllrVnFHakNxdHNiQ1pqeFpMNS1ueVI5QnVZQUZuT0FNNHc5ZE9SZ2JJSGlGMWJsYmxCT1NEaGM2aDA0cUR6Yk9Yd2lDWUx4N2ctdmc?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZmpsVjl4Njl2YjZGOGpBdTBCUnZRWDdPa3oxbWZvUVlwNXFwRHlrTUJiMWxjdnlmRlY3S1NLMWE1RHdlb0RIek9WdmViWFdxNnNSZEJZcjlXZ2FzUWZucEJjenhqSFlwY3NHTzgtemJsajJ2UDgtRWVIRnpEQVBUcC1RbmZoTHp2Nkp3Ylh2dmpFQkZJSlYycHhMS2E0MHRIUEZ1Vg?oc=5",
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxOM01pVXdNbXIyQXphd3VtY1VUN3BzOHdHNGxQb3hQVUpBcHdYY3VZQzhSTm9hQjVHSktSbzg4UmdMSkEwemlQdnRGRGRXUUxpek9qeVVmR3doR2hfQ3p1cHdDT19zeHAzbjhtcklkbXNPNEh4TG4zXzdpakxyS3JMbFV2N21iZWJXVm9hSzdKVG9FUFdlM2JTUkdzeXQ4S01kUEVSc1lZZHRKTUQ1TDctb2NRczhXbUpweEdPRWphbWJ6bWNXemlWSzh0MVTSAdIBQVVfeXFMTmZFOTNwVTZ3Yk51aUlUTXdGVnhmUDIwbzlzclpKZHFzSjJyenM3RVRjTlp5dnlxS1RyaFFmT05ReGMyNEpuU3k0dWo5alVZU3pNUkNyR3lzRmZpMTNBZmQ4dGZiR0VidDd3ZG1FS2x5Z1JBclRZLXpfWDFDZ2pFME1ST1hGYWJBbjlfV0pkOHQ0SHBIdGdKYjFfT2dJWjNuN0ZfRmUySEkwTzc3aDdiWTFsYTdBdVVUSFFPNHlOYl9HcXRNN2VKaEFheHBqT1RwVTd3?oc=5",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE9DbEN2UkFxeG1DQmVMSjJicWJfTWU2LW5qczJKd3JidGFGV2dndFB6RUtvamU4NWZ5WkdlTE1hR1ZKSXFRTUJJckN6V2lDeFk3NDBsZlZYT1dlQ1V6TUl5dUZfd1dCUGlUNnZRT0ZNZmdMcHprSk5nVWVR?oc=5",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNenQwSGk3cmRacmxpbDFlbDBwOHN0aHg2NnZwLUFiN2NsT3FGMWlUYzRubWVpWmZaZHhueE5PRG9Mc09rT1JBT3dQd2NQY3hSU2VXbERxSy10SmlKQ0k3QkNqX3JvTWtpNmF3Rkp0aGFvLVNWdW1MTnJ5Uk9GYmNlTzQ0c3phWkpVU29QdFQ0VXZZVVo1S2RnamMtNGpSUTZjaDVmSUpZSVl0QmNT?oc=5",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTUU5azdXVjFudjlnQmlnTHl0czhjWElKRExBdUtCNHFjVDM3SkJOQ25JWEdwOWxBWlZXWC1LS1FKSHItODZlel9NNE0xWWh5T1NoODI2c1JiOWtRWnBjdjdUTk01V1dwMjFVcTBpMS10bFJTdTZ5UUdGaFhjWUlzRy1vN3FIMkljdVRfX05DMkd0UEVDdUVlRTVHOVVOMXNlcEJEWTNLcV8zM05ZQ01nWTRHRmdOQTM5ay04YXBkZXJDenFSYUdQSkVHaTJfeUVVOTFj0gHTAUFVX3lxTE1NRTlrN1dWMW52OWdCaWdMeXRzOGNYSUpETEF1S0I0cWNUMzdKQk5DbklYR3A5bEFaVldYLUtLUUpIci04NmV6X000TTFZaHlPU2g4MjZzUmI5a1FacGN2N1ROTTVXV3AyMVVxMGkxLXRsUlN1NnlRR0ZoWGNZSXNHLW83cUgySWN1VF9fTkMyR3RQRUN1RWVFNUc5VU4xc2VwQkRZM0txXzMzTllDTWdZNEdGZ05BMzlrLThhcGRlckN6cVJhR1BKRUdpMl95RVU5MWM?oc=5",
+    "https://www.aljazeera.com/economy/2026/9/28/oil-prices-surge-after-trump-rejects-irans-plan-to-reopen-strait-of-hormuz?traffic_source=rss",
+    "https://www.aa.com.tr/en/asia-pacific/china-says-dialogue-with-us-important-pathway-for-advancing-ai/4071431",
+    "https://inbusiness.kz/ru/last/kazahstanec-nurgisa-adiletuly-vzyal-serebro-aziady-v-tyazheloj-atletike",
+    "https://inbusiness.kz/ru/last/avtoprom-kazahstana-narastil-vypusk-na-31",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMUVZNUtHcDRGeGtQS0xXMUtlSE9IaEhHRk5jaHp0ekFCTWU3aVRsbTA1VjF3YkhkTGtGUW80TTd4VFRiN09IQ05vQlcwOE93N08xVjVkNWdySGc1UWJZYmt1MmhoWmR6cU1nVllwRWhEak9uTVRvRnFBVFNwanJzSW9fb0xrOWNfNlRUckMwc1VpeDNDZWRDSmh3Mmk?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNWVWLXFpd0pCWGx3QUhlYjJObi1JeTNDX2duSm5XSURrQkNBYndMMHp4VGdYUnQ2TDBER0NIdzkxaGtXcXVBUFVmUHEyektXRzhYZURMNnZhaC04M0RwSVNxS29IUDhXWjZkNFRtcWs0YU9GVExJQVhEa2VRN3VLb3BJTS1hT3pXY0tZaG1aMWIwRUNPUTRqLUJ3dF9yeFpkSEk3MzQ5NTR5Wml2OXc?oc=5",
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPTGFWMGZPLU1vT05BNDVRUWkwNkN3MEk5bEMtVU9tRE56eW5fdUpQbzk2c0NpcDEzMjdDaXZyaFVvbWltQWhoRFdjTWgtQ2xNWlA4cmNiY0tTT0s5VUhEV0FLeTRyNkU3OWFKclJXSkJWa2c3ZkRkaHpUVW52VzZsdTVBZ1REQWJWaXExQ3hzVExmSDNkVk5wNWVCd1VOcFE5dlhYbHZKWEkwUkoyTFlWbW9PaWlEMXEwZlpGMGNaR2RObEVkTlBUbEgyRTRWRkF2REJZLU9LNm7SAdgBQVVfeXFMT0xhVjBmTy1Nb09OQTQ1UVFpMDZDdzBJOWxDLVVPbUROenluX3VKUG85NnNDaXAxMzI3Q2l2cmhVb21pbUFoaERXY01oLUNsTVpQOHJjYmNLU09LOVVIRFdBS3k0cjZFNzlhSnJSV0pCVmtnN2ZEZGh6VFVudlc2bHU1QWdUREFiVmlxMUN4c1RMZkgzZFZOcDVlQndVTnBROXZYWGx2SlhJMFJKMkxZVm1vT2lpRDFxMGZaRjBjWkdkTmxFZE5QVGxIMkU0VkZBdkRCWS1PSzZu?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB6SklfSDFsc3lIcUVkSTlhbkl1a2czSmRMV3BrTzhqOEFRbmZOWkN0ajJKOTJHMGlkVVFuSXpJTTh6LThsM3Rhd1lCZkpraE9LdDFIeHZtZXdiSVJTTF9ybXNoaTM?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa1JhMHlXQmxjdzYxUUhKT1haVEp3NHZ0UUxKOXVWN3BVWVh1T2xYd0VxdVlweUxHWWtYRVRCUEU4alhrb005MkVLeFBQT1dGMmNfaGFDZnlnM1hRNm9KY2tkc2hZRjFTbk03MWpsOWg2bFVCZ1J6ZW1XbkxzYXhoeWdpVV9tQUVGMHp6V1BPZUZsQ2RXaUZJc3lLdlRILXZ0bVRZU3V3?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxNOGJqLTF5NG1uOERjbkFYcDNLeE9zQ1B0MEpFSFZmMmg4MHNNU0RhU1JOYms0eU1TX3ZaYkRsZ2JxdDNwQ3hVbTVBZTVRS2VtUzh5TEFEQXh1WjdhQnAzaWk4NDdNaG5UUGFNMGtxTzl5LXVSRFJpOHdrb0FubmdDNFBYZllwb3pOYkxsaDlxUkttYk1DeS1pWFk3Q1Rjakd2RUgyZDRR?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNMkpualRnWldvbWhPTjhnb3otaDUxS0NRNGlfZWlWSnRVWkpZbmVNajRYdDFlT0NwMS1nZFlub0ZFVExPeWh5Q1hnQlRaUHFGNUFFX2JnTmxxeVJOellKYlB2VnBzVlNic1Q2UldRQlVGMnE1cnl3SjNiNGg3OXluNXBCandfcThMX3U3SGFaOG9SYW8?oc=5",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTFBiUVdrdGRZTVE1Y0djRXJfQVVIejkyRk1xTE1ueFotbjVpMGxrZ1RRUEk0V3QxYmMtTlFPSS0xS1BBTnBTNmxYNWtyTHBlaHdnTlpjRUpjaEhneU05NXBQZkpxQXlWMExNbmc?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE84d01sam12X2VfYVFEdmV2S0FYdU9wbEFvOHVGNGI0Z2l2ZE9SWU1aRjhXUkZKTXNISDh2V2RnZEJ2dGlHTDIzRlhCS1NUdHBKdkZOdWFBX0VSamJodmd5bm1DQjh0SDZCWGdSNGVzX1NWZTRZLVJ1VnRvTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxPU1U3ZXJidUhta0xNakFfVy0ydEtOVGRGbEhqdVEwRW5nYmVJVk1mbGR3SV9FUUpscGNJc2VWVnBiNi13X0VIOU1pVDFHejlialBTTS13ajFJbGhLWUhGR085aDlSRW1WSnBXdlI0R2pyM0dueWZVdDFHZzFza0tId1FEWllLUk9vel92RlpKdzhVOFY00gGaAUFVX3lxTE1hZHplc2wwS25rZ25mVnJDUDNQNjNRcWtITEFZTXNaT20tUFFERjRZVzYxdjYzNk5PY1RCbTJZR0F3b05qR3JpbjJnLWwxaERBaXphNU5HVHliaHU5Zi1fdnM0RDZ5aWtPWFU3ZXU0Rl9UbGxsQjgwMk11Wm5xZHI4ejRyY2lJcGlIckdybFFuLUpQMkx2bzl6ZUE?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxQaHRfQ2Z2SmlaeFRvQWt6Q0tjNDQ5bDJLaDIyY2xnaTctZFJTNjVINUptZTlCYUlGZDVENDNFYTU1ZTV6SVBDY3VaTkxTZk92Tnd4VlZfRExqcC1LZmQxYXR3dmFmUUMxY0Q4LXhFak1rNC1COF9ueFN4dU0zRWdEb2NWWdIBgwFBVV95cUxQaHRfQ2Z2SmlaeFRvQWt6Q0tjNDQ5bDJLaDIyY2xnaTctZFJTNjVINUptZTlCYUlGZDVENDNFYTU1ZTV6SVBDY3VaTkxTZk92Tnd4VlZfRExqcC1LZmQxYXR3dmFmUUMxY0Q4LXhFak1rNC1COF9ueFN4dU0zRWdEb2NWWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxQazBoOEtvYjlGdWdzRkZMbl9jeXpVUE53TkxiajM0ZHg4YkRMVkVRRXJxZU9GalBPU1o0UjhHTFlHRW16YTRpZ2pFcGlrM1ljcWlSdTlmV1hNQzkzU0tLb2o0VElnSWZLZWtTcXkyNEZ2enZVbkhmblo3ekMtZDAxdm9pRFg5ei12WmUya2tB?oc=5",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPY3RRUVNWcVpJc2V6MFRzWDZldlhfY3RHYlllVmRZN045bFpXa3dyMlFjazBPb0VuMjMyT2hjRktTRHZmeHBsUTZMU0tYRUlYdF9WUElCSkxrQzhESXFSWV91Z3pQQTJlS3ZLMXBNdG9aMnVfb1ZKLTJENU5NOEROLWludXU4S1JwTUZ1ZnJFWWtXeFNGak5FSkh3WXdmRlJVWlMwN3dhbzg2NV9VR19MM2pURHQ3S05idVozTThMSVg?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSHJhMENUMUlZemJOcXZNWjlKd2FQY0lhZWh3RzRfTDNEVjUzQ0xqZ1VHdU9EcHY5Ty12MlQ5djY0WnllRUtKaF9SVkZ0LTRYNy1fZGtPOWZXa0xyMTBwUXdXU1piUEgtTzBEeF9jY3dOdjlIVDRYNFEzSzVXQi1VMzJOTVRPbUFIOE96Uk5QSW1xR3Q3QUNNYzk3eVRUZ0tjN1FQS2ZIZkFBUHpnRlF5d2dPczQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcVhQbFJWa3BzeDliUGZGQ1ZVY19mbmY1bmNleGw0ODF6RjV2a0ljSkp3a29lLTBpd1A5M2hxWTg0UmZoSWUzRHFPTEhMQ0t0bUVWWmdIbXJJVW5qVHpfSnZxTzlWdTczY0RZamlVVldsZVZKS185Q21LcG82bkYwZEV0UkdET1AzVUozeWgwekpYSXhJZHo5NVZxV0k2aTBpT2pwUjRreS10dlRNMDBxM2NzYWRkcmFqZkdDMDFNWm1BTkpQcFdGdzN3?oc=5",
+    "https://www.bbc.co.uk/news/articles/c83v4qe70r0ko?at_medium=RSS&at_campaign=rss",
+    "https://inbusiness.kz/ru/last/eshe-odno-zemletryasenie-zaregistrirovali-nedaleko-ot-almaty",
+    "https://www.scmp.com/news/people-culture/trending-china/article/3368944/china-professor-sparks-debate-claiming-one-third-youth-are-unsuitable-marriage?utm_source=rss_feed",
+    "https://www.scmp.com/news/hong-kong/law-and-crime/article/3369058/hong-kong-cracks-down-visitors-abusing-visas-run-one-stop-shop-tourist-services?utm_source=rss_feed",
+    "https://inbusiness.kz/ru/last/sud-atyrau-otkazal-ncoc-v-otmene-vzyskaniya-shtrafa-na-2-3-trln-tenge"
   ],
   "recent": [
-    {
-      "tokens": [
-        "agency",
-        "board",
-        "chief",
-        "despit",
-        "gaza",
-        "met",
-        "peace",
-        "role",
-        "saying",
-        "unrwa"
-      ],
-      "ts": 1790331421.5505848
-    },
-    {
-      "tokens": [
-        "казахс",
-        "подеше",
-        "резко",
-        "юань"
-      ],
-      "ts": 1790331427.4528525
-    },
-    {
-      "tokens": [
-        "asia",
-        "cbre",
-        "compel",
-        "flat",
-        "growth",
-        "hotels",
-        "invest",
-        "most",
-        "pacifi",
-        "supply",
-        "travel"
-      ],
-      "ts": 1790331449.0277307
-    },
-    {
-      "tokens": [
-        "ветери",
-        "казахс",
-        "оформи",
-        "пасеку",
-        "паспор",
-        "придет",
-        "пчелов"
-      ],
-      "ts": 1790331453.2609973
-    },
-    {
-      "tokens": [
-        "china",
-        "climat",
-        "deal",
-        "flood",
-        "india",
-        "nepal",
-        "pushes",
-        "ravage"
-      ],
-      "ts": 1790331462.3536005
-    },
     {
       "tokens": [
         "costs",
@@ -15518,113 +15453,84 @@
         "ставку"
       ],
       "ts": 1790588872.8354545
+    },
+    {
+      "tokens": [
+        "cash",
+        "drive",
+        "flow",
+        "free",
+        "ghana",
+        "growth",
+        "higher",
+        "oil",
+        "output",
+        "positi",
+        "prices",
+        "swings",
+        "tullow"
+      ],
+      "ts": 1790590741.7437074
+    },
+    {
+      "tokens": [
+        "care",
+        "decade",
+        "dilnot",
+        "nhs",
+        "social",
+        "style",
+        "system",
+        "take"
+      ],
+      "ts": 1790590747.5854194
+    },
+    {
+      "tokens": [
+        "china",
+        "claimi",
+        "debate",
+        "marria",
+        "one",
+        "profes",
+        "sparks",
+        "third",
+        "unsuit",
+        "youth"
+      ],
+      "ts": 1790590775.7690046
+    },
+    {
+      "tokens": [
+        "abusin",
+        "cracks",
+        "down",
+        "hong",
+        "kong",
+        "one",
+        "run",
+        "servic",
+        "shop",
+        "stop",
+        "touris",
+        "visas"
+      ],
+      "ts": 1790590779.0577207
+    },
+    {
+      "tokens": [
+        "ncoc",
+        "взыска",
+        "оспори",
+        "смогла",
+        "тенге",
+        "трлн",
+        "штрафа"
+      ],
+      "ts": 1790590782.6923711
     }
   ],
   "recent_ru": [
-    {
-      "tokens": [
-        "агентс",
-        "бапор",
-        "бывший",
-        "встреч",
-        "газе",
-        "глава",
-        "заявле",
-        "мира",
-        "несмот",
-        "оон",
-        "органи",
-        "отсутс",
-        "провел",
-        "ранние",
-        "роли",
-        "совет"
-      ],
-      "ts": 1790331421.5505905
-    },
-    {
-      "tokens": [
-        "141",
-        "август",
-        "валюту",
-        "вырос",
-        "доллар",
-        "достиг",
-        "заметн",
-        "казахс",
-        "млрд",
-        "наличн",
-        "обменн",
-        "продаж",
-        "рубли",
-        "скупаю",
-        "спрос",
-        "тенге",
-        "чистые"
-      ],
-      "ts": 1790331427.4528573
-    },
-    {
-      "tokens": [
-        "азии",
-        "выросл",
-        "доллар",
-        "инвест",
-        "интере",
-        "месяце",
-        "миллиа",
-        "отели",
-        "первые",
-        "привле",
-        "путеше",
-        "растущ",
-        "регион",
-        "фоне",
-        "шесть"
-      ],
-      "ts": 1790331449.0277352
-    },
-    {
-      "tokens": [
-        "2026",
-        "ветпас",
-        "все",
-        "вступа",
-        "затраг",
-        "казахс",
-        "минсел",
-        "новые",
-        "октябр",
-        "пасеки",
-        "получа",
-        "правил",
-        "пчелов",
-        "силу",
-        "страны",
-        "хозяйс"
-      ],
-      "ts": 1790331453.261002
-    },
-    {
-      "tokens": [
-        "бедств",
-        "ввп",
-        "зовет",
-        "индию",
-        "китай",
-        "климат",
-        "минист",
-        "непал",
-        "оон",
-        "премье",
-        "процен",
-        "стихий",
-        "стоят",
-        "стране",
-        "шах"
-      ],
-      "ts": 1790331462.353605
-    },
     {
       "tokens": [
         "власти",
@@ -26969,6 +26875,111 @@
         "ставку"
       ],
       "ts": 1790588872.8354585
+    },
+    {
+      "tokens": [
+        "oil",
+        "tullow",
+        "высоки",
+        "вышла",
+        "гане",
+        "добычи",
+        "компан",
+        "нефть",
+        "плюс",
+        "позвол",
+        "показа",
+        "потоку",
+        "рост",
+        "свобод",
+        "улучши",
+        "финанс",
+        "цены"
+      ],
+      "ts": 1790590741.7437124
+    },
+    {
+      "tokens": [
+        "nhs",
+        "англии",
+        "времен",
+        "десяти",
+        "дилнот",
+        "займет",
+        "массы",
+        "миллиа",
+        "образц",
+        "потреб",
+        "реформ",
+        "систем",
+        "создан",
+        "соцобе",
+        "фунтов",
+        "эконом",
+        "эндрю"
+      ],
+      "ts": 1790590747.585424
+    },
+    {
+      "tokens": [
+        "брака",
+        "брачны",
+        "другог",
+        "жертво",
+        "ляна",
+        "молодё",
+        "препод",
+        "профес",
+        "ради",
+        "словам",
+        "создан",
+        "союз",
+        "способ",
+        "требуе",
+        "треть",
+        "универ",
+        "фуданс",
+        "юнгана"
+      ],
+      "ts": 1790590775.7690094
+    },
+    {
+      "tokens": [
+        "аресто",
+        "возрас",
+        "гонкон",
+        "женщин",
+        "иммигр",
+        "ловят",
+        "наруше",
+        "нелега",
+        "пребыв",
+        "служба",
+        "турист",
+        "услови",
+        "четыре"
+      ],
+      "ts": 1790590779.0577242
+    },
+    {
+      "tokens": [
+        "ncoc",
+        "атырау",
+        "взыска",
+        "кашага",
+        "операт",
+        "отказа",
+        "отклон",
+        "отмени",
+        "прекра",
+        "суд",
+        "тенге",
+        "требов",
+        "трлн",
+        "штраф",
+        "штрафа"
+      ],
+      "ts": 1790590782.6923752
     }
   ],
   "weather_date": "2026-09-28"
