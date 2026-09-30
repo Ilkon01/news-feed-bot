@@ -72,9 +72,11 @@ RESPONSE_SCHEMA = {
         "title_ru": {"type": "STRING"},
         "lead": {"type": "STRING"},
         "detail": {"type": "STRING"},
+        "people": {"type": "ARRAY", "items": {"type": "STRING"}},
     },
     "required": [
-        "send", "topic", "country", "importance", "title_ru", "lead", "detail"
+        "send", "topic", "country", "importance", "title_ru", "lead", "detail",
+        "people",
     ],
 }
 
@@ -588,8 +590,16 @@ def build_prompt(item, config):
             "агитационной риторикой.\n"
         )
 
+    today = local_now(config)
+    today_str = f"{today.day} {MONTHS_GEN[today.month - 1]} {today.year}"
+
     return f"""Ты — персональный новостной редактор. Решаешь, нужна ли эта
 новость читателю, и если да — пишешь её для Telegram-канала.
+
+СЕГОДНЯ: {today_str}. Твои собственные знания о мире УСТАРЕЛИ.
+Кто сейчас президент, премьер, министр или глава компании — бери
+ТОЛЬКО из текста статьи ниже, НИКОГДА из своей памяти. Если в статье
+сказано «Трамп», нельзя писать «Байден», и наоборот.
 
 О ЧИТАТЕЛЕ:
 {profile}
@@ -629,6 +639,11 @@ def build_prompt(item, config):
 1. send — подходит ли новость читателю.
 2. topic — ровно одно название РАЗДЕЛА из списка выше, дословно,
    например «Технологии и ИИ». Если ни один не подходит — «Прочее».
+   Раздел «Ислам и мусульманский мир» — ТОЛЬКО для новостей, где речь
+   прямо об исламе, мусульманах или движении Хизмет. Новости о
+   христианстве, Ватикане, иудаизме и других религиях — раздел
+   «Другие религии». Обычная политика в мусульманской стране без
+   религиозной стороны — «Мировая политика».
 3. country — страна ИЛИ регион, ГДЕ ПРОИСХОДИТ СОБЫТИЕ, по-русски.
    Это НЕ страна издания. Примеры: «Израиль», «США», «Казахстан»,
    «Газа», «Китай». Если событие охватывает несколько стран — укажи
@@ -645,9 +660,16 @@ def build_prompt(item, config):
      - решение, прямо и серьёзно затрагивающее Казахстан.
    ВО ВСЕХ ОСТАЛЬНЫХ СЛУЧАЯХ — ОБЫЧНО.
 
-5. title_ru — ШАГ 1, ЗАГОЛОВОК. Строго не длиннее {title_max} знаков
-   вместе с пробелами (примерно 5–7 слов) — так он уместится в две
-   строки на телефоне. Только суть: что случилось или кто что сделал.
+5. title_ru — ШАГ 1, ЗАГОЛОВОК. 4–7 слов, примерно до {title_max}
+   знаков — так он уместится в две строки на телефоне.
+   - ВСЕГДА только целыми словами. Никогда не обрывай слово: если
+     заголовок длинный — перефразируй короче, а не обрезай.
+   - Заголовок должен быть понятен САМ ПО СЕБЕ, без текста ниже:
+     КТО сделал ЧТО. Если прочитав его, нельзя понять, что произошло, —
+     это плохой заголовок.
+     Плохо: «СМИ и Трамп: сети ждут новостей» — что случилось, непонятно.
+     Плохо: «Anthropic предупреждает об экзистенциальных ри» — оборван.
+     Хорошо: «Anthropic назвала риски ИИ в документах к IPO».
    Без подробностей, без точки в конце.
    Это не перевод, а самостоятельный заголовок, как у редактора
    русскоязычного издания: живой, естественный, читается с первого раза.
@@ -685,8 +707,30 @@ def build_prompt(item, config):
      - коротко контекст (1–2 предложения): почему это происходит,
        что было до этого;
      - что будет дальше и когда.
-   НЕ повторяй lead дословно — развивай его. Если в тексте статьи
-   фактов мало — пиши короче, но только по существу.
+   Каждое предложение detail — НОВЫЙ факт, которого нет ни в
+   заголовке, ни в lead. Пересказ уже сказанного другими словами —
+   это повтор, он запрещён.
+   Пример повтора, так делать НЕЛЬЗЯ:
+     Заголовок: «Palo Alto Networks запускает ИИ-сервис»
+     lead: «Новая платформа кибербезопасности создана на базе моделей
+     Claude и GPT.»
+     detail: «Компания Palo Alto Networks представила новый сервис
+     кибербезопасности на основе ИИ. В основе используются модели
+     Claude и GPT.» — всё это уже сказано выше.
+   Если в тексте статьи нет новых фактов для detail — оставь detail
+   пустым. Пустой detail лучше повтора.
+
+8. people — список ВСЕХ людей, которых ты упомянул в title_ru, lead
+   и detail, в том написании, как они указаны в тексте статьи
+   (латиницей, если статья на английском): ["Donald Trump", "Xi
+   Jinping"]. Если людей нет — пустой список. Бот сверит каждое имя
+   с текстом статьи.
+
+САМОПРОВЕРКА ПЕРЕД ОТВЕТОМ:
+- В заголовке все слова целые, и из него ясно, что произошло?
+- Каждое имя в тексте действительно есть в статье?
+- В lead нет того, что уже сказано в заголовке?
+- В detail нет того, что уже сказано в заголовке или lead?
 
 ПРАВИЛА НАПИСАНИЯ:
 {writing_text}
@@ -706,15 +750,32 @@ def build_prompt(item, config):
 - Не пиши фраз-заполнителей вроде «эксперты отмечают», «это вызывает
   обеспокоенность», «это подчёркивает растущую роль». Лучше меньше,
   но по существу.
+- НИКОГДА не пиши о том, чего в статье НЕТ: «подробности не
+  приводятся», «другие детали не сообщаются», «компания не раскрыла
+  сроки». Читателю это ничего не даёт.
+- Не упоминай, откуда взята новость: «об этом сообщило агентство»,
+  «как стало известно из публикации».
+
+ЕСЛИ МАТЕРИАЛА МАЛО. Если в тексте статьи нет конкретики — ни имён,
+ни цифр, ни деталей, только общая фраза, — ставь send: false.
+Исключение — события уровня СРОЧНО.
 
 Если новость не подходит — send: false, остальные поля пустые строки."""
 
 
-def ask_gemini(item, config):
+def ask_gemini(item, config, fix_note=""):
     """Спрашивает Gemini. Если модель перегружена — пробует следующую.
-    Возвращает словарь, {} при сбое, None если исчерпан дневной лимит."""
+    fix_note — замечания к прошлому ответу, если его пришлось вернуть
+    на доработку. Возвращает словарь, {} при сбое."""
+    prompt = build_prompt(item, config)
+    if fix_note:
+        prompt += (
+            "\n\nТВОЙ ПРОШЛЫЙ ОТВЕТ НА ЭТУ НОВОСТЬ ОТКЛОНЁН. Ошибки:\n"
+            + fix_note
+            + "\nНапиши ответ заново, исправив эти ошибки."
+        )
     payload = {
-        "contents": [{"parts": [{"text": build_prompt(item, config)}]}],
+        "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.2,
             "maxOutputTokens": 3000,
@@ -758,6 +819,180 @@ def ask_gemini(item, config):
 
     print(f"[GEMINI] все модели недоступны, пропускаю «{item['title'][:45]}»")
     return {}
+
+
+# ---------- Проверка ответа модели ----------
+
+# Известные фигуры: как имя выглядит в русском тексте -> как оно может
+# выглядеть в исходнике. Если модель написала имя, которого в статье
+# нет, — это выдумка из её устаревшей памяти (например, «Байден»
+# вместо «Трамп»).
+KNOWN_PEOPLE = {
+    "байден": ["biden", "байден"],
+    "трамп": ["trump", "трамп"],
+    "харрис": ["harris", "харрис"],
+    "вэнс": ["vance", "вэнс", "вэнс"],
+    "обам": ["obama", "обам"],
+    "путин": ["putin", "путин"],
+    "зеленск": ["zelensk", "зеленск"],
+    "цзиньпин": ["jinping", "цзиньпин", "xi"],
+    "нетаньяху": ["netanyahu", "нетаньяху"],
+    "эрдоган": ["erdogan", "erdoğan", "эрдоган"],
+    "макрон": ["macron", "макрон"],
+    "мерц": ["merz", "мерц"],
+    "шольц": ["scholz", "шольц"],
+    "стармер": ["starmer", "стармер"],
+    "сунак": ["sunak", "сунак"],
+    "моди": ["modi", "моди"],
+    "токаев": ["tokayev", "tokaev", "токаев"],
+    "назарбаев": ["nazarbayev", "nazarbaev", "назарбаев"],
+    "мирзиёев": ["mirziyoyev", "мирзиёев", "мирзиеев"],
+    "лукашенк": ["lukashenk", "лукашенк"],
+    "гюлен": ["gulen", "gülen", "гюлен"],
+    "гутерриш": ["guterres", "гутерриш"],
+    "маск": ["musk", "маск"],
+    "альтман": ["altman", "альтман"],
+    "амодеи": ["amodei", "амодеи"],
+}
+
+# Слова, которыми заголовок может законно заканчиваться, хоть они
+# и короткие: ИИ, ЕС, ООН и т.п. пишутся заглавными и проходят сами.
+SHORT_OK = {"ии", "ес", "сша", "оон", "кнр", "рф", "рк", "ai", "ит"}
+
+# Признаки пустых фраз о том, чего в статье нет
+FILLER_NEG = re.compile(
+    r"\bне\s+(привод|раскры|уточн|сообщ|называ|указ|comment|disclos)", re.I)
+FILLER_OBJ = re.compile(
+    r"(подробност|детал|цифр|срок|стоимост|информаци|сумм)", re.I)
+FILLER_SRC = re.compile(
+    r"(стало известно из|сообщ\w* (агентств|издани)|опубликованн\w* "
+    r"(агентств|издани)|по данным (агентства|издания)|в (статье|материале) "
+    r"(говорится|не))", re.I)
+
+
+def source_blob(item):
+    return f"{item.get('title', '')} {item.get('text', '')}".lower()
+
+
+TITLES = {"pope", "president", "prime", "minister", "king", "queen",
+          "prince", "sheikh", "dr", "mr", "mrs", "папа", "президент",
+          "король", "принц", "шейх", "премьер", "министр"}
+
+
+def name_in_source(name, blob):
+    """Есть ли человек в исходнике. Достаточно, чтобы нашлось любое из
+    слов имени (кроме титулов) — по началу слова, чтобы «Trump's»
+    и «Трампа» тоже находились. Проверка нарочно мягкая: её дело —
+    поймать человека, которого в статье нет совсем."""
+    words = [w for w in re.findall(r"[\w\-']+", name.lower())
+             if len(w) >= 3 and w not in TITLES]
+    if not words:
+        return True
+    # Имя по-русски, а статья на английском — сверить нельзя.
+    # Известных людей в этом случае ловит список KNOWN_PEOPLE.
+    if re.search(r"[а-яё]", name.lower()):
+        cyr = len(re.findall(r"[а-яё]", blob))
+        if cyr < len(blob) * 0.3:
+            return True
+    return any(re.search(r"\b" + re.escape(w[:5]), blob) for w in words)
+
+
+def find_problems(data, item):
+    """Ищет в ответе модели ошибки, из-за которых новость нельзя
+    отправлять как есть. Возвращает список понятных описаний."""
+    problems = []
+    title = (data.get("title_ru") or "").strip()
+    ru_text = f"{title} {data.get('lead', '')} {data.get('detail', '')}".lower()
+    blob = source_blob(item)
+
+    # 1. Оборванный заголовок: последнее слово — обрубок
+    words = re.findall(r"[A-Za-zА-Яа-яЁё0-9\-]+", title)
+    if words:
+        last = words[-1]
+        if (len(last) <= 2 and last.lower() == last
+                and last.lower() not in SHORT_OK and not last.isdigit()):
+            problems.append(
+                f"заголовок оборван на «{last}» — нужен целый, "
+                f"понятный заголовок из целых слов")
+    if title.endswith(("-", "…", "...", ",", ":")):
+        problems.append("заголовок обрывается на полуслове")
+
+    # 2. Имена, которых нет в статье
+    for person in data.get("people") or []:
+        if isinstance(person, str) and not name_in_source(person, blob):
+            problems.append(
+                f"имени «{person}» нет в тексте статьи — не придумывай имена")
+    for ru_stem, src_forms in KNOWN_PEOPLE.items():
+        if re.search(r"\b" + ru_stem, ru_text):
+            found = any(re.search(r"\b" + re.escape(f), blob) for f in src_forms)
+            if not found:
+                problems.append(
+                    f"в тексте упомянут «{ru_stem.capitalize()}…», а в статье "
+                    f"этого человека нет — бери имена только из статьи")
+    return problems
+
+
+def split_sentences(text):
+    return [x.strip() for x in re.split(r"(?<=[.!?…])\s+", text) if x.strip()]
+
+
+SYNONYMS = [
+    (r"искусственн\w*\s+интеллект\w*", " ии "),
+    (r"\bai\b", " ии "),
+]
+
+
+# Общие слова, которые сами по себе ничего не сообщают. Без них
+# пересказ «Компания X представила новый сервис на основе ИИ» виден
+# как повтор «X запускает ИИ-сервис».
+GENERIC = {
+    "компа", "предс", "новый", "новая", "новое", "новые", "основ", "работ",
+    "котор", "также", "стало", "заяви", "сообщ", "отмет", "рамка", "связи",
+    "решен", "напра", "испол", "разра", "проек",
+}
+
+
+def meaning_tokens(text):
+    """Значимые слова для сравнения по смыслу: основы по 5 букв,
+    синонимы приведены к одному виду, общие слова отброшены."""
+    t = text.lower()
+    for pat, repl in SYNONYMS:
+        t = re.sub(pat, repl, t)
+    words = re.findall(r"[a-zа-яё0-9]+", t)
+    toks = {w[:5] for w in words if len(w) > 2 and w not in STOPWORDS}
+    toks |= {w for w in words if w == "ии"}
+    return toks - GENERIC
+
+
+def clean_detail(data):
+    """Убирает из раскрывающегося блока пустые фразы («подробности не
+    приводятся», «об этом сообщило агентство») и предложения, которые
+    повторяют заголовок и текст под ним. Возвращает сколько убрано."""
+    detail = (data.get("detail") or "").strip()
+    if not detail:
+        return 0
+    known = meaning_tokens(f"{data.get('title_ru', '')} {data.get('lead', '')}")
+    removed = 0
+    new_pars = []
+    for par in re.split(r"\n\s*\n", detail):
+        kept = []
+        for sent in split_sentences(par):
+            if FILLER_NEG.search(sent) and FILLER_OBJ.search(sent):
+                removed += 1
+                continue
+            if FILLER_SRC.search(sent):
+                removed += 1
+                continue
+            toks = meaning_tokens(sent)
+            if toks and len(toks & known) / len(toks) >= 0.6:
+                removed += 1
+                continue
+            kept.append(sent)
+            known |= toks
+        if kept:
+            new_pars.append(" ".join(kept))
+    data["detail"] = "\n\n".join(new_pars)
+    return removed
 
 
 # ---------- Оформление ----------
@@ -1131,8 +1366,10 @@ def main():
     # порядок: самые авторитетные источники первыми, но мировые
     # и казахстанские новости вперемешку — в пропорции kz_share
     unique.sort(key=lambda i: -i["trust"])
-    batch = build_queue(unique, kz_share)[:ai_limit]
-    print(f"Пойдёт в Gemini: до {len(batch)}"
+    # Берём с запасом: часть новостей отсеется, если у них не найдётся
+    # полного текста статьи.
+    batch = build_queue(unique, kz_share)[:ai_limit * 2]
+    print(f"Кандидатов на обработку: {len(batch)}"
           f" (из них казахстанских: {sum(1 for i in batch if i.get('kz'))})")
 
     # ШАГ 4 — полный текст статей. Качаем параллельно, чтобы не
@@ -1148,10 +1385,25 @@ def main():
             enriched += fetched
 
     # ШАГ 5-6 — ИИ и отправка
+    min_text = config.get("min_text_chars", 800)
     ai_used = 0
     last_call = 0.0
+    thin = 0
+    retried = 0
+    rejected = 0
+    cleaned = 0
+
+    def call_ai(it, note=""):
+        nonlocal ai_used, last_call
+        wait = pause - (time.time() - last_call)
+        if wait > 0:
+            time.sleep(wait)
+        last_call = time.time()
+        ai_used += 1
+        return ask_gemini(it, config, note)
+
     for item in batch:
-        if sent >= send_limit:
+        if sent >= send_limit or ai_used >= ai_limit:
             break
 
         group = item["group"]
@@ -1160,6 +1412,14 @@ def main():
             # у всех изданий сюжета настоящий адрес оказался заблокированным
             new_ids.append(item["id"])
             continue
+
+        # Без текста статьи модели не из чего писать: выходит пересказ
+        # заголовка на три уровня. Такие новости не присылаем.
+        if len(best.get("text") or "") < min_text:
+            thin += 1
+            new_ids.append(item["id"])
+            continue
+
         if best is not item:
             swapped += 1
 
@@ -1169,22 +1429,28 @@ def main():
             kz_skipped += 1
             continue
 
-        # выдерживаем промежуток между обращениями к ИИ
-        wait = pause - (time.time() - last_call)
-        if wait > 0:
-            time.sleep(wait)
-        last_call = time.time()
-
-        data = ask_gemini(best, config)
-        ai_used += 1
-
-        if data is None:
-            break
-
+        data = call_ai(best)
         new_ids.append(item["id"])
 
         if not (data.get("send") and data.get("lead")):
             continue
+
+        # Проверка ответа: оборванный заголовок, выдуманные имена.
+        # Одна попытка исправить, потом — не присылаем.
+        problems = find_problems(data, best)
+        if problems and ai_used < ai_limit:
+            retried += 1
+            data = call_ai(best, "\n".join(f"- {p}" for p in problems))
+            if not (data.get("send") and data.get("lead")):
+                continue
+            problems = find_problems(data, best)
+        if problems:
+            rejected += 1
+            print(f"  отклонено после проверки: «{data.get('title_ru','')[:50]}»"
+                  f" — {problems[0]}")
+            continue
+
+        cleaned += clean_detail(data)
 
         is_kz = best.get("kz") or (data.get("country") or "").startswith("Казахстан")
         if is_kz and kz_sent >= kz_limit:
@@ -1213,8 +1479,11 @@ def main():
     state["seen"] = state["seen"] + new_ids
     save_state(state, memory_hours)
     print(
-        f"Обращений к Gemini: {ai_used}. "
+        f"Обращений к Gemini: {ai_used} (повторных: {retried}). "
         f"Догружено статей: {enriched}. "
+        f"Без текста статьи, пропущено: {thin}. "
+        f"Отклонено проверкой: {rejected}. "
+        f"Убрано пустых и повторных фраз: {cleaned}. "
         f"Текст взят у другого издания сюжета: {swapped}. "
         f"Отсеяно как дубль после перевода: {ru_dups}. "
         f"Отложено по балансу Казахстан/мир: {kz_skipped}. "
