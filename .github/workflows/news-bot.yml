@@ -41,14 +41,23 @@ jobs:
       - name: Установить зависимости
         run: pip install -r requirements.txt
 
+      # Свой лимит у шага бота — меньше лимита всего запуска. Если бот
+      # зависнет, GitHub остановит только этот шаг, и следующий шаг
+      # успеет сохранить state.json. Сам бот прекращает обработку
+      # на 8-й минуте (max_run_minutes в config.yaml).
       - name: Запустить бота
+        timeout-minutes: 12
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python news_bot.py
 
+      # Выполняется всегда, даже если бот упал или был остановлен:
+      # бот записывает state.json после каждой отправленной новости,
+      # и без этого шага уже отправленное ушло бы в канал повторно.
       - name: Сохранить state.json обратно в репозиторий
+        if: always()
         run: |
           # В тихие часы бот ничего не создаёт — сохранять нечего
           [ -f state.json ] || exit 0

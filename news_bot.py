@@ -296,7 +296,10 @@ def domain_of(url):
 
 
 def is_blocked(item, blocked):
-    """Отсев нежелательных изданий по домену или названию."""
+    """Отсев нежелательных изданий по домену или названию.
+      .ru          — зона целиком;
+      rt.com       — домен и его поддомены (но не sport.com);
+      tass, медуза — часть адреса или названия издания."""
     dom = domain_of(item.get("link", ""))
     src_name = (item.get("source") or "").lower()
     for b in blocked:
@@ -305,6 +308,9 @@ def is_blocked(item, blocked):
             continue
         if b.startswith("."):          # зона целиком, например .ru
             if dom.endswith(b):
+                return True
+        elif "." in b and " " not in b:  # конкретный домен
+            if dom == b or dom.endswith("." + b) or src_name == b:
                 return True
         elif b in dom or b in src_name:
             return True
@@ -473,11 +479,23 @@ def title_tokens(title):
 
 
 def similarity(tokens_a, tokens_b):
-    """Доля общих слов (мера Жаккара)."""
+    """Доля общих слов от более короткого заголовка."""
     if not tokens_a or not tokens_b:
         return 0.0
     common = len(tokens_a & tokens_b)
     return common / min(len(tokens_a), len(tokens_b))
+
+
+def is_sent_before(tokens, sent_sets, threshold, min_common):
+    """Совпадает ли сюжет с уже отправленным. Кроме доли общих слов
+    нужно ещё и минимум min_common общих слов: иначе «Israel strikes
+    Beirut» и «Israel strikes Gaza» (общие только israel и strike)
+    считались одной новостью, и вторая пропадала на трое суток."""
+    for rs in sent_sets:
+        if (len(tokens & rs) >= min_common
+                and similarity(tokens, rs) >= threshold):
+            return True
+    return False
 
 
 def is_repeat_ru(data, recent_ru, threshold):
@@ -493,17 +511,18 @@ def is_repeat_ru(data, recent_ru, threshold):
     return False, tokens
 
 
-def deduplicate(items, threshold, recent):
+def deduplicate(items, threshold, recent, min_common=3):
     """Оставляет по одной новости на сюжет — от источника с высшим доверием.
     Также убирает то, что уже отправлялось в прошлых запусках."""
     for item in items:
         item["tokens"] = title_tokens(item["title"])
 
-    # 1) убрать совпадающее с уже отправленным ранее
+    # 1) убрать совпадающее с уже отправленным ранее. Перефразированный
+    # дубль, который здесь проскочит, поймает сверка по русскому тексту.
     recent_sets = [set(r["tokens"]) for r in recent]
     not_repeated, repeated = [], []
     for item in items:
-        if any(similarity(item["tokens"], rs) >= threshold for rs in recent_sets):
+        if is_sent_before(item["tokens"], recent_sets, threshold, min_common):
             repeated.append(item)
         else:
             not_repeated.append(item)
@@ -789,7 +808,9 @@ def ask_gemini(item, config, fix_note=""):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 3000,
+            # С запасом: у «думающих» моделей размышления входят в этот
+            # лимит, и при 3000 ответ мог обрываться посреди JSON.
+            "maxOutputTokens": 8192,
             "responseMimeType": "application/json",
             "responseSchema": RESPONSE_SCHEMA,
         },
@@ -822,11 +843,23 @@ def ask_gemini(item, config, fix_note=""):
                 break
 
             try:
-                raw = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
-                return json.loads(raw)
+                cand = resp.json()["candidates"][0]
+                raw = cand["content"]["parts"][0]["text"]
+                data = json.loads(raw)
+                if not isinstance(data, dict):
+                    raise ValueError("ответ не объект")
+                data["_model"] = model
+                return data
             except Exception as e:
-                print(f"[GEMINI/{model}] не разобрал ответ: {e}")
-                return {}
+                reason = ""
+                try:
+                    reason = resp.json()["candidates"][0].get("finishReason", "")
+                except Exception:
+                    pass
+                print(f"[GEMINI/{model}] не разобрал ответ"
+                      f"{' (' + reason + ')' if reason else ''}: "
+                      f"{type(e).__name__}, пробую следующую модель")
+                break
 
     print(f"[GEMINI] все модели недоступны, пропускаю «{item['title'][:45]}»")
     return {}
@@ -838,33 +871,36 @@ def ask_gemini(item, config, fix_note=""):
 # выглядеть в исходнике. Если модель написала имя, которого в статье
 # нет, — это выдумка из её устаревшей памяти (например, «Байден»
 # вместо «Трамп»).
-KNOWN_PEOPLE = {
-    "байден": ["biden", "байден"],
-    "трамп": ["trump", "трамп"],
-    "харрис": ["harris", "харрис"],
-    "вэнс": ["vance", "вэнс", "вэнс"],
-    "обам": ["obama", "обам"],
-    "путин": ["putin", "путин"],
-    "зеленск": ["zelensk", "зеленск"],
-    "цзиньпин": ["jinping", "цзиньпин", "xi"],
-    "нетаньяху": ["netanyahu", "нетаньяху"],
-    "эрдоган": ["erdogan", "erdoğan", "эрдоган"],
-    "макрон": ["macron", "макрон"],
-    "мерц": ["merz", "мерц"],
-    "шольц": ["scholz", "шольц"],
-    "стармер": ["starmer", "стармер"],
-    "сунак": ["sunak", "сунак"],
-    "моди": ["modi", "моди"],
-    "токаев": ["tokayev", "tokaev", "токаев"],
-    "назарбаев": ["nazarbayev", "nazarbaev", "назарбаев"],
-    "мирзиёев": ["mirziyoyev", "мирзиёев", "мирзиеев"],
-    "лукашенк": ["lukashenk", "лукашенк"],
-    "гюлен": ["gulen", "gülen", "гюлен"],
-    "гутерриш": ["guterres", "гутерриш"],
-    "маск": ["musk", "маск"],
-    "альтман": ["altman", "альтман"],
-    "амодеи": ["amodei", "амодеи"],
-}
+# Имя ищется С ЗАГЛАВНОЙ буквы, а после основы — исключения для обычных
+# слов: иначе «маски» принимались за Маска, «трамплин» — за Трампа,
+# «мерцание» — за Мерца, и нормальная новость отклонялась.
+KNOWN_PEOPLE = [
+    ("Байден", r"Байден", ["biden", "байден"]),
+    ("Трамп", r"Трамп(?!лин)", ["trump", "трамп"]),
+    ("Харрис", r"Харрис", ["harris", "харрис"]),
+    ("Вэнс", r"Вэнс", ["vance", "вэнс"]),
+    ("Обама", r"Обам", ["obama", "обам"]),
+    ("Путин", r"Путин", ["putin", "путин"]),
+    ("Зеленский", r"Зеленск", ["zelensk", "зеленск"]),
+    ("Си Цзиньпин", r"Цзиньпин", ["jinping", "цзиньпин", "xi"]),
+    ("Нетаньяху", r"Нетаньяху", ["netanyahu", "нетаньяху"]),
+    ("Эрдоган", r"Эрдоган", ["erdogan", "erdoğan", "эрдоган"]),
+    ("Макрон", r"Макрон", ["macron", "макрон"]),
+    ("Мерц", r"Мерц(?!ани|ающ|ает|ают|ал|ит|ат)", ["merz", "мерц"]),
+    ("Шольц", r"Шольц", ["scholz", "шольц"]),
+    ("Стармер", r"Стармер", ["starmer", "стармер"]),
+    ("Сунак", r"Сунак", ["sunak", "сунак"]),
+    ("Моди", r"Моди(?!ф)", ["modi", "моди"]),
+    ("Токаев", r"Токаев", ["tokayev", "tokaev", "токаев"]),
+    ("Назарбаев", r"Назарбаев", ["nazarbayev", "nazarbaev", "назарбаев"]),
+    ("Мирзиёев", r"Мирзи[её]ев", ["mirziyoyev", "мирзиёев", "мирзиеев"]),
+    ("Лукашенко", r"Лукашенк", ["lukashenk", "лукашенк"]),
+    ("Гюлен", r"Гюлен", ["gulen", "gülen", "гюлен"]),
+    ("Гутерриш", r"Гутерриш", ["guterres", "гутерриш"]),
+    ("Маск", r"Маск(?!ир|от|и\b|ой\b|ами\b|ах\b)", ["musk", "маск"]),
+    ("Альтман", r"Альтман", ["altman", "альтман"]),
+    ("Амодеи", r"Амодеи", ["amodei", "амодеи"]),
+]
 
 # Слова, которыми заголовок может законно заканчиваться, хоть они
 # и короткие: ИИ, ЕС, ООН и т.п. пишутся заглавными и проходят сами.
@@ -913,7 +949,7 @@ def find_problems(data, item):
     отправлять как есть. Возвращает список понятных описаний."""
     problems = []
     title = (data.get("title_ru") or "").strip()
-    ru_text = f"{title} {data.get('lead', '')} {data.get('detail', '')}".lower()
+    ru_text = f"{title} {data.get('lead', '')} {data.get('detail', '')}"
     blob = source_blob(item)
 
     # 1. Оборванный заголовок: последнее слово — обрубок
@@ -933,12 +969,12 @@ def find_problems(data, item):
         if isinstance(person, str) and not name_in_source(person, blob):
             problems.append(
                 f"имени «{person}» нет в тексте статьи — не придумывай имена")
-    for ru_stem, src_forms in KNOWN_PEOPLE.items():
-        if re.search(r"\b" + ru_stem, ru_text):
+    for display, pattern, src_forms in KNOWN_PEOPLE:
+        if re.search(r"\b" + pattern, ru_text):
             found = any(re.search(r"\b" + re.escape(f), blob) for f in src_forms)
             if not found:
                 problems.append(
-                    f"в тексте упомянут «{ru_stem.capitalize()}…», а в статье "
+                    f"в тексте упомянут «{display}», а в статье "
                     f"этого человека нет — бери имена только из статьи")
     return problems
 
@@ -1303,6 +1339,7 @@ def build_queue(unique, kz_share):
 
 
 def main():
+    started = time.time()
     config = load_config()
     if in_quiet_hours(config):
         print("Тихие часы — новости не отправляю.")
@@ -1328,6 +1365,8 @@ def main():
     max_age = config.get("max_age_hours", 4)
     pause = config.get("seconds_between_ai_calls", 5)
     threshold = config.get("duplicate_threshold", 0.5)
+    min_common = config.get("duplicate_min_common", 3)
+    deadline = started + config.get("max_run_minutes", 8) * 60
     fetch_full = config.get("fetch_full_text", True)
     min_desc = config.get("min_description_chars", 1500)
     attempts = config.get("max_text_attempts", 3)
@@ -1380,7 +1419,8 @@ def main():
     print(f"Прошло отсев по словам: {len(candidates)}")
 
     # ШАГ 3 — дедупликация
-    unique, duplicates = deduplicate(candidates, threshold, state["recent"])
+    unique, duplicates = deduplicate(candidates, threshold, state["recent"],
+                                     min_common)
     for i in duplicates:
         new_ids.append(i["id"])
     print(f"После склейки дублей осталось: {len(unique)} (убрано {len(duplicates)})")
@@ -1414,6 +1454,9 @@ def main():
     retried = 0
     rejected = 0
     cleaned = 0
+    ai_failed = 0
+    models_used = {}
+    out_of_time = False
 
     def call_ai(it, note=""):
         nonlocal ai_used, last_call
@@ -1422,10 +1465,36 @@ def main():
             time.sleep(wait)
         last_call = time.time()
         ai_used += 1
-        return ask_gemini(it, config, note)
+        data = ask_gemini(it, config, note)
+        model = data.pop("_model", None)
+        if model:
+            models_used[model] = models_used.get(model, 0) + 1
+        return data
+
+    def persist():
+        """Записывает память на диск сразу после каждой отправки. Если
+        GitHub оборвёт запуск по времени, отправленное уже не уйдёт
+        повторно."""
+        snapshot = dict(state)
+        snapshot["seen"] = state["seen"] + new_ids
+        save_state(snapshot, memory_hours)
+
+    def unmark(it):
+        """Gemini не ответил — новость не считается просмотренной
+        и попадёт в следующий запуск."""
+        if it["id"] in new_ids:
+            new_ids.remove(it["id"])
 
     for item in batch:
         if sent >= send_limit or ai_used >= ai_limit:
+            break
+        # Запас до лимита GitHub: одно обращение к Gemini может занять
+        # до 3 минут, если все модели тормозят.
+        if time.time() > deadline:
+            out_of_time = True
+            break
+        # Gemini не отвечает раз за разом — остальное в следующий запуск
+        if ai_failed >= 3:
             break
 
         group = item["group"]
@@ -1453,6 +1522,10 @@ def main():
 
         data = call_ai(best)
         new_ids.append(item["id"])
+        if not data:
+            ai_failed += 1
+            unmark(item)
+            continue
 
         if not (data.get("send") and data.get("lead")):
             continue
@@ -1460,9 +1533,13 @@ def main():
         # Проверка ответа: оборванный заголовок, выдуманные имена.
         # Одна попытка исправить, потом — не присылаем.
         problems = find_problems(data, best)
-        if problems and ai_used < ai_limit:
+        if problems and ai_used < ai_limit and time.time() < deadline:
             retried += 1
             data = call_ai(best, "\n".join(f"- {p}" for p in problems))
+            if not data:
+                ai_failed += 1
+                unmark(item)
+                continue
             if not (data.get("send") and data.get("lead")):
                 continue
             problems = find_problems(data, best)
@@ -1477,7 +1554,10 @@ def main():
         is_kz = best.get("kz") or "Казахстан" in normalize_country(
             data.get("country")).split("/")
         if is_kz and kz_sent >= kz_limit:
+            # новость из мировой ленты оказалась о Казахстане — отложить
+            # до следующего запуска, а не терять
             kz_skipped += 1
+            unmark(item)
             continue
 
         # второй этап склейки — уже по русскому тексту
@@ -1498,11 +1578,18 @@ def main():
             state["recent_ru"].append(
                 {"tokens": sorted(ru_tokens), "ts": time.time()}
             )
+            persist()
 
     state["seen"] = state["seen"] + new_ids
     save_state(state, memory_hours)
+    if out_of_time:
+        print("Время запуска вышло — остальные новости в следующем запуске.")
+    if ai_failed >= 3:
+        print("Gemini не отвечает — остальные новости в следующем запуске.")
+    models_txt = ", ".join(f"{m} {n}" for m, n in models_used.items()) or "нет"
     print(
-        f"Обращений к Gemini: {ai_used} (повторных: {retried}). "
+        f"Обращений к Gemini: {ai_used} (повторных: {retried}, "
+        f"без ответа: {ai_failed}). Ответили модели: {models_txt}. "
         f"Догружено статей: {enriched}. "
         f"Без текста статьи, пропущено: {thin}. "
         f"Отклонено проверкой: {rejected}. "
