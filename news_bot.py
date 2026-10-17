@@ -1721,14 +1721,18 @@ def main():
             print("[ОЦЕНКА] Gemini не ответил — беру порядок по доверию изданий")
         else:
             min_score = config.get("min_score", 5)
+            # Казахстанские новости оценка ставит ниже мировых: после
+            # перехода на оценку их доля упала с 26% до 19% при цели 30%.
+            min_score_kz = config.get("min_score_kz", min_score)
             bonus = config.get("priority_bonus", 2)
             ranked, low, rep = [], 0, 0
             for n, it in enumerate(pool):
-                score, repeat = scores.get(n, (min_score, False))
+                need = min_score_kz if it.get("kz") else min_score
+                score, repeat = scores.get(n, (need, False))
                 if repeat:
                     rep += 1
                     new_ids.append(it["id"])
-                elif score < min_score:
+                elif score < need:
                     low += 1
                     new_ids.append(it["id"])
                 else:
