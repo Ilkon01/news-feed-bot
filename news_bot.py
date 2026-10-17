@@ -1304,6 +1304,37 @@ def esc(text):
     return html.escape(str(text or ""), quote=False)
 
 
+# Буквы чужих письменностей посреди русского текста — сбой модели:
+# 17.10.2026 в пост про Йемен попала японская «お». Арабская вязь,
+# иероглифы, хангыль, деванагари и т.п. в русском тексте не нужны.
+FOREIGN_SCRIPT = re.compile(
+    "[֐-ࣿऀ-෿฀-࿿ᄀ-ᇿ"
+    "぀-ヿ㄀-㆏㐀-䶿一-鿿"
+    "가-힯豈-﫿ﭐ-﷿ﹰ-﻿]")
+
+# Адрес сайта в тексте («hr.enbek.kz», «Cars.com») Telegram сам
+# превращает в ссылку посреди новости. Невидимый пробел после точки
+# не меняет вид текста, но ссылки не будет.
+DOMAIN_DOT = re.compile(r"(?<=\w)\.(?=[a-z]{2,}\b)")
+
+
+def tidy(text):
+    """Текст новости для Telegram: без букв чужих письменностей,
+    без самодельных ссылок, с экранированием HTML."""
+    text = FOREIGN_SCRIPT.sub("", str(text or ""))
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    return esc(DOMAIN_DOT.sub(".​", text))
+
+
+def readable_source(item):
+    """Название издания в подписи. Если оно не латиницей и не
+    кириллицей (было «نون بوست»), показываем адрес сайта."""
+    name = item.get("source") or ""
+    if re.search(r"[A-Za-zА-Яа-яЁё]", name):
+        return name
+    return domain_of(item.get("link", "")) or name
+
+
 def make_hashtag(text):
     """Превращает «Санкции и торговые войны» в #санкции_и_торговые_войны."""
     text = re.sub(r"\([^)]*\)", "", text)          # убрать скобки
@@ -1348,12 +1379,12 @@ def format_message(item, data, config):
     lead_max = config.get("lead_max_chars", 125)
     topic = data.get("topic", "")
     emoji = pick_emoji(topic, config)
-    title = esc(data.get("title_ru", "")).strip()
+    title = tidy(data.get("title_ru", "")).strip()
     raw_lead, raw_detail = fit_lead(
         data.get("lead", ""), data.get("detail", ""), lead_max
     )
-    lead = esc(raw_lead)
-    detail = esc(trim_text(raw_detail, 3000))
+    lead = tidy(raw_lead)
+    detail = tidy(trim_text(raw_detail, 3000))
     country = normalize_country(data.get("country"))
     importance = (data.get("importance") or "").strip().upper()
 
@@ -1385,7 +1416,7 @@ def format_message(item, data, config):
     # Подпись: название источника само является ссылкой на статью,
     # +N — сколько ещё изданий написали об этом же событии.
     link = html.escape(item["link"], quote=True)
-    signature = f'<a href="{link}">{esc(item["source"])}</a>'
+    signature = f'<a href="{link}">{esc(readable_source(item))}</a>'
     extra = item.get("sources_count", 1) - 1
     if extra > 0:
         signature += f" +{extra}"
