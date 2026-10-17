@@ -6,6 +6,9 @@
   ШАГ 2 — отсев по ключевым словам (бесплатно, без ИИ)
   ШАГ 3 — дедупликация: одинаковые новости из разных источников
           склеиваются в один сюжет
+  ШАГ 3а — Gemini одним запросом оценивает кандидатов по интересам
+          читателя (0–10) и отмечает повторы уже отправленного;
+          дальше идут только лучшие
   ШАГ 4 — для каждого сюжета ищем полный текст статьи: от самого
           надёжного источника, у которого текст открыт
   ШАГ 5 — Gemini: проверка по интересам + заголовок, текст
@@ -284,10 +287,16 @@ def clean_publisher(name):
     """Приводит имя издателя из Google News к человеческому виду:
     «ABC News - Breaking News, Latest News and Videos» -> «ABC News»,
     «Problem Solvers Caucus (.gov)» -> «Problem Solvers Caucus»."""
-    name = re.sub(r"\s*\([^)]*\)\s*$", "", name)      # хвост в скобках
+    raw = name.strip()
+    if re.match(r"https?://", raw):                    # имя — это адрес
+        raw = domain_of(raw)
+    name = re.sub(r"\s*\([^)]*\)\s*$", "", raw)       # хвост в скобках
     name = re.split(r"\s+[-–|:]\s+", name)[0]          # всё после тире
-    name = re.sub(r"\s*\.(com|net|org|ru|kz|kg|uz)\s*$", "", name, flags=re.I)
-    return name.strip()[:40]
+    short = re.sub(r"\s*\.(com|net|org|ru|kz|kg|uz)\s*$", "", name, flags=re.I)
+    # «24.kz» не превращать в «24»: без зоны имя теряет смысл
+    if len(short.strip()) >= 3 and not short.strip().isdigit():
+        name = short
+    return name.strip().rstrip("/")[:40]
 
 
 def domain_of(url):
@@ -315,6 +324,13 @@ def is_blocked(item, blocked):
         elif b in dom or b in src_name:
             return True
     return False
+
+
+def is_blocked_url(item, parts):
+    """Разделы сайтов, которые не нужны: местные новости Австралии
+    и британская внутренняя политика у Guardian, Гонконг у SCMP."""
+    link = (item.get("link") or "").lower()
+    return any(p.lower() in link for p in parts if p.strip())
 
 
 def decode_google_news(url):
@@ -678,6 +694,10 @@ def build_prompt(item, config):
    НЕ ставь вторую страну, если она лишь упомянута мимоходом или
    событие внутреннее. «Выборы в Германии» — просто «Германия»;
    «Пожар в Анкаре» — просто «Турция». Никогда не больше двух стран.
+   Спорт — только страна, где проходят соревнования, без гражданства
+   спортсменов: «Испанец проиграл бельгийцу в Шанхае» — «Китай».
+   Санкции и решения — кто принял/в отношении кого: «США сняли
+   санкции с российского дизеля» — «США/Россия», а не «Россия/Украина».
 4. importance — ровно одно слово: СРОЧНО или ОБЫЧНО.
    СРОЧНО ставится КРАЙНЕ РЕДКО — не чаще одной новости из тридцати.
    Это событие, о котором человек захочет узнать немедленно и которое
@@ -688,7 +708,9 @@ def build_prompt(item, config):
      - крупный теракт с множеством жертв;
      - обвал или скачок рынков, дефолт страны, резкая девальвация;
      - решение, прямо и серьёзно затрагивающее Казахстан.
-   ВО ВСЕХ ОСТАЛЬНЫХ СЛУЧАЯХ — ОБЫЧНО.
+   ВО ВСЕХ ОСТАЛЬНЫХ СЛУЧАЯХ — ОБЫЧНО. Смена президента небольшой
+   страны, обычное падение акций, рядовой удар в идущей войне —
+   ОБЫЧНО.
 
 5. title_ru — ШАГ 1, ЗАГОЛОВОК. 4–7 слов, примерно до {title_max}
    знаков — так он уместится в две строки на телефоне.
@@ -709,8 +731,11 @@ def build_prompt(item, config):
      «Усиление влияния ультраправых сил Европы». Хорошо: «Ультраправые
      в Европе набирают силу».
    - Глаголы вместо отглагольных существительных.
-   - Имена — в принятой русской форме: Нетаньяху, Эрдоган.
+   - Имена — в принятой русской форме: Нетаньяху, Эрдоган. Никогда
+     не латиницей: «Дональд Трамп», а не «Дональд Trump».
    - Без английских слов, кроме названий компаний и изданий.
+   - Если глаголу нужно дополнение — оно должно быть в заголовке.
+     Плохо: «Токаев и монархи Бельгии посетили» — посетили что?
 
 6. lead — ШАГ 2, ТЕКСТ ПОД ЗАГОЛОВКОМ. Строго не длиннее {lead_max}
    знаков вместе с пробелами — это 1–2 коротких предложения.
@@ -778,8 +803,11 @@ def build_prompt(item, config):
   ни имён, ни оценок, ни последствий. Исключение — пояснение
   экономического термина по правилам написания.
 - Не пиши фраз-заполнителей вроде «эксперты отмечают», «это вызывает
-  обеспокоенность», «это подчёркивает растущую роль». Лучше меньше,
-  но по существу.
+  обеспокоенность», «это подчёркивает растущую роль», «продолжает
+  привлекать внимание». Если в статье мнение высказал конкретный
+  человек или организация — назови их: «Аналитик Capital Economics
+  Джон Смит считает…». Безымянных «экспертов» не бывает.
+- Весь текст — по-русски. Английские фразы из статьи переводи.
 - НИКОГДА не пиши о том, чего в статье НЕТ: «подробности не
   приводятся», «другие детали не сообщаются», «компания не раскрыла
   сроки». Читателю это ничего не даёт.
@@ -793,10 +821,20 @@ def build_prompt(item, config):
 Если новость не подходит — send: false, остальные поля пустые строки."""
 
 
+def response_schema(config):
+    """Схема ответа. Раздел — строго из списка: раньше модель писала
+    «Экономика Казахстана» вместо «Казахстан: экономика и кошелёк»,
+    и у 5% новостей вместо значка раздела стоял 📰."""
+    schema = json.loads(json.dumps(RESPONSE_SCHEMA))
+    sections = list((config.get("topics") or {}).keys())
+    if sections:
+        schema["properties"]["topic"]["enum"] = sections + ["Прочее"]
+    return schema
+
+
 def ask_gemini(item, config, fix_note=""):
-    """Спрашивает Gemini. Если модель перегружена — пробует следующую.
-    fix_note — замечания к прошлому ответу, если его пришлось вернуть
-    на доработку. Возвращает словарь, {} при сбое."""
+    """Пишет новость. fix_note — замечания к прошлому ответу, если его
+    пришлось вернуть на доработку. Возвращает словарь, {} при сбое."""
     prompt = build_prompt(item, config)
     if fix_note:
         prompt += (
@@ -804,15 +842,27 @@ def ask_gemini(item, config, fix_note=""):
             + fix_note
             + "\nНапиши ответ заново, исправив эти ошибки."
         )
+    data, model = call_gemini(prompt, response_schema(config))
+    if not isinstance(data, dict):
+        print(f"[GEMINI] все модели недоступны, пропускаю «{item['title'][:45]}»")
+        return {}
+    data["_model"] = model
+    return data
+
+
+def call_gemini(prompt, schema, temperature=0.2):
+    """Обращение к Gemini. Если модель перегружена или ответ не
+    разобрался — пробует следующую. Возвращает (ответ, модель)
+    или (None, None) при сбое всех моделей."""
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
-            "temperature": 0.2,
+            "temperature": temperature,
             # С запасом: у «думающих» моделей размышления входят в этот
             # лимит, и при 3000 ответ мог обрываться посреди JSON.
             "maxOutputTokens": 8192,
             "responseMimeType": "application/json",
-            "responseSchema": RESPONSE_SCHEMA,
+            "responseSchema": schema,
         },
     }
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
@@ -846,10 +896,10 @@ def ask_gemini(item, config, fix_note=""):
                 cand = resp.json()["candidates"][0]
                 raw = cand["content"]["parts"][0]["text"]
                 data = json.loads(raw)
-                if not isinstance(data, dict):
-                    raise ValueError("ответ не объект")
-                data["_model"] = model
-                return data
+                expected = list if schema.get("type") == "ARRAY" else dict
+                if not isinstance(data, expected):
+                    raise ValueError("ответ не того вида")
+                return data, model
             except Exception as e:
                 reason = ""
                 try:
@@ -861,8 +911,94 @@ def ask_gemini(item, config, fix_note=""):
                       f"{type(e).__name__}, пробую следующую модель")
                 break
 
-    print(f"[GEMINI] все модели недоступны, пропускаю «{item['title'][:45]}»")
-    return {}
+    return None, None
+
+
+# ---------- Оценка кандидатов по интересам ----------
+
+RANK_SCHEMA = {
+    "type": "ARRAY",
+    "items": {
+        "type": "OBJECT",
+        "properties": {
+            "i": {"type": "INTEGER"},
+            "score": {"type": "INTEGER"},
+            "repeat": {"type": "BOOLEAN"},
+        },
+        "required": ["i", "score", "repeat"],
+    },
+}
+
+
+def build_rank_prompt(pool, recent_titles, config):
+    """Один запрос на всех кандидатов: насколько каждая новость нужна
+    читателю и не повторяет ли она уже отправленное."""
+    lines = []
+    for n, it in enumerate(pool):
+        summary = re.sub(r"\s+", " ", it.get("text") or "")[:220]
+        lines.append(f"{n}. [{it['source']}] {it['title']} — {summary}")
+    recent = "\n".join(f"- {t}" for t in recent_titles) or "- (пока ничего)"
+    today = local_now(config)
+    return f"""Ты — редактор личного новостного канала. Оцени каждую новость
+из списка: насколько она нужна ЭТОМУ читателю. Сегодня {today.day}
+{MONTHS_GEN[today.month - 1]} {today.year}.
+
+О ЧИТАТЕЛЕ:
+{bullets(config.get("reader_profile"))}
+
+ИНТЕРЕСЫ ЧИТАТЕЛЯ по разделам и уровням:
+{topics_text(config)}
+
+НИКОГДА не присылать:
+{bullets(config.get("never_send"))}
+
+ПРАВИЛА ОТБОРА:
+{bullets(config.get("editorial_rules"))}
+
+ШКАЛА score от 0 до 10:
+  9–10 — тема «очень интересно» и заметное событие; любые новости
+         о движении Хизмет и Фетхуллахе Гюлене; хадж и умра;
+         положение мусульман в мире; крупные события в Казахстане;
+  7–8  — тема «интересно» или содержательный материал из
+         «очень интересно»;
+  5–6  — можно прислать, если нет лучшего;
+  0–4  — не присылать.
+ОБЯЗАТЕЛЬНО 0–3:
+  - местный криминал и происшествия в любой стране, включая
+    Казахстан: кражи, драки, ДТП, бытовые убийства, аресты за мелкие
+    правонарушения, отдельные несчастные случаи;
+  - рядовые сводки боёв без изменения положения дел;
+  - внутренняя политика и местные новости Австралии, Великобритании,
+    Гонконга и других стран без значения для мира или Казахстана;
+  - протокольные визиты и встречи без конкретных решений и цифр;
+  - анонсы матчей, слухи и обзоры игр, реклама, светская хроника.
+Темы с уровнем «слабый интерес» — не выше 4, кроме очень крупных событий.
+
+repeat: true — новость о том же событии, что уже отправлено
+(список ниже), и не сообщает ничего существенно нового.
+
+УЖЕ ОТПРАВЛЕНО:
+{recent}
+
+НОВОСТИ (номер. [издание] заголовок — начало текста):
+{chr(10).join(lines)}
+
+Верни по одному объекту на КАЖДЫЙ номер: i — номер, score, repeat."""
+
+
+def rank_candidates(pool, recent_titles, config):
+    """Возвращает {номер: (score, repeat)} или None при сбое Gemini."""
+    data, _ = call_gemini(build_rank_prompt(pool, recent_titles, config),
+                          RANK_SCHEMA, temperature=0.1)
+    if not isinstance(data, list):
+        return None
+    out = {}
+    for row in data:
+        try:
+            out[int(row["i"])] = (int(row["score"]), bool(row.get("repeat")))
+        except Exception:
+            continue
+    return out
 
 
 # ---------- Проверка ответа модели ----------
@@ -906,15 +1042,40 @@ KNOWN_PEOPLE = [
 # и короткие: ИИ, ЕС, ООН и т.п. пишутся заглавными и проходят сами.
 SHORT_OK = {"ии", "ес", "сша", "оон", "кнр", "рф", "рк", "ai", "ит"}
 
+# Глаголы, после которых в заголовке обязано быть дополнение:
+# «Токаев и монархи Бельгии посетили» — посетили что?
+DANGLING_VERB = re.compile(
+    r"(посетил|обсудил|подписал|представил|назвал|принял|провел|провёл"
+    r"|заключил|объявил|утвердил|одобрил|запустил|раскрыл|получил"
+    r"|выпустил|открыл|создал|предложил|ввел|ввёл|повысил|снизил)"
+    r"(а|и|о)?")
+
+# Известные люди латиницей посреди русского текста
+LATIN_NAMES = re.compile(
+    r"\b(Trump|Biden|Harris|Vance|Obama|Putin|Zelensk\w*|Netanyahu"
+    r"|Erdogan|Erdoğan|Macron|Merz|Starmer|Modi|Tokayev|Musk|Altman"
+    r"|Amodei|Guterres|Xi Jinping)\b")
+
+# Три и больше строчных английских слов подряд — непереведённый кусок.
+# Названия (Rainbow Six Tactics) пишутся с заглавных и не ловятся.
+ENGLISH_PHRASE = re.compile(r"\b[a-z]{3,}(?:\s+[a-z]{2,}){2,}\b")
+
 # Признаки пустых фраз о том, чего в статье нет
 FILLER_NEG = re.compile(
     r"\bне\s+(привод|раскры|уточн|сообщ|называ|указ|comment|disclos)", re.I)
 FILLER_OBJ = re.compile(
     r"(подробност|детал|цифр|срок|стоимост|информаци|сумм)", re.I)
 FILLER_SRC = re.compile(
-    r"(стало известно из|сообщ\w* (агентств|издани)|опубликованн\w* "
+    r"(стало известно из|(сообщ|подтверд|пиш|написа)\w* (агентств|издани"
+    r"|газет|портал|телеканал)|опубликованн\w* "
     r"(агентств|издани)|по данным (агентства|издания)|в (статье|материале) "
     r"(говорится|не))", re.I)
+# Безымянные «эксперты» и общие слова без фактов
+FILLER_VAGUE = re.compile(
+    r"(^|\s)((военные|правозащитники и|многие|некоторые)\s+)?"
+    r"(эксперты|аналитики|специалисты|наблюдатели)\s+(отмечают|считают"
+    r"|указывают|полагают|подчеркивают|подчёркивают)"
+    r"|продолжает привлекать внимание", re.I)
 
 
 def source_blob(item):
@@ -963,6 +1124,30 @@ def find_problems(data, item):
                 f"понятный заголовок из целых слов")
     if title.endswith(("-", "…", "...", ",", ":")):
         problems.append("заголовок обрывается на полуслове")
+    if words and DANGLING_VERB.fullmatch(words[-1].lower()):
+        problems.append(
+            f"заголовок кончается на «{words[-1]}» — не сказано, что именно; "
+            f"допиши дополнение или перефразируй")
+
+    # 1а. Подробности-мусор вроде «Ррррр»
+    detail = (data.get("detail") or "").strip()
+    if detail and (len(detail) < 25 or " " not in detail
+                   or re.search(r"(.)\1{3,}", detail)):
+        problems.append(
+            "раскрывающийся блок бессмысленный — напиши конспект статьи "
+            "или оставь его пустым")
+
+    # 1б. Имена латиницей в русском тексте («Дональд Trump»)
+    m = LATIN_NAMES.search(ru_text)
+    if m:
+        problems.append(
+            f"имя «{m.group(0)}» написано латиницей — пиши по-русски")
+
+    # 1в. Непереведённые английские фразы
+    m = ENGLISH_PHRASE.search(f"{data.get('lead', '')} {detail}")
+    if m:
+        problems.append(
+            f"непереведённая английская фраза «{m.group(0)}» — переведи")
 
     # 2. Имена, которых нет в статье
     for person in data.get("people") or []:
@@ -1027,7 +1212,7 @@ def clean_detail(data):
             if FILLER_NEG.search(sent) and FILLER_OBJ.search(sent):
                 removed += 1
                 continue
-            if FILLER_SRC.search(sent):
+            if FILLER_SRC.search(sent) or FILLER_VAGUE.search(sent):
                 removed += 1
                 continue
             toks = meaning_tokens(sent)
@@ -1246,7 +1431,16 @@ def build_weather_message(hourly, local_date, utc_offset, city):
     wind = [hourly["wind_speed_10m"][i] for i in day
             if hourly["wind_speed_10m"][i] is not None]
 
-    code = max(codes) if codes else 0
+    # Погода, которая держится дольше всего днём. Раньше бралась
+    # «худшая» за день: час утреннего тумана превращал солнечный день
+    # в «туман». Осадки отдельно сообщает вероятность ниже, а гроза
+    # и снег важны, даже если идут недолго.
+    code = 0
+    if codes:
+        code = max(set(codes), key=lambda c: (codes.count(c), c))
+        severe = [c for c in codes if c >= 71]
+        if severe and code < 71:
+            code = max(severe)
     sky = WEATHER_TEXT.get(code, "")
     rain_max = max(rain) if rain else 0
     wind_max = round(max(wind)) if wind else 0
@@ -1345,12 +1539,24 @@ def main():
         print("Тихие часы — новости не отправляю.")
         return
 
+    memory_hours = config.get("duplicate_memory_hours", 48)
+    state = load_state()
+
+    # Бота запускает будильник cron-job.org, а расписание GitHub
+    # срабатывает редко и в случайное время. Если оно совпадало
+    # с будильником, за полчаса приходило 10 новостей вместо 5.
+    min_gap = config.get("min_minutes_between_runs", 20)
+    last_run = state.get("last_run_ts", 0)
+    if (os.environ.get("GITHUB_EVENT_NAME") == "schedule"
+            and time.time() - last_run < min_gap * 60):
+        print(f"Предыдущий запуск был {int((time.time() - last_run) / 60)} мин "
+              f"назад — этот пропускаю, чтобы не было двойной пачки.")
+        return
+
     if not check_telegram():
         print("Останавливаюсь: сначала почините доступ в Telegram (см. выше).")
         return
-
-    memory_hours = config.get("duplicate_memory_hours", 48)
-    state = load_state()
+    state["last_run_ts"] = time.time()
 
     # Погода — раз в день утром, отдельным постом
     post_weather(config, state)
@@ -1374,6 +1580,8 @@ def main():
     kz_limit = max(1, round(send_limit * kz_share)) if kz_share else 10**9
     patterns = build_keyword_patterns(config.get("keywords", []))
     blocked_list = config.get("blocked_sources", [])
+    url_parts = config.get("blocked_url_parts", [])
+    per_source = config.get("max_per_source_per_run", 0) or 10**9
     ru_dups = 0
     enriched = 0
     swapped = 0
@@ -1392,7 +1600,7 @@ def main():
     for i in items:
         if i["id"] in seen:
             continue
-        if is_blocked(i, blocked_list):
+        if is_blocked(i, blocked_list) or is_blocked_url(i, url_parts):
             blocked_n += 1
             new_ids.append(i["id"])
             continue
@@ -1428,9 +1636,49 @@ def main():
     # порядок: самые авторитетные источники первыми, но мировые
     # и казахстанские новости вперемешку — в пропорции kz_share
     unique.sort(key=lambda i: -i["trust"])
+
+    # ШАГ 3а — оценка по интересам. Раньше в канал шли первые новости
+    # очереди, то есть от изданий с высшим доверием: Gemini одобрял
+    # почти всё, а до лент Хизмета и хаджа (доверие 5) очередь не
+    # доходила — за 5 дней ни одной такой новости. Теперь один запрос
+    # оценивает пул кандидатов, и писать бот будет лучшие.
+    ranked = None
+    pool_size = config.get("rank_pool_size", 60)
+    if pool_size and unique:
+        prio = set(config.get("priority_feeds", []))
+        first = [i for i in unique if i["feed"] in prio]
+        rest = [i for i in unique if i["feed"] not in prio]
+        pool = (first + build_queue(rest, kz_share))[:pool_size]
+        recent_titles = [r["title"] for r in state["recent_ru"][-40:]
+                         if r.get("title")]
+        scores = rank_candidates(pool, recent_titles, config)
+        if scores is None:
+            print("[ОЦЕНКА] Gemini не ответил — беру порядок по доверию изданий")
+        else:
+            min_score = config.get("min_score", 5)
+            bonus = config.get("priority_bonus", 2)
+            ranked, low, rep = [], 0, 0
+            for n, it in enumerate(pool):
+                score, repeat = scores.get(n, (min_score, False))
+                if repeat:
+                    rep += 1
+                    new_ids.append(it["id"])
+                elif score < min_score:
+                    low += 1
+                    new_ids.append(it["id"])
+                else:
+                    it["score"] = score + (bonus if it["feed"] in prio else 0)
+                    ranked.append(it)
+            ranked.sort(key=lambda i: (-i["score"], -i["trust"]))
+            print(f"[ОЦЕНКА] оценено {len(pool)}: подходят {len(ranked)}, "
+                  f"неинтересных {low}, повторов {rep}")
+            for it in ranked[:8]:
+                print(f"  {it['score']:>2} · {it['title'][:70]}")
+
     # Берём с запасом: часть новостей отсеется, если у них не найдётся
     # полного текста статьи.
-    batch = build_queue(unique, kz_share)[:ai_limit * 2]
+    batch = build_queue(ranked if ranked is not None else unique,
+                        kz_share)[:ai_limit * 2]
     print(f"Кандидатов на обработку: {len(batch)}"
           f" (из них казахстанских: {sum(1 for i in batch if i.get('kz'))})")
 
@@ -1457,6 +1705,8 @@ def main():
     ai_failed = 0
     models_used = {}
     out_of_time = False
+    src_sent = {}
+    src_skipped = 0
 
     def call_ai(it, note=""):
         nonlocal ai_used, last_call
@@ -1520,6 +1770,13 @@ def main():
             kz_skipped += 1
             continue
 
+        # Не больше N новостей одного издания за запуск: за 5 дней
+        # Atameken, Guardian и Al Jazeera дали 60% канала.
+        # Не помечаем как просмотренное — уйдёт в следующем запуске.
+        if src_sent.get(best["source"], 0) >= per_source:
+            src_skipped += 1
+            continue
+
         data = call_ai(best)
         new_ids.append(item["id"])
         if not data:
@@ -1572,11 +1829,15 @@ def main():
             sent += 1
             if is_kz:
                 kz_sent += 1
+            src_sent[best["source"]] = src_sent.get(best["source"], 0) + 1
             state["recent"].append(
                 {"tokens": sorted(item["tokens"]), "ts": time.time()}
             )
+            # заголовок нужен оценке: она сверяет новых кандидатов
+            # с уже отправленным
             state["recent_ru"].append(
-                {"tokens": sorted(ru_tokens), "ts": time.time()}
+                {"tokens": sorted(ru_tokens), "ts": time.time(),
+                 "title": data.get("title_ru", "")}
             )
             persist()
 
@@ -1597,6 +1858,7 @@ def main():
         f"Текст взят у другого издания сюжета: {swapped}. "
         f"Отсеяно как дубль после перевода: {ru_dups}. "
         f"Отложено по балансу Казахстан/мир: {kz_skipped}. "
+        f"Отложено по лимиту на издание: {src_skipped}. "
         f"Отправлено сообщений: {sent} (из них о Казахстане: {kz_sent})"
     )
 
