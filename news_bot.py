@@ -957,10 +957,14 @@ def build_rank_prompt(pool, recent_titles, config):
 
 ШКАЛА score от 0 до 10:
   9–10 — тема «очень интересно» и заметное событие; любые новости
-         о движении Хизмет и Фетхуллахе Гюлене; хадж и умра;
-         положение мусульман в мире; крупные события в Казахстане;
+         о движении Хизмет и Фетхуллахе Гюлене; решения о хадже
+         и умре — правила, квоты, цены, визы, политика Саудовской
+         Аравии; крупные события в Казахстане;
   7–8  — тема «интересно» или содержательный материал из
-         «очень интересно»;
+         «очень интересно»; положение мусульман в мире — законы,
+         запреты, дискриминация;
+  4–5  — истории отдельных паломников, местные новости мечетей
+         и общин без последствий для многих людей;
   5–6  — можно прислать, если нет лучшего;
   0–4  — не присылать.
 ОБЯЗАТЕЛЬНО 0–3:
@@ -1646,6 +1650,7 @@ def main():
     pool_size = config.get("rank_pool_size", 60)
     if pool_size and unique:
         prio = set(config.get("priority_feeds", []))
+        bonus_feeds = set(config.get("bonus_feeds", []))
         first = [i for i in unique if i["feed"] in prio]
         rest = [i for i in unique if i["feed"] not in prio]
         pool = (first + build_queue(rest, kz_share))[:pool_size]
@@ -1667,7 +1672,7 @@ def main():
                     low += 1
                     new_ids.append(it["id"])
                 else:
-                    it["score"] = score + (bonus if it["feed"] in prio else 0)
+                    it["score"] = score + (bonus if it["feed"] in bonus_feeds else 0)
                     ranked.append(it)
             ranked.sort(key=lambda i: (-i["score"], -i["trust"]))
             print(f"[ОЦЕНКА] оценено {len(pool)}: подходят {len(ranked)}, "
