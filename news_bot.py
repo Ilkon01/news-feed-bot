@@ -850,10 +850,11 @@ def ask_gemini(item, config, fix_note=""):
     return data
 
 
-def call_gemini(prompt, schema, temperature=0.2):
+def call_gemini(prompt, schema, temperature=0.2, models=None):
     """Обращение к Gemini. Если модель перегружена или ответ не
     разобрался — пробует следующую. Возвращает (ответ, модель)
     или (None, None) при сбое всех моделей."""
+    models = models or GEMINI_MODELS
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -867,7 +868,7 @@ def call_gemini(prompt, schema, temperature=0.2):
     }
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
 
-    for model in GEMINI_MODELS:
+    for model in models:
         for attempt in range(2):
             try:
                 resp = requests.post(
@@ -1002,11 +1003,16 @@ repeat: true — новость о том же событии, что уже о�
 
 
 def rank_candidates(pool, recent_titles, config):
-    """Возвращает {номер: (score, repeat)} или None при сбое Gemini."""
-    data, _ = call_gemini(build_rank_prompt(pool, recent_titles, config),
-                          RANK_SCHEMA, temperature=0.0)
+    """Возвращает {номер: (score, repeat)} или None при сбое Gemini.
+    Оценку делает модель посильнее (rank_models): Flash-Lite ставил
+    рядовым сводкам ударов 9 вопреки правилам. Это одно обращение
+    за запуск, бесплатного лимита хватает."""
+    models = config.get("rank_models") or GEMINI_MODELS
+    data, model = call_gemini(build_rank_prompt(pool, recent_titles, config),
+                              RANK_SCHEMA, temperature=0.0, models=models)
     if not isinstance(data, list):
         return None
+    print(f"[ОЦЕНКА] оценивала модель {model}")
     out = {}
     for row in data:
         try:
