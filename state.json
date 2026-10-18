@@ -1,11 +1,5 @@
 {
   "seen": [
-    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1F2ZExPVm5RV05CRlhrRTNzRWNGbkpGRkVoN3plZE9PaE9Sd3ZCMURxMGw4WGhuUnFCZ3QwRGthem9nd1hNdnRncHVRa1c3cHJwdXd1VDBWbko0ZVFIbUQwX3ZNOEVMdUNleXdUS21ZS2pkakQ1Wks2WVozbTFaM3dKdEFtMWp3OF93RmJkX0dlc1lsbTllNGxIakdjTEd2c2s5MzZEbll4YmvSAbABQVVfeXFMUGNwQW5yM2UwQ3ctTDQzMmNyaXhkVDBRQ0lNRGlwc0RBY2NOLU9HNjV5aEoyRHN2Sm5zZ0ZpTmswY0VMM0tiNlBpT3MyRnVUWER3NHd6M25tS0RzOFRPMGhxOEhtUm1uelFYYmdzbDFZaS1vNVdNeHdHc0wxMjhPSHE3dWVDbFBUNU84a0VFSDFwX09MbkhIalowVlJvM3lKX0JESTEtR21yWkVYVDZFRnk?oc=5",
-    "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQUd2Vk5RYno4cGZ2alFBci1CQmtya2xJcklHM1RkbWYyMFA0WTZiU216ak01UnBSUko0WE1nb0F4VE91ZmgxVmpmZWJ1V0F6YTU0TjBhWU5YdnRVT3prdDBEUjE5RE5HMVFldFIzMUM3cjIzajZEN3I1aDYtWEpSaHRHS0wzRWNTV2daWlFOY3hKeWIxWEZXSExn?oc=5",
-    "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQlJGcDNlaGpLaHphNWlfRGhKdDFNMHozaEtNUS1NZmR1X0cxczdlV2ZCMlRTSmt4WW1mNllkV1NOSi02bzgyOTJsNEhYbUJOQjNab2lsdUxRWmxmRHc2MmR1eU1Kd0hjeEZRUXlDQ096WEs4M3hnRXBRdFBXNjNoWTljVW05QnpYazF2T24wa1h6X0l1Slo0d2ZicHTSAaQBQVVfeXFMUFAwRzlRSndyVWNwXzl2b0ItcWFOUldCUGYwMHprbUdjWG9zbFZndkxOQWVXUGcxc1NOcGhmYmFhNkV4WTJZeENGalNCWTFDN2dtNUhsa3diQ0dod2NXOEJfUkxBY2F0YmVTdzNjM0JmT2Nnd0U3QmpJSDNtbGNJTEh1Q3lQeHVXdFFvNUlQY2JlRnhzazdQQTNJcV91b3AwYlNTZUE?oc=5",
-    "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRVRhNGtaam1TUGUwUnlURzZnTkhTODZ0TFRNN25vVDdOaWdBYVp1R3FwZzJaNGRBM2tLdGhNUlg2aW5maXpiSzMxaTYyclpLWnFOM01QOUZEQ18tSHFIRURkWTBENTJtVTRsTFRzTWFlbWctTHdBZmdJOTRWN3I3WXZzdVd1YWltN2pFVVh1Smg2OG5CYmZ3YTN1Wm1TLTE2RFZ3eDhTVQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5BckpFTGQ3a0RFR09QeXlqWlA3eXRMeW4tckZBYmFWLU45Y0haWXNVbWNXWld0azhhMDRfUHVHeVdYck1ad0xzYlpWY1h4YjB5dHdDa2FZSQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNck5aU1lDYmJ5bmZpejJ6YklyUGpKdTVVQTJjNTliLWJoRlpIcXJyTlBlcmV6RHB4LWcwMllNRGxtNzBSSWU3WmtjaVVaenM5bGVsc3d4OGI0dnF2b2pCcUVMXy1FVHRuQ1IydWRQUXRYRk1kZ09HemFaRHRmc2toVzNnMWZreW1uQklHbW8xMnpDcGVhYVRGYl9mYjlSNVp3OEtkZERRUFhjWmRCRThIc3hQNNIBuAFBVV95cUxON3J1cm9CazllX0NTNDg0RG9QTGlqZDYxVTQyZVpLUWdpcUFUbThKQWs0dFVfUjdNX1JiUnZFT1hwSzZIMzFOWDVCLUFDcS1RVW54VkNiWk5RcHk5empLbHYyQkNldHllME5xWnZ4dFJnWjBlR1Rwb1BTakd1V0lFQjg4aVdrZmxGN0poaElqMkdKSmJiWWpUUzZ5Y056Ymp6WWN3NEdQdzFUMmtDZEVtdHpReFY1TVJw?oc=5",
     "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNSXNiMTFCNktwc01fZDNYVjlGV2taakFFdkt6TTl2UTd4YmhfdWp3WkJXS3lURlA4LVNTQVVpLTRRQzFHU1d2YzR0ZEY3eElmN2pWN1VCeFBRQUtHQm1HalJ0ejU0Qi1yMHY4eFUzS3JCaDRRY0ZSNGxsbEtuTjdfbHlJT0tpZk5YZG1ESFlNTzJjQ005N0N2aXV5VTFKb2tjcVNVMmIzeHhBUzZWd0o0aWs1WlBxaElUTUxELWI2aDI?oc=5",
     "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZWtUWkpCZlNKcUkwUlh4SnhQOEZBYkpRX1VpMnQ5VHhBemtQZjdZMzQ5YmhKREplU0M0ZjlKSWRrbTdrSHJPcE9OR0swdUJnbDVxNGhrM01lYTRRRU04eGdlYzhDbnJfamFIalB3clRBMHp1T0E4THNnT1U3ampzNV85Ri1aTmZzVWJ1VEJKZ3NXMHoxNXZjeGhrbkdIdVc0Y0ZqY3Q5LTV0U2VybV9B?oc=5",
     "https://news.google.com/rss/articles/CBMijwFBVV95cUxPY1M3MDEzdHZKYXRQb0hWdDdLUVF3MjhtTDVLSkxDSXlJc1daNmlFLS1yd2ZNYzV6aDNRNEpQckhxV3hQN2hlWmlqTkFLcXJQWFRCSlNsVUFpdHVqR3dPdGFUYlNiUUEwTTN0TGxrbEdxNmhaRFNROV8xNy1RREtIblRxc01nQ0EzdEtMYU4yTQ?oc=5",
@@ -7999,106 +7993,15 @@
     "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObXdiamhpZG03T2VNYlZSMllsUUlxOGtrNHRtMFNndmZoQS1BcUJNa3RTR0FqZ2l3aWUxR3RNOUQtYzktREdLbUI0SFoxcTNYR0VzeThoejd3dWtaRW9obHV1b3NtbS1welRQdVYzblNVeHRBYWNXYXJxY2ozZkFMMEhpY2hVcFpr?oc=5",
     "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa2JpejBhSm55eU5zM18zZldFMFd1b1hUYWNUQUt2NVY3SEdpZUE0eDZLVjIydHVaVVZ2d2NUSElQeGFPbDFSWGJFRUl6dlpfbk03cVFtTnVmdnJfSWJ0ZFByUkFLRTg2NUprZUZ3OWZzQTl6LS1sSTdTSld1NXBCZm1xem9EYTJ5UzdITE05SllwaktXcGc?oc=5",
     "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWjZFSlRNeXB4QTl0Qk9KM1ZnV3FqWUFGbWpOeTdaaXp6Q0diOExWS293bVJsdUhTZXBMbzZnRjl1cGR4WlgyNWExOHBSLTBiS1NqMnFrLTlsSklVNmdrMTZwVlZIWW1pREM5Qkh1dTlhQnN5dzQ5UlFIZWc5enc0ZTFzc09sOTJIVjNrNndvZng4ZHJDcnRPN2ZUSTl3aXdrX3ZSY0I4RjlDOEhSWVFTc3JWalY?oc=5",
-    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOHEyaWprQWxwMExQcEhUNjVZZUVISVhaenNyUjNuSF9IZ3cwN0pueWtBNWtsazhqaVI4Z0s3MmdNQlNSZXFkQlhwakpuZHF6NVZoY1Zwa2FJZEhtX3RpMzlIbWJUSTV2WXFVbFN0eXc4a2tRNVhJYnNiNzhmMFFGYTVZajdiWWNLSVpYOU5uM2lQTS1tanBfRWM2ck1idUJuZDRQLUM2Tm5lcHJXdzdEanJCWkjSAboBQVVfeXFMTTNVUTNUQzZxelZicEJfQVIxSXlUenRFNEpFaE4wcTB2czFyZEN4akdMTXI2YmE1RFpucUx5Sm5tSkhvb08zQjI3SEtTazlGVXhkdklGbTMzcWF3LTNEcHlBRzhKakdvQ1YtMlJMSmRENUZNZWFKOS1VNXN3MVpSbDRtcXk4Q3kyX1Fzd0RXOG5OeTRKazRXeGpFNEQwY0hIUXU5ZTc0THlvdGN2bmJncmdLVVpLeXFENFp3?oc=5"
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOHEyaWprQWxwMExQcEhUNjVZZUVISVhaenNyUjNuSF9IZ3cwN0pueWtBNWtsazhqaVI4Z0s3MmdNQlNSZXFkQlhwakpuZHF6NVZoY1Zwa2FJZEhtX3RpMzlIbWJUSTV2WXFVbFN0eXc4a2tRNVhJYnNiNzhmMFFGYTVZajdiWWNLSVpYOU5uM2lQTS1tanBfRWM2ck1idUJuZDRQLUM2Tm5lcHJXdzdEanJCWkjSAboBQVVfeXFMTTNVUTNUQzZxelZicEJfQVIxSXlUenRFNEpFaE4wcTB2czFyZEN4akdMTXI2YmE1RFpucUx5Sm5tSkhvb08zQjI3SEtTazlGVXhkdklGbTMzcWF3LTNEcHlBRzhKakdvQ1YtMlJMSmRENUZNZWFKOS1VNXN3MVpSbDRtcXk4Q3kyX1Fzd0RXOG5OeTRKazRXeGpFNEQwY0hIUXU5ZTc0THlvdGN2bmJncmdLVVpLeXFENFp3?oc=5",
+    "https://www.scmp.com/news/hong-kong/society/article/3371166/spirit-hong-kong-awards-finalist-bridges-gap-accessible-dental-care?utm_source=rss_feed",
+    "https://www.livescience.com/technology/artificial-intelligence/autonomy-always-begins-with-something-a-human-hands-it-whos-responsible-when-an-ai-agent-goes-rogue",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/eight-yemeni-government-forces-killed-battle-houthis",
+    "https://www.scmp.com/news/world/united-states-canada/article/3371281/fatalities-feared-fire-erupts-canadian-military-base-alberta?utm_source=rss_feed",
+    "https://www.scmp.com/news/people-culture/trending-china/article/3371282/outrageous-taiwan-mandopop-band-member-assaulted-south-korean-diver-underwater?utm_source=rss_feed",
+    "https://www.aljazeera.com/news/2026/10/18/iran-says-two-tankers-catch-fire-after-hitting-mines-in-strait-of-hormuz?traffic_source=rss"
   ],
   "recent": [
-    {
-      "tokens": [
-        "career",
-        "faces",
-        "house",
-        "katie",
-        "law",
-        "scruti",
-        "spokes",
-        "white",
-        "zachar"
-      ],
-      "ts": 1792029671.5006435
-    },
-    {
-      "tokens": [
-        "govern",
-        "inform",
-        "leak",
-        "shot",
-        "should",
-        "sugges",
-        "trump"
-      ],
-      "ts": 1792029674.9338903
-    },
-    {
-      "tokens": [
-        "въезда",
-        "казахс",
-        "новые",
-        "правил",
-        "страну",
-        "утверд"
-      ],
-      "ts": 1792031439.9529986
-    },
-    {
-      "tokens": [
-        "attack",
-        "black",
-        "catche",
-        "fire",
-        "rising",
-        "romani",
-        "sea",
-        "ship",
-        "waters"
-      ],
-      "ts": 1792031443.8890917
-    },
-    {
-      "tokens": [
-        "aborti",
-        "free",
-        "labor",
-        "make",
-        "nation",
-        "one",
-        "politi",
-        "promis",
-        "pure",
-        "rises",
-        "timing",
-        "victor"
-      ],
-      "ts": 1792031448.8081841
-    },
-    {
-      "tokens": [
-        "alread",
-        "casual",
-        "civili",
-        "death",
-        "only",
-        "restri",
-        "rising",
-        "starli",
-        "toll",
-        "ukrain",
-        "worsen"
-      ],
-      "ts": 1792031453.089534
-    },
-    {
-      "tokens": [
-        "белору",
-        "въезда",
-        "дня",
-        "запраш",
-        "казахс",
-        "нужно",
-        "пропус",
-        "три"
-      ],
-      "ts": 1792031458.0637808
-    },
     {
       "tokens": [
         "beyond",
@@ -16115,150 +16018,23 @@
         "portfo"
       ],
       "ts": 1792288866.3490283
+    },
+    {
+      "tokens": [
+        "catch",
+        "fire",
+        "hittin",
+        "hormuz",
+        "iran",
+        "mines",
+        "strait",
+        "tanker",
+        "two"
+      ],
+      "ts": 1792290678.5766191
     }
   ],
   "recent_ru": [
-    {
-      "tokens": [
-        "bar",
-        "state",
-        "белого",
-        "дома",
-        "жалоба",
-        "закари",
-        "калифо",
-        "карьер",
-        "кэти",
-        "лжи",
-        "обвини",
-        "поступ",
-        "пресс",
-        "секрет",
-        "утверж",
-        "юридич"
-      ],
-      "ts": 1792029671.5006478
-    },
-    {
-      "tokens": [
-        "аризон",
-        "выбора",
-        "данных",
-        "заявле",
-        "митинг",
-        "ноябрь",
-        "перед",
-        "предвы",
-        "предло",
-        "прозву",
-        "стреля",
-        "трамп",
-        "утечки"
-      ],
-      "ts": 1792029674.9338944
-    },
-    {
-      "tokens": [
-        "беспла",
-        "вводит",
-        "въезда",
-        "иностр",
-        "казахс",
-        "новые",
-        "обязыв",
-        "октябр",
-        "оформл",
-        "платфо",
-        "постан",
-        "правил",
-        "разреш",
-        "специа",
-        "через",
-        "электр"
-      ],
-      "ts": 1792031439.953006
-    },
-    {
-      "tokens": [
-        "водах",
-        "загоре",
-        "коморс",
-        "море",
-        "остров",
-        "под",
-        "произо",
-        "румыни",
-        "судно",
-        "террит",
-        "флагом",
-        "химово",
-        "черном",
-        "эвакуи",
-        "экипаж"
-      ],
-      "ts": 1792031443.8890958
-    },
-    {
-      "tokens": [
-        "аборты",
-        "беспла",
-        "виктор",
-        "власти",
-        "выбора",
-        "доллар",
-        "инвест",
-        "млн",
-        "ноябре",
-        "обещаю",
-        "победы",
-        "правит",
-        "сделат",
-        "случае",
-        "четыре",
-        "штата"
-      ],
-      "ts": 1792031448.8081887
-    },
-    {
-      "tokens": [
-        "starli",
-        "бьет",
-        "военны",
-        "всу",
-        "дронах",
-        "дронов",
-        "защите",
-        "неба",
-        "ограни",
-        "отключ",
-        "связи",
-        "скорос",
-        "столкн"
-      ],
-      "ts": 1792031453.0895383
-    },
-    {
-      "tokens": [
-        "2027",
-        "беспла",
-        "введет",
-        "въезда",
-        "гражда",
-        "заявку",
-        "интерн",
-        "июля",
-        "казахс",
-        "около",
-        "подава",
-        "потреб",
-        "пропус",
-        "стран",
-        "цифров",
-        "часа",
-        "через"
-      ],
-      "ts": 1792031458.0637846
-    },
     {
       "tokens": [
         "врачей",
@@ -28639,8 +28415,30 @@
       ],
       "ts": 1792288866.349032,
       "title": "Марокко создало министерство искусственного интеллекта"
+    },
+    {
+      "tokens": [
+        "два",
+        "загоре",
+        "иран",
+        "минах",
+        "морски",
+        "навига",
+        "обвиня",
+        "ормузс",
+        "отключ",
+        "поддер",
+        "подорв",
+        "пролив",
+        "систем",
+        "суда",
+        "сша",
+        "танкер"
+      ],
+      "ts": 1792290678.5766246,
+      "title": "Два танкера загорелись в Ормузском проливе"
     }
   ],
   "weather_date": "2026-10-18",
-  "last_run_ts": 1792288832.7623203
+  "last_run_ts": 1792290624.9680684
 }
