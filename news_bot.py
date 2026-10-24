@@ -44,7 +44,9 @@ except ImportError:
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config.yaml")
 STATE_PATH = os.path.join(os.path.dirname(__file__), "state.json")
-MAX_SEEN_ITEMS = 8000
+# Память «уже видел». За запуск добавляется около 200 адресов, 38
+# запусков в сутки: 8000 хватало примерно на сутки, 15000 — на двое.
+MAX_SEEN_ITEMS = 15000
 
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 # Куда слать: личный chat_id или канал (@имя_канала либо -100...)
@@ -452,8 +454,11 @@ def pick_best_text(group, min_chars, blocked, max_attempts=3):
 
 
 def is_fresh(item, max_age_hours):
+    # Записи без даты считались свежими всегда. Как только адрес
+    # выпадал из памяти «уже видел», старая статья приходила заново
+    # (так было с Nikkei Asia — у её ленты нет дат вовсе).
     if item["age_hours"] is None:
-        return True
+        return False
     return item["age_hours"] <= max_age_hours
 
 
@@ -514,15 +519,40 @@ def is_sent_before(tokens, sent_sets, threshold, min_common):
     return False
 
 
+def ru_title_stems(title):
+    """Основы слов русского заголовка по 5 букв: «Канада» и «Канаде»,
+    «грузоперевозки» и «грузовики» сводятся к одному."""
+    words = re.findall(r"[a-zа-яё0-9]+", (title or "").lower().replace("ё", "е"))
+    return {w[:5] for w in words if len(w) > 2 and w not in STOPWORDS}
+
+
+def same_title(a, b):
+    """Один ли это сюжет по заголовкам: минимум 3 общих слова и не меньше
+    75% слов более короткого заголовка. Порог проверен на постах
+    канала 21–24.10.2026: ловит «В Казахстане проверяют главврачей
+    больниц» (дважды за 6,5 ч), «В Индии мечети (и медресе) грозит
+    снос», но не путает «Учёные раскрыли тайну сборки вирусов»
+    и «…тайну линий Наска»."""
+    if not a or not b:
+        return False
+    common = len(a & b)
+    return common >= 3 and common / min(len(a), len(b)) >= 0.75
+
+
 def is_repeat_ru(data, recent_ru, threshold):
-    """Сравнивает русский заголовок+пересказ с уже отправленными."""
+    """Сравнивает новость с уже отправленными: заголовок с заголовком
+    и заголовок+пересказ целиком. Раньше было только второе, и при
+    одинаковых заголовках разный пересказ «размывал» сходство."""
     tokens = title_tokens(
         f"{data.get('title_ru', '')} {data.get('lead', '')[:250]}"
     )
     if not tokens:
         return False, set()
+    stems = ru_title_stems(data.get("title_ru", ""))
     for r in recent_ru:
         if similarity(tokens, set(r["tokens"])) >= threshold:
+            return True, tokens
+        if same_title(stems, ru_title_stems(r.get("title", ""))):
             return True, tokens
     return False, tokens
 
@@ -991,7 +1021,12 @@ def build_rank_prompt(pool, recent_titles, config):
 Темы с уровнем «слабый интерес» — не выше 4, кроме очень крупных событий.
 
 repeat: true — новость о том же событии, что уже отправлено
-(список ниже), и не сообщает ничего существенно нового.
+(список «УЖЕ ОТПРАВЛЕНО» ниже), и не сообщает ничего существенно
+нового. Другими словами, с другим изданием или на другом языке —
+это всё равно повтор: «Apple Music получила новый дизайн» и «Apple
+обновила бренд музыкального сервиса» — одно событие.
+Если в списке НОВОСТИ несколько новостей об одном событии — repeat:
+false только у одной, самой полной, у остальных repeat: true.
 
 УЖЕ ОТПРАВЛЕНО:
 {recent}
@@ -1714,7 +1749,10 @@ def main():
         first = [i for i in unique if i["feed"] in prio]
         rest = [i for i in unique if i["feed"] not in prio]
         pool = (first + build_queue(rest, kz_share))[:pool_size]
-        recent_titles = [r["title"] for r in state["recent_ru"][-40:]
+        # 40 заголовков — это около 4 часов: вчерашние повторы оценка
+        # не видела. 150 — больше суток.
+        n_recent = config.get("rank_recent_titles", 150)
+        recent_titles = [r["title"] for r in state["recent_ru"][-n_recent:]
                          if r.get("title")]
         scores = rank_candidates(pool, recent_titles, config)
         if scores is None:

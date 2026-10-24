@@ -76,10 +76,8 @@ world_news_rss:
   - name: "South China Morning Post"
     trust: 7
     url: "https://www.scmp.com/rss/91/feed"
-  # Nikkei — платное издание: полный текст недоступен, доверие понижено
-  - name: "Nikkei Asia"
-    trust: 6
-    url: "https://asia.nikkei.com/rss/feed/nar"
+  # Nikkei Asia убрана 24.10.2026: платное издание (текст закрыт),
+  # а у ленты нет дат публикации — старые статьи приходили заново.
   - name: "The Verge"
     trust: 7
     url: "https://www.theverge.com/rss/index.xml"
@@ -270,6 +268,10 @@ min_score_kz: 5
 rank_models:
   - "gemini-flash-latest"
   - "gemini-flash-lite-latest"
+# Сколько последних отправленных заголовков оценка сверяет с новыми
+# кандидатами, чтобы отсеять повторы. 150 — больше суток. При 40
+# (около 4 часов) повторы вчерашних новостей проходили.
+rank_recent_titles: 150
 
 # Ленты, которые попадают в оценку всегда. Без этого до них не доходила
 # очередь: за 12–16 октября 2026 ни одной новости о Хизмете и хадже.
