@@ -9832,134 +9832,58 @@
     "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMWs5MkY4WUtrUzRRb1FUZURsX1AtSXk2NmxFWWp0cnQxcm43eGVXdUVBYlNGLXF1NzdHaVhiQmtYWG93Z2FoM3U0dnBVSW1oU2JFb2ZFQUkyMnFmSWdoRHNYVktVaGh4NmhsR29HQkhBcVU1UEFmVGxVcWY0c2xjcTZNQTNUSVNuenlad1Q1dU01cFlzR1lsbVRuUkxqNHAyRDJrai1XQi03ODdfekdlclZGMWpVRy10VE1J0gG7AUFVX3lxTFAxazkyRjhZS2tTNFFvUVRlRGxfUC1JeTY2bEVZanRydDFybjd4ZVd1RUFiU0YtcXU3N0dpWGJCa1hYb3dnYWgzdTR2cFVJbWhTYkVvZkVBSTIycWZJZ2hEc1hWS1VoaHg2aGxHb0dCSEFxVTVQQWZUbFVxZjRzbGNxNk1BM1RJU256eVp3VDV1TTVwWXNHWWxtVG5STGo0cDJEMmtqLVdCLTc4N196R2VyVkYxalVHLXRUTUk?oc=5",
     "https://inbusiness.kz/ru/last/500-putevok-v-budushchee-ko-dnyu-respubliki-qarmet-i-allur-predlozhat-molodym-kazakhstantsam-novye-karernye-vozmozhnosti-422492",
     "https://www.aljazeera.com/news/2026/10/25/israeli-elections-what-are-the-possible-outcomes?traffic_source=rss",
-    "https://www.aa.com.tr/en/middle-east/saudi-led-coalition-says-it-intercepted-houthi-cruise-missile-over-khamis-mushait/4100014"
+    "https://www.aa.com.tr/en/middle-east/saudi-led-coalition-says-it-intercepted-houthi-cruise-missile-over-khamis-mushait/4100014",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxPY2s4UFBDVURqM0o0QlFzQkFjUFFaS3VXOU8tU1FoMENCSkhTSkFKUE5OOEphczZDZzBjaTBKaUtaNms1VDVlTm1TYVpkN09SRjVlRE9KbnlJWGlUOUduOTdXbGV3UExib2hsbHBTTmI4UWdYdHExNEhOU0k5cjJidy0tMUoyN3lHVE83X3dzZjBCOHllampMOEl2YjdTaGhvWVViZGxTTmFVTnNRVWRN?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZXd4QnFnb3BYTU1XZ2RLM2o4OHVpOS1iYU1lcnhzcU5nbGpaMno2TnZ6Z29UVzVvY2FYR3hJY1J2QXp2dnM1YzRyUjVpSjMwY0x1TnZDMUdacmJ5ME4tT1Y1RGJlVUlBUVNyWmV6ZDR1cXI4dFJGV2FtdVRwYjc5M3YtLWhRREc1UmZFb21UZHY?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE90N2cxX0l3b2ozenZmOXo5cS1QTXRVaDkxS0hoWlB2YUlSVlJOVy1mS0c3R21pc1lWZXhzX3gyOHVMZUJNSkpnN1NuSEtyd1kySTVFX2xnUzRzZ082N2tPRGFzMEdZVTk2bW4zcUxTU3ZhUGJ0MGlLQVJFMHJidw?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE5UVm9VWW1VcGREOE56UVlINWlJRExPMW5pUTRvZXVNQlNyd25HbFp3TWl0WU5vVlgyNlZwcDlyMmhUQUU1TG5fbC1MalBiQ1NENEhzTl9OQ0gzR1l0VjlXcE1BeXA5eVpNM3RjRVQ2eThWa0pYMVhB?oc=5",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5lOEt0V1JaNXlsOEpGa19rRXl2eFgzbDhyaTBzRE9zZTVvRnF0bThsd0FIMGhzOE1ERDMwbzdaZkNvRXVDb1JIaFhaVXhuLUQwaFRnMnVRUzFYVG9zT3lYak9lTVp3R1E?oc=5",
+    "https://news.google.com/rss/articles/CBMicEFVX3lxTE5uYjFnQ2NzU0o1bWFhUEVCY1pOYXpEUUNtU3FPLXpjU2pXNWRtenB1eXNzbHR0QzNYREs5YW1EeUVMcTV6eVFKa0NqVXVMcjJON2Q5M2NCR1JnQVFTRkVWQzc1SnZMVlpnQ2o5V0VDM04?oc=5",
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRzRpT1FiYWpvNHpmbklzc3ZvVl96aFBsZ3BmQ2dJaG4yejdFQlZudWc5UmhGSUwyemQwOFN0N3JBdjNyV0t4OUlpdEhJR2NFZjl3eXd0WXRIZXpEV0pQc3hrSDBMc3ZlZW5DSk5zTlI2dHNOdHM0c2ZlS0lIeU5uUVViY1dMeXRZS1ljZTVpME9WT1NPX2Q0cU1LUDhmb3J0WDNaYXFZZ19vdGpoc3M5TVVkT3hMb3czMXh3YVFRdmpScUJoQ2RWYTFHOU80TGxkai1wLXMwSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBBQ3NlYWFaMFUzUkRwSHdYdU5qd29LelBjMkhYS3duWlJCaTBaak9DVXhEN2lzRWt2OUNsazk3dkRDS2ZCN1RoZ0ZhV3U5ZnowWURz?oc=5",
+    "https://news.google.com/rss/articles/CBMiTEFVX3lxTE00QWFDN0gyREt0UFN6V01BaXQ0MHlmcTZaTGZubGg5c1Z1a3d1V1oxQVg3RXBRR19ScGRHUXk4M3dtLWp2Z2U3SWZaUFg?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbmstbTMteFVMRTEwTkN6TXF0cXp3NXhNcldPRmV2MTEtZUlaTGNQWGtHS0p0MlBqcTB2ay1HamlCc1FqZW00UnNyYTAtVUJ2OE5jczd1TWlWTVVid3M3MEw5Wms4NTBsU0NQYUxYM2xKdEdlSXh4NW5nTUlqYlAtX0VMcHdsUTY4Q19XMXFVUWt5aUlxZEdBWFFTdkM2MGE3UUx2bjBSSC1LeDFpbmV6NHRPY3VxRlln?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFA4WHdYTlZzWklTLVVNcjlTNEs4RnNodHp1c1V5aVBYSXhvdFlsSHRkRmlVWVZCSDg3UHZobWNNYURpbVBYRWlQaXliSzRXQllCTW1hbzdBbzdNYUdfaW9TeHVPYVVING9faDlqVGNXWGFNc0FnalE?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdmh0VVFpaWJhdGhtR1ZQMjZCcmlPTi1uOTgyVGpZRXhjNVgwdVV2MEFWNmkzTlVvamU4TVFVaHlNR1h4N1BfbllSUTNCM21ndDVoRXF3eUtuUFFwX1Y3ZC1yNUQ3R1BiWG9SdWJiRURZLXk1dHUxbXRFV0t0LVFDSGxZbFhFWlh0dXd5VUw1QVN2Q1FDWWREeUhtSnFBQUVuZEZUcVRIMGJMdzJfeHllWnpUbTMwN3R6SHc?oc=5",
+    "https://news.google.com/rss/articles/CBMimgJBVV95cUxNUTU1WU9YUjFrclpqVjZibEZQUHluejhfR0JWQ1NyMlJtakZ4V0lMZU9zbmdJdlRIalA1NF9NalZRLXVJUGMzRFpQOC03SUhHVGIyV0JTNDNxSjNsVGg3QXZxTHc1c1V3QUxMVkhxejBWWFM0YXRTUFZocWFSeGRaajhuVzRmbnc4TUpJZF85OTNiVTh4TFVGYmhxMG91Q3RyQmRXckxsM0s2WUpHZWZvTzlOakpld3BYdFJteExkV0Zacm15TjRvem5Qa1VWVS1aTmRMUkNWZTlJQlAya1Rua3pQX25uMXBWVndmUlhEbkpUVUIxaUZEaVhIWEdMNDc4Nnh0Wkd0UGFJNGFWVEx4MHRFcEhPRHJzRmc?oc=5",
+    "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5JWW5xbTlNNEVkekE2OUZ2V1FFNlRkX3F3cm5EVFlsRTJJbER0UTBfaVBkT2xFSkNjZWRPLWVKcW9GYWxnUHVOemltMUJhZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5KOHF1MzRNc3NaendzSklzTWQxX2ZOSjhfemdKdXFmZTVwOEp4b01tLVhpRGdTYmtMUFBsM3F0blRvUTZkVUZLTkhnc1lwbnJ1M0FPa3FpYjQ5djdLRVZrcU4tRQ?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQM2dJeEV0cmJOWjl6Um1fNmtFX0tNVGlobmF4dzEwWTk4ZWk5WFMzZjI0REZfblpKeTNQcnZld1NfMGY1b1FWMVVhdVNzcG04WG5oSHpyTFBtNVZ0QmRXX1VhN0hlUWNKUThDeHd0eEZRZ2V6eFdMa1FfTWNpcXQ2QklrdmNfaEtpRGdMZWVXZDdRZkVpTHliUFFZR2l3UQ?oc=5",
+    "https://www.aa.com.tr/en/middle-east/irans-army-claims-it-shot-down-us-drone-over-southern-iran/4100054",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxObUlSeGx2bllMV3paMG1SYklDdk8zc2I0T19CakZBcXFhWHpQdW5HUDBZWXdFSVZ1SkczSkYzSTRzTjJHSEtSUjlFd19wUmU3Y0gyWC1KYk9Wa2hKNlNuNXNKQVQwQ3JlTXRBUzV4QnJWeVFfVW12dDlxVmtFclNLZ0pHMnpiekEyRmluRmdsdlhXTjNqREhYTXdVd1JIeTVzTFBqOXpjM0hlMzZNTm1zUW10bnpJRXNN?oc=5",
+    "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxQS2k4UVNZTXcwbmNURHM5b3JSWjJWdjFHNGlfX3QwOVg1ZHNXRjNsQlVIM0NnYVB6SGt4Q1E0REdNdEtiSW9fcGlmM243RkFqS25wR2dBckxTcm02ZGM3eFdHeTJ3SVowYldFa2lqbGdOcXhlZXRzNGZSUlNiSThBSEYyOGRtdXFLLTQ2YXRRaEZSQXhIdFF0MQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPLU1nS0UxWG8xTjBQZzVRU184TVlObnpaazMwTkx3RmpsdHQwRUMwZktBUTg2SXF4dEx0TG1OUS1pOENJTWR2cWdRWTM2S052TWxlQUk5V2x5bUFfdy1rVUdmbEg0YUFfSVI2WlFBUWt5SnlSQk5zTkdYSXg4RHRiX1ZPTmFJUVFKeHpTZkI4SkpOMUs2LWRmRlI0enNOejVMSkNUbWlNSGI2YWFEUUp3OWlKMkVLeEw2?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbC1pR0J3bzJqaVBmaEJsbVl5WFBNOVhuT2xJdTBBZkFEeDllRWtNczY0NFN3Z3BHaUprS0ZZc3BPUDlsY3J5TXJ4LS1qZzNneUtoYlV5UGphQzlmclZ5OWVwbG1XSklRS0htcnA5UEtBaEpQVnlQUG9ZdDZnZWJKWW1CUnkteWk2eklYQ2N2cy1TRFdWczRvWFJDR3I1WHE1ajNMOGwxOU9RV19fckxwZ29fVzE?oc=5",
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FQi10RlgxckJ2S2ppUG1DVS1PMFZ0MHo1QUlmWGJDMlRMQWRGMnRLSGJTVEp3c19yMTR1MldkR3BMbTVzTTJfTkxnbW9JNHBSU0hOOEtzb2p6Z1FCeml0UGE4VjQ3YTJv?oc=5",
+    "https://www.theguardian.com/world/2026/oct/25/lula-da-silva-flavio-bolsonaro-brazil-presidential-election",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMVN0b3hoTTBrZHdSTHI5aEF6MnloYU5taENuT1lVZ0toV3JZUFFCQ04wbzY3ZU9YQUoxUlo1WFQ4RkxxTTlkZGk0RmM5eGtFMVhCZVNoMHJPUHgtMC1KOUJXSmdJNVVJamZsTERKUFdKWkwtYnh5U3psNE1RakdEYUlUUkVpT3dHX0JTRDVwQ3o0Wkg2THE4c1dLWmdQVl94TVJQRnZIQ1NMOW1QWmRV?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcmRELTl4SThFeGVYa2lkSEF0RE5uNHFUZUd3ZUFTZkhVeXhNeW9uWlI2andFTGJqbnJoTjhPTDMwWUpFMVBkc3lPMW5hbFlJZmY1RzZkUXZyOTFRNXFtcE1ReWhmTW5mVFV3UVhHR2hFRkRMSGl3ZlRRVTlWcjlWVDROQzVjNWlaYmpjYlRKdE9WN2k5VlJMQWliRl85YkhZblFOdHlucXpkX1lVZFlV0gG0AUFVX3lxTE1DekVPN3UzWi04Q3ROazVRUEZLZHMtU25FT0dmV0NPbWtPaFdycXFHMlNJQ0ZzM0hsSHJxSmFvdVo1SHU0WE5QUHhuRTZtNURjZU9DVmlsYkJyZFRyTTZGay1rVDJuTjI5eC0tc0I5dUhVcUJoN0dKLTRsWl90dlpSWXlHc2tPbF9PSmRKX0hvcjVSNzRpTGtkcDJEMFoybUdiUVRZLVA0S0VhdGZxVDZhYmhsSg?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTXd0Z0U4VzJ0by1xLUJzZ19KNktQU1lhY3BkR1JfMjFsQzc0dlRhckQtMFlHRU0xMWZ5SGFGU0RYUUQyRW1FQS1GMUUzd0FLaWtJSDZSNGxybGdncjhtZm5MLTh4NjhNQUNMZ2FhSmdXaVhmZGlhWTJlUWxRZy1FMGRCTnhLV25QSzlrLVhWRm8td19CTGxRZFIwU3dNR2dLLWpSZmpuV3dtQdIBrwFBVV95cUxQZ09lbDFkc1BtTWt3YUNIbnZKV243LWxJWXladU5mcnBzc2JnOFAyODVVMl9iYTd5QjRPcGxfWTNTWm41NG4zbmZoSVhwdE5UNTRQY3JtYmV2LVZIc3lUN1lXU0dCVmNQMThxVWN3RXUtQVlwdldmLUtQbFRfSlJJeGtnS2t1b1Iwel9hNzM3YTdrX3RrMTRpZkJ5UWRpejMwQlNJYXFWUzE2U3poV29n?oc=5",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVHU5T18tS3F5UFdTNEpMc0lONG5EaE56SFQ2V2ZreUtyR1BiTElPUnpVNjZsbngxU3V4YTdKbmpDcV91S0NfQkpuZ25kNkdyUVdGZmh0R01kNl8xYi1VNnBCejltd2Q1TmI3d2dMUS1jcnBPbmZJM0RSZ0JxNFFZNUpETEYwRXVOMjBpRTR6ejI5WExCYUNmVQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxNR2RBZlZESnVqLUllOUJVc2prTDZqbzBRVUNXczhicnVKdDdBTDFHeXg5WWNHc3JmbHhzRFhHcFpaUHZEMmh4Z1FINDJNdjVHR0VzakhTeUZZYXV2Rm5MRmdrbFFFQ2Z1Y0JqN05nNmotOU5sd0hjTExDcjdsWkQ4d0RSYUNqOTIta0VneHFPeFRjd9IBlwFBVV95cUxPeHIzdmdpTm1mUDhkcUd3OG9Ib29YLXpsNHV6LUNGc2s2QjJrclFqRXVpT28wanlNNnItWERZbEtNbDh5b2g1dlNHbjhBSF82Ql9XQmtKRTVraGJXMXIwOWg4VEo2Y3Z4LWFHb1hEb2xZY0ZoMjg0YnFPcFlFYVNLeXhLQlFrRXEyVkV2aEd0a1pwbmx2RUJn?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZTFxVk9aWG40ZURMaFMybEF5QmNTemdHUUgxWDVyVk4zaF9qSmdSYzJweWZsM1N4algtdm0zcDdhUXZsMXAxdjNncVprb1o4cFlsUlpDbTFJY0o2RC1WZHlFTHJjUEE3WGFacTlhclRQd19xTFlUWkk4SXpfXzBURWtNOFc3UW1YWDVGdnNyODYtamFuZV9Dd2tveEFnWUZ2R3lR?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNk9zbWRJZDF1aF9WaWZJWnRLQXhCRmtkbnJLMmt0cC1aX2swYkp1UlpFRVZoZG1TWlBENVNZenhUMWs1eG4tMmR5UVZBNFV4NXAyMjJtbVNmWnJTejlJdFJDVmtlMWdadXJOcTU1d1Q1UUpYNUJLeXhuY21YRW1xcUpBMDJMREZFa29qeXk3WVZEM3h6YktqeFlwMFIxQkVfMV9jbEJB?oc=5",
+    "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE45R0JYQ0dqdWxiMFhWUjVGbTlsRDVOUlNEU1p3aXNZQXVuaHVka1BRV1pxV1VwTVg3WFpjYWtQUlhPekU?oc=5",
+    "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
+    "https://kz.kursiv.media/2026-10-25/cntr-v-astane-iz-goryashhej-kvartiry-na-14-m-etazhe-spasli-dvuh-detej/?utm_source=rss&utm_medium=rss&utm_campaign=cntr-v-astane-iz-goryashhej-kvartiry-na-14-m-etazhe-spasli-dvuh-detej",
+    "https://kz.kursiv.media/2026-10-25/mlts-yuliya-putinczeva-pobediv-dvuh-yaponok-vyigrala-kvalifikacziyu-turnira-v-tokio/?utm_source=rss&utm_medium=rss&utm_campaign=mlts-yuliya-putinczeva-pobediv-dvuh-yaponok-vyigrala-kvalifikacziyu-turnira-v-tokio",
+    "https://www.theguardian.com/tv-and-radio/2026/oct/25/i-cant-believe-i-get-to-see-that-one-born-every-minute-is-back-for-a-12th-series",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBwQ0RzemhGd3dtSG1ETDhqdzdkTVlFVmF3UGZjanVmSGg0cEMtalM5QkgtdzBFOHRDYmJFUHlFRjh5ZDBjYXcxZktSdTFTb3hESDJWVmNjbHhTN0VqU2hjaFU0NFFJX3M?oc=5",
+    "https://www.aa.com.tr/en/asia-pacific/north-korean-leader-kim-vows-to-strengthen-ties-with-china-during-dandong-visit/4100052",
+    "https://www.aa.com.tr/en/world/el-salvadors-president-denies-report-that-bodies-found-in-haiti-are-missing-salvadoran-soldiers/4100038",
+    "https://www.aa.com.tr/en/americas/11-shot-1-more-injured-near-florida-university-stadium-police/4099932",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE9USVhaeElDRGRFbEl1REZjNDhGQzJCRnY3NzJRWWFCVWdDT2VvaHU1SmxJbi1xRS1lejhyamFrUFRmSWpGQWpSTHcxdDNwYV85azhHMHZ0MzFIQUVuangxeVJqMnBkV0t4MHRTLUU0eUJXRS1pdThnUGpqbw?oc=5",
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOYUVDbDN5b2NFZDJCTzNfOXJoMGZEaldNU1dOd0lXeFI5bE5CRUIyZHdmLUVFd09lZDlEOHVYMXdiSHN0THlYMDlUWndGZy12SDZRRU93U25IWW5BSUR2RjR4OWM3Y0hoWnR4MGxxQjMxQ0xFQkJ4SzVaS25ELTRhSWtzQnFzZmFjcHZjeDBvVkVtOE55NlYtVzM0SDhqcmp2a1BzSTJCQXBBWl9jS3NyclZia0ZpemlPNmVJNm9fQ0FQZ0phQ25FZTZLY05Ga3RR?oc=5",
+    "https://www.aljazeera.com/gallery/2026/10/25/photos-clashes-erupt-in-france-amid-protests-over-rising-living-costs?traffic_source=rss",
+    "https://www.scmp.com/news/china/politics/article/3372065/beijing-commemorates-end-japanese-rule-over-taiwan-call-reunification",
+    "https://kz.kursiv.media/2026-10-25/devy-kofe-na-verblyuzhem-moloke-podayut-v-novom-kazahstanskom-restorane-v-shanhae/?utm_source=rss&utm_medium=rss&utm_campaign=devy-kofe-na-verblyuzhem-moloke-podayut-v-novom-kazahstanskom-restorane-v-shanhae",
+    "https://www.aa.com.tr/en/world/police-clash-with-protesters-in-rome-as-demonstrators-march-toward-prime-minister-s-office/4100018",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdnRaZkprV1VVSVNxVEJpN2ZnN05zaWVDSERxYXpUcTZpaGtsd2F6Nm8wdFBOZGM4UDljNm5DcTVwS2lMMEZGbGFhd04tM1RTQThDZG8zUVpIY0lwS21JdXVVNGtRNW1xbERPdktydzVCeWxkYVI0YkVpVHNmLV83X2V0YktyX3M2ME5fam5Ha3FRMndsLWw0NkRTcHNLeHR5bVhmWUpqQWJXLU5Cd2JsWlZLaGJ3SGc2QmfSAboBQVVfeXFMTnZ0WmZKa1dVVUlTcVRCaTdmZzdOc2llQ0hEcWF6VHE2aWhrbHdhejZvMHRQTmRjOFA5YzZuQ3E1cEtpTDBGRmxhYXdOLTNUU0E4Q2RvM1FaSGNJcEttSXV1VTRrUTVtcWxET3ZLcnc1QnlsZGFSNGJFaVRzZi1fN19ldGJLcl9zNjBOX2puR2txUTJ3bC1sNDZEU3BzS3h0eW1YZllKakFiVy1OQndibFpWS2hid0hnNkJn?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUldFTGRkVC1jdHBrdTE0YXhMT29CYmZ0UG5HcWRKNlg5bGFPaFNjVkszdU56eGI4ZGNKTnJ1ZktTWW9jYjZXdmF1S1FmOWhBaUFici1tYzhfWEZ0TDNGRWdMenVfNUFRc3M4WVFzZU5JZHd6cTUyWkE2enYtN21YdFVrRzRPb0MtNFp3X3FrLWhNMGFQYnd6amZQLVpIelRCVUV2dU1UOW0ybUhNZ19wMEhrUWJoQTh3elA1N3lZdU5sUUxMMElqY04xNUNJS2RyRXfSAdYBQVVfeXFMUDBVeVRpZmxPRWpxQXg3X0FFYW9iSzFBbkwtMHE1YjRUeC04dnJyR3EzRkZXaE9pMVJNZEluYWVsTWdNYjRxYk9ZZEFPeE5kN3ByT1pRcEN6MGR1Vk5ycGZSNWttQ3ZxZy1KMDVvX0k4b0FSMm5MdnEwRG5vQTNFeFViaHJ6M3EtUVdTdW1La1k1cXBPSkItMUZ3ckl3X3RVZXROcmRWRVRxcV9IUGFmNHJ6WU5fVEtCYmxvVDZycFZva3N3OWl5VVlST2dmRktmdnVQMkZYUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNWmhXSWw0Qm1GSTVRcGIxdlZXWFdNM0ZZbE9JRl9YWi1VejZMcC1vcHBpWVp0Umw3Y3Nhd01iRHlGWXppMVBXeHJoajlIa0xVMHlKRkk1NzFkTFFsNG1ic21DaFNLaWNBaDRSLUYycXhzeURyTXNZU0k0WFlmYldwaFVtQ1lhRDhadHl1cV8yek5UdE9jZkpDa0xlZUxjcEhxUzVHdlVEREpiTlhrQTdCSGczYkVPQkR6WFBrSmxtN1FjMUcx?oc=5"
   ],
   "recent": [
-    {
-      "tokens": [
-        "ahead",
-        "counci",
-        "hosts",
-        "macron",
-        "meetin",
-        "planne",
-        "protes",
-        "securi",
-        "weeken"
-      ],
-      "ts": 1792656107.4850957
-    },
-    {
-      "tokens": [
-        "300",
-        "главвр",
-        "директ",
-        "медучр",
-        "провер",
-        "профпр",
-        "свыше"
-      ],
-      "ts": 1792656112.1560652
-    },
-    {
-      "tokens": [
-        "anger",
-        "art",
-        "diplom",
-        "eco",
-        "haze",
-        "indone",
-        "sparks",
-        "tensio",
-        "turn"
-      ],
-      "ts": 1792656116.9778292
-    },
-    {
-      "tokens": [
-        "владее",
-        "китайс",
-        "компан",
-        "кунг",
-        "показа",
-        "робота",
-        "телохр"
-      ],
-      "ts": 1792656125.4367418
-    },
-    {
-      "tokens": [
-        "centre",
-        "evicti",
-        "mehboo",
-        "mosque",
-        "mufti",
-        "near",
-        "notice",
-        "reside",
-        "slams"
-      ],
-      "ts": 1792656129.9829414
-    },
-    {
-      "tokens": [
-        "000",
-        "barcla",
-        "cuttin",
-        "increa",
-        "jobs",
-        "relian"
-      ],
-      "ts": 1792657888.5564313
-    },
-    {
-      "tokens": [
-        "адвока",
-        "возвра",
-        "войну",
-        "ехали",
-        "казахс",
-        "попали",
-        "работа",
-        "расска"
-      ],
-      "ts": 1792657892.9108303
-    },
-    {
-      "tokens": [
-        "broker",
-        "deal",
-        "iran",
-        "russia"
-      ],
-      "ts": 1792657897.2874713
-    },
-    {
-      "tokens": [
-        "автоба",
-        "везти",
-        "выгодн",
-        "казахс",
-        "какие",
-        "китая",
-        "машины",
-        "расска"
-      ],
-      "ts": 1792657902.2929583
-    },
-    {
-      "tokens": [
-        "accomm",
-        "additi",
-        "billio",
-        "cost",
-        "hajj",
-        "pilgri",
-        "weighs",
-        "zamfar"
-      ],
-      "ts": 1792657906.6205564
-    },
     {
       "tokens": [
         "2026",
@@ -16542,215 +16466,78 @@
         "saudi"
       ],
       "ts": 1792915278.5105853
+    },
+    {
+      "tokens": [
+        "beijin",
+        "call",
+        "commem",
+        "end",
+        "japane",
+        "reunif",
+        "rule",
+        "taiwan"
+      ],
+      "ts": 1792917107.6397026
+    },
+    {
+      "tokens": [
+        "верблю",
+        "казахс",
+        "кофе",
+        "молоке",
+        "новом",
+        "подают",
+        "рестор",
+        "шанхае"
+      ],
+      "ts": 1792917112.428032
+    },
+    {
+      "tokens": [
+        "clash",
+        "demons",
+        "march",
+        "minist",
+        "office",
+        "police",
+        "prime",
+        "protes",
+        "rome",
+        "toward"
+      ],
+      "ts": 1792917116.775546
+    },
+    {
+      "tokens": [
+        "армию",
+        "беспил",
+        "войск",
+        "гибель",
+        "казахс",
+        "меняет",
+        "остано",
+        "реформ",
+        "солдат",
+        "учебки"
+      ],
+      "ts": 1792917121.5219061
+    },
+    {
+      "tokens": [
+        "artifi",
+        "debris",
+        "earth",
+        "fall",
+        "intell",
+        "predic",
+        "satell",
+        "when"
+      ],
+      "ts": 1792917125.6606097
     }
   ],
   "recent_ru": [
-    {
-      "tokens": [
-        "акции",
-        "безопа",
-        "города",
-        "макрон",
-        "новые",
-        "порядк",
-        "пройду",
-        "протес",
-        "совет",
-        "созыва",
-        "суббот",
-        "угрожа",
-        "улицах",
-        "францу"
-      ],
-      "ts": 1792656107.4850996,
-      "title": "Макрон созывает совет безопасности из-за протестов"
-    },
-    {
-      "tokens": [
-        "аттест",
-        "больни",
-        "главвр",
-        "казахс",
-        "ключев",
-        "медици",
-        "первый",
-        "провер",
-        "руково",
-        "состав",
-        "старто",
-        "страны",
-        "учрежд",
-        "этап"
-      ],
-      "ts": 1792656112.1560688,
-      "title": "В Казахстане проверяют главврачей больниц"
-    },
-    {
-      "tokens": [
-        "видео",
-        "вирусн",
-        "вниман",
-        "гари",
-        "запуст",
-        "защиту",
-        "индоне",
-        "перфор",
-        "пожара",
-        "привле",
-        "проект",
-        "против",
-        "сняв",
-        "суматр",
-        "танцем",
-        "фоне",
-        "художн",
-        "через",
-        "эколог",
-        "южной"
-      ],
-      "ts": 1792656116.9778328,
-      "title": "Индонезийцы привлекают внимание к пожарам через перформансы"
-    },
-    {
-      "tokens": [
-        "guardi",
-        "kung",
-        "legend",
-        "roboti",
-        "unitre",
-        "выполн",
-        "гумано",
-        "защища",
-        "имени",
-        "китайс",
-        "компан",
-        "людей",
-        "показа",
-        "предст",
-        "робота",
-        "способ",
-        "телохр",
-        "трюки"
-      ],
-      "ts": 1792656125.4367447,
-      "title": "Китайская компания представила робота-телохранителя"
-    },
-    {
-      "tokens": [
-        "близ",
-        "власти",
-        "выдали",
-        "выселе",
-        "грозит",
-        "индии",
-        "мечети",
-        "объект",
-        "премье",
-        "резиде",
-        "религи",
-        "снос",
-        "уведом"
-      ],
-      "ts": 1792656129.9829457,
-      "title": "В Индии мечети грозит снос"
-    },
-    {
-      "tokens": [
-        "barcla",
-        "банков",
-        "внедря",
-        "группа",
-        "интелл",
-        "искусс",
-        "мест",
-        "повыше",
-        "процес",
-        "пять",
-        "рабочи",
-        "сократ",
-        "тысяч",
-        "эффект"
-      ],
-      "ts": 1792657888.5564358,
-      "title": "Barclays сократит пять тысяч рабочих мест"
-    },
-    {
-      "tokens": [
-        "вернул",
-        "военны",
-        "войны",
-        "гражда",
-        "казахс",
-        "обязат",
-        "освобо",
-        "родине",
-        "россии"
-      ],
-      "ts": 1792657892.9108334,
-      "title": "Казахстанцы вернулись с войны в России"
-    },
-    {
-      "tokens": [
-        "возмож",
-        "встрет",
-        "ирана",
-        "лавров",
-        "масудо",
-        "обсужд",
-        "пезешк",
-        "посред",
-        "россия",
-        "сделке",
-        "сергей",
-        "соглаш",
-        "стать",
-        "сша",
-        "тегера",
-        "ядерно"
-      ],
-      "ts": 1792657897.287476,
-      "title": "Россия может стать посредником в сделке США и Ирана"
-    },
-    {
-      "tokens": [
-        "автоба",
-        "автомо",
-        "ввоз",
-        "выгодн",
-        "измене",
-        "китая",
-        "машин",
-        "новых",
-        "оценил",
-        "подерж",
-        "покупк",
-        "правил",
-        "сделал",
-        "таможе"
-      ],
-      "ts": 1792657902.2929616,
-      "title": "Автобайеры оценили ввоз машин из Китая"
-    },
-    {
-      "tokens": [
-        "близко",
-        "власти",
-        "выделе",
-        "жилье",
-        "замфар",
-        "ищет",
-        "миллиа",
-        "найр",
-        "обсужд",
-        "паломн",
-        "средст",
-        "хадж",
-        "хараму",
-        "штата"
-      ],
-      "ts": 1792657906.62056,
-      "title": "Замфара ищет средства на хадж"
-    },
     {
       "tokens": [
         "2026",
@@ -27413,8 +27200,104 @@
       ],
       "ts": 1792915278.5105898,
       "title": "Силы коалиции перехватили ракету над Саудовской Аравией"
+    },
+    {
+      "tokens": [
+        "возвра",
+        "годовщ",
+        "кампан",
+        "китай",
+        "оконча",
+        "остров",
+        "отмети",
+        "пекин",
+        "правле",
+        "провёл",
+        "тайван",
+        "японск"
+      ],
+      "ts": 1792917107.6397061,
+      "title": "Китай отметил годовщину возвращения Тайваня"
+    },
+    {
+      "tokens": [
+        "camelc",
+        "sandyq",
+        "заведе",
+        "зарабо",
+        "казахс",
+        "открыл",
+        "районе",
+        "рестор",
+        "хуанпу",
+        "шанхае"
+      ],
+      "ts": 1792917112.4280345,
+      "title": "Казахский ресторан открылся в Шанхае"
+    },
+    {
+      "tokens": [
+        "демонс",
+        "минист",
+        "офису",
+        "попыта",
+        "премье",
+        "привел",
+        "прорва",
+        "протес",
+        "риме",
+        "столкн"
+      ],
+      "ts": 1792917116.7755492,
+      "title": "Протесты в Риме привели к столкновениям"
+    },
+    {
+      "tokens": [
+        "армию",
+        "безопа",
+        "военну",
+        "войска",
+        "два",
+        "казахс",
+        "масшта",
+        "меняет",
+        "одобри",
+        "пройду",
+        "раздел",
+        "реформ",
+        "службу",
+        "совет",
+        "срочну",
+        "трагед",
+        "чистки",
+        "этапа"
+      ],
+      "ts": 1792917121.5219085,
+      "title": "Казахстан меняет армию после трагедии"
+    },
+    {
+      "tokens": [
+        "законы",
+        "индоне",
+        "исслед",
+        "космич",
+        "модель",
+        "мусора",
+        "нейрос",
+        "объеди",
+        "орбиты",
+        "падени",
+        "прогно",
+        "расчёт",
+        "создал",
+        "спутни",
+        "схода",
+        "физики"
+      ],
+      "ts": 1792917125.660613,
+      "title": "ИИ прогнозирует падение космического мусора"
     }
   ],
   "weather_date": "2026-10-25",
-  "last_run_ts": 1792915232.0049608
+  "last_run_ts": 1792917028.2372236
 }
