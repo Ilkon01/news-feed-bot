@@ -9213,24 +9213,51 @@
     "https://news.google.com/rss/articles/CBMiowFBVV95cUxPODhLTGM3Tms2NFZRRzZwdDZVNHE2V3RHQ0VYUXZkOUJ0LXQtcjdLYWlyWDJlMEZSVnNBdkVnMlZEVkZyb1p0eDE5LUtYUUd6WjlCelNRVWptUnVXZW95YjVsajg1am1qQ2FpOHdVSFZ3SkFUMWFoVTdjdFJuTVQwSXNveDB5Y2N5RjRFUXdkalZQdGRiSGd1bmo1Ry12dUxZR3hB0gGoAUFVX3lxTE5ZNmtTSi1aeVZhZjJzTVNSTVU1UmxzejczMWZVOVBRYlZBeDRlUUl6NTJ4LWRvcEx6cGRlYzlVdVM2T0xmQ0h3dF84djM4Z2lsTHZSTmZlY0JCOTVfSWpaa2ZtU0ZETEhHMnBYV0JmWFBpSm1rUjQ2MjJRQW5lQ0ptbk1vSDZMWTR6UkZOSzFZSXdFYmQ2YVliU0pIVUFud2EyUmhXZUJyNA?oc=5",
     "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRTFJejhGVHpHM3RQVWQ4UzVmaWJfSUVsUkJJaENrN1h0bjA0aHhvaDVvREd0QllZQnU1Q3J4RnBKNmg3aVRWRWxBeDNuMmdQRVpKamNEWmQ4bnlxYzJGVTRMdGpjaU5kNGZ1Skt5VE5WNi1Sa1d5UENGVUo1dko1YVM4OGFMcENiTHVBU2RTV0psdks0ZkVzU0N4Nm5IM3BhY2R4ZEN3?oc=5",
     "https://news.google.com/rss/articles/CBMihwFBVV95cUxNS3F3eHg3WGVPOEtRYnBkaDdTSGtIQXNhNENzVEFvM3lnYXRpV2RvMXl6aHY2OXVOWlVQX0k3eWJILVhLdlpocjBzWXVuMGVWYjNsTFNaQVg5eENPa0tUMXN2WXhXOGJYZjVtUmVUbWxwU3luSEVuNWlkUzBwZlRsR2lqN0dPYVU?oc=5",
-    "https://www.aa.com.tr/en/americas/trump-says-he-has-to-stop-killing-iranian-leaders-to-know-who-us-is-negotiating-with/4099930"
+    "https://www.aa.com.tr/en/americas/trump-says-he-has-to-stop-killing-iranian-leaders-to-know-who-us-is-negotiating-with/4099930",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE80ZlprMjNoaDNMLWFUNEltX0JQU1YyVHdUQnB6eFB0QVpfM3YyaWs2d2hPX05UTWptS3ZkaWxqeG1paDZRWWFQU3ktb09Bc1BaejNB?oc=5",
+    "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBCLUpaZFBGTl81RWtTcFVsUnJGZ19DU1dpd1FKSFpndTlxZGduSmtIWllLcnphNG9LSURuazF2dXkyZGdDR3hB?oc=5",
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPbEdIX1Y5RGc4bEZHWlAybjl3NXdzR3F1YjNfZ3M4UnZzQVlsQms3aDExR2JiU1RfWWt2VTRKTnNFSHpfUWhia1BHU0RCbjFwV0gzcHB1Y0l3T25rREg3bVZGNWc2Zm9JSGdTSDROZWw1VDdlOFZwNC1fX2ZjMzJ6U3U2ZFAyVV8zMzhNZWprazZZWUVaeG01cHg4SG9VR2dLUjdrQ0c0cVFGb3l0NURuZXdYUmtDR2JIYW1wOUxidDVMdlN1X29MbFVGanpnRUpqMExoNEk3SFduUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxObkRQZW85N2p4SmdCc3FXLXpuRFhKNkFyZTVqMW9heFdfU0pmTlFVdEJ5Q0xFS3pVMnc3RVJXVV8tQUJoTk81MFpMRTFGcnR5dVFTMGM4UE5Rb1ltNUNwYVYydndzeTR4VVZwRzRvWGEyYjRrUHBPWU9xQ1dLYWZoYkxsRjRYNnhTeTBKN3JfenNMZUJYeEE3SWtZdnBsaks3cXNDZk9RYVljV3Zmcy1GQXY4TklVeEdQcnFMT3hQQ25malplM191b2VLZ3E1RHpuQVE?oc=5",
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSS00LXhGSXprUGZkZ1BHc2ZWRS05M3NWV3hGaHlaWHFCaU5UVHpINXlCbEhaRWlxVDExZnlEQ2E0LVdoZnFfZVpxblpVVzVLNGxyUVZzZnBaZnctbmJoWUJuVWlIX3NJWWFoNVh4TWx4aXlZU2NTYzdUcDZHbGRWX2ZFWEdPLUc5VzRjZ3JlRHNWN0prUGdjd3hnb0ZZNGUxR1JnaDhRSHFRbVhuaE50UGp1NFRDUXZpVXBPVERSLUxlc0pRdjZ1ZHFhY0lWWU5IaTV0eNIB1AFBVV95cUxQSS00LXhGSXprUGZkZ1BHc2ZWRS05M3NWV3hGaHlaWHFCaU5UVHpINXlCbEhaRWlxVDExZnlEQ2E0LVdoZnFfZVpxblpVVzVLNGxyUVZzZnBaZnctbmJoWUJuVWlIX3NJWWFoNVh4TWx4aXlZU2NTYzdUcDZHbGRWX2ZFWEdPLUc5VzRjZ3JlRHNWN0prUGdjd3hnb0ZZNGUxR1JnaDhRSHFRbVhuaE50UGp1NFRDUXZpVXBPVERSLUxlc0pRdjZ1ZHFhY0lWWU5IaTV0eA?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPb2FJaTJEekJlQzdJX0dnVmJYcDE5bEZycGw4NGp0UlR2dmpHdDBNWTB3Q0lLWnlOTWtjUTBiZXk2UC1Qa25jYTZGSVBxX3dKVlpIcWozZlpvVUo3Y0JyOWQzWFNWMGRJc1d4N1lPVWVZSEpoWjNTbDRQX1hyZTRTbGpZa2U0MVB5d3R4aWk0MmhXN19kNWM3aTNhOUtyMjA?oc=5",
+    "https://news.google.com/rss/articles/CBMirAJBVV95cUxPSm5RMmJXejBIXzVnNmhHTkI3czhOVUdyRElEU1RLQ1J5S092ZE8zRDdQNnA1ZnJMLTB0SUowZVVzQ3RKTGJzLWd4TGM0NllDSm9oYXgzWnNzMXpkV3E0SmgwQ0QzTzFPcEtPSWZtY3VKTFF2NktSZVgtOHdxZ0I0WnNBZTNVdmptZU53ZWFLZVhkOG9vQTNNaW1iLTVEcEY3ek9RRzk4anpEM0ZBT1ZBb2xKMzJpU3FSQnNreTY2Q2NHY3d1dE5Hb2Yxb0w5SHgwamxCU3U5cWhWVU1xaFBTSGNBX09SQmIzS1NDWTVzTGJlOVcyV0JCWmVQS2dIczZlQ2JiYXlZdGRKRV9LRmhfN1ZjSTFkcm9weVdsMXRkS0E0QWFOTGpieTBOamY?oc=5",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeEFIcm0tZFYzX29fZFVWS0F6SGEtam1RRUhNZklTWnpHSVdSMGhWTmhhZGtMemZid3hoYkFtc2dEakljOGZsczBGNGRnVDZ1d09iVl9HUDQ1MlJIWWFSU0xaNFNfejFRSW5oWmJQYWpVLXYzbF9VWkh6Z3I0U3dEU3NuRkRLNVZ3YUVZUEZPRVBjdmZWNkVNYUtaRXlaY1dBZmdoRGRVVm1ZNFRpT3ZlVDE5dDhWZXUtR1pVNFp2S2k?oc=5",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01N0tVbkxOcWVDU1o0a2pENm1XdlpaQkQ1aVktYjZDaUlvSTB4SGFJME80UTRRYXNKejdlRTZSanVJZE1iMlo0bG9jaDZ1T0N3azdRclZMaFNjVnh4Mjl4Y3l1ZnpwY3fSAVxBVV95cUxPV2NCZXl3OGVhVVVpRklYQXBWV0VEY3BEUmg4WUktTVIyWE9jaHlmVHZ4Q0hNLUtueFFLNGEtTGFULTYzaGJCWllOdnlvVFJPaWRGZnI2cVV5VXc2Uw?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOdVZzcDlrMmNmQjVGN0g2M0czTEpKYm8xRV9wWG1rRkZrX2dFYnZTR0RhRXkzaHJmNzk4aGQ0UDdRSzhfRTh2OUdPX0F0ZS1tTnlLTUdzVGxnQ2F2OGR2LVRxaFBsMGdNTEF0VlNpTWZnZ2J1S0RZZVhfcmVSQlZoU25kbGtLLTM5M2RINF9mcGNwaXZBdU1PUDREWURHZw?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxOeWJ2bGllV1N5MGZKTC1hWXRQUmV5U0xTNll5Q1hTVG1sczNVNjZwNDVuX2NmS2swOFJfOUx0bkpVSGJKWENCZ3AwS2czZ2pXZ3lUOVZXelBMaXZRaUZkX1loWjRndjQ3dXcydFRLdVc3cFQ3ZkRVS2szTTc5S0xtU01CT1hQS0lFX1IxbUNNQk81dzFCbk5wTzhwcHptX0RPejd3eENNdGRLZEM5QmtMMmlUWU9nZw?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObXp4M3Q5bWUzdE43cmVTTDNxSVcxaGxQQWswd0Qyc2lqdm1wNXZIWEdTSEpVVG5rMUhidmdPajQ2WGJ3NWRnd3JZWVN6QURNYmdPOXlVdWx4OG1MVWVtMlhmTWI2UGRPV0RMam5sdXdyUUczaUFiMVRrNGFiVXRvcGtka3h2ZGFVWnlQejBZT1VoNXdqUFpmeFlaTi10VERlQWpSMHlZLS0wd9IBrwFBVV95cUxPZXQyY1RBY3lYNm1tQ3FKWGxfSWlteHdncFhUUmN4OUJMVzRIaEtsSGE2RU5TaFhQcDc3WFgzTm5DUnMtak5ydlFqUU5FRHVLQnhpMWgxcERlbDJvajR0bXpyUGJRTEtpUkdXbEhmWW9CcEJzS0k3Z243WXhLSVJwWWdzdEpvZ240M05ub3JrUVcxdVd5em1rT3hYR3ZpS21WWVRFZWtEYVBqczlUVWpV?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxQRE9DMkFGcUhETGRSMVBvWDdRRW5lRU85OXZDZHdfempWRG5RWm1WWHpFMGtDTEFCb2x4TE84azhYcVZyQ3M5MEZXb3ZQNXhpYlIwN0ozaDh5S25YbEsycE9xOE9PdEhzblAxOVNSTHBqRWduZ3RrMF9IQnc2ZHVMcVpkUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMThNeEFJVnpJRnRNV194M0hubld3ZE4yZ2YzSzlJN1hzX0d3a1dKQ2xuX1BYXzVud2QyQkpEQWNNNG43elBlY1JFTjlCN19uTnA1YnVXVXZKc0c1SEU0ZVpLdWx0SjBoZzgxaS1MZWZvZTBNMlBtdVlZUmNqMTJYYlhzejIwYllOQV9PQkhIYV8wWWhxcGlVRWhFb0J2Z1U0QTFaNnpHZE9vbFktekJGb292cXRUcVA0?oc=5",
+    "https://kz.kursiv.media/2026-10-25/rmnm-traktor-valtra-proyekhal-krug-na-red-bull-ring-za-rekordnoye-vremya/?utm_source=rss&utm_medium=rss&utm_campaign=rmnm-traktor-valtra-proyekhal-krug-na-red-bull-ring-za-rekordnoye-vremya",
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0zdWpqcFg1V3N0a2xoR3pITDBRcmZ0cFRMMXluYkxOOC1YUlNKaGd5anpQSnBCY2UxYTNERXZIV1ozUG5BYUpWd0QwQ3dtS2NXc0ljd2ZMY3Q?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxNZkdyb25Vc2Jfbll5SnoySTR5NlhXdTB4LVJ5ejNBRXN6TnAtMFN3REM0dkExRzlGb3VISmpFRVJiZ3l2RnhuX0E1dDA3TWtXdC1McFpGdVZjVngtSWdlajVIYlJveDFvbjRrOTN6d1BndWtEYWFVcHhlN1lKZDU2TXUyZGd2aVhPRGVVbUNXYWRQYnFFdGNzbEoxaUstRkRKeXAzWWxKdGlGS2lfV0VWVG4wMm5vdmtTUkJKS1BR?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxNemptZE4yZnpaRG1UMXpXSDg2QUJRZTlrUlZic2VlSnpKa3VhV2IxY3lQMUpadjhDc19oWlJaMG9BaDRGVk1sZGZFV2xaeW1leUdtYmIzcnhoeS0tZmN0VVRuc3F3ZC1WOXZ2UEczMnRWbUFtbzNldlpfbEo0OGxjMmtGczdXOXJ6dDg1Nk1fUXdEX29kLWYwZ012OWUxQ0o4bEgtMTJjVXVWdXNib0ZB?oc=5",
+    "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4cnZhUWR5YUZiWm9ZUFo5cjRtS0tMbF8wNnN5YUc2NS02bDZYdEJmRUx1V0lseXRsWjhDel85UWIxRFMydzJoTEhpb2d3WnhwS2dZc2xPTG9xMDFl?oc=5",
+    "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMMFRCOFZVcjREZy1SZXQ4Z0dpdVlvTTItVlhRSVVBMXFTY2ZFNlpUSTVCTkRrQ3FSYTg1T1loR2kxSmZ6Q3BQVi1VRWRJOXNqQ0J3X0NZTzR1VWh6Q3c?oc=5",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUHhiQlR4VFJsLTZVMDZQLWl4M2JmNGlXeGR6TEtjbXRUTF9zUDduZG5WOThXR0x4NW5EX29ybE84SXhYa3NNLThTRTBySGo0R2VTSTc5ZUhXLTVJWWVEOXhkZFJuWTlfc2gtVEd6SHBZXzZua2ZqR1J0emxqOG5HSzRtNGpUR0RsNDA3anNJQ2ZWVGRCUjhUekNzSlA3QndyeFF4ZFdLTDdTUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcjBRTTlHcjZZTVN4aV9lYTI1ak1pV3BjRnRabEQ2UWVkQVRJUklUWHdSZ01ZcWQzT1pqcF9yTEtwRnpoa0pXbUZrY0tzZTlpOG1Wc2ozdFlfVk54YmR4d21rSEdTaEJYN3ZwbFYzRHl4d1JtSkhTSzhHS0s1eF95a2h3?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcjBRTTlHcjZZTVN4aV9lYTI1ak1pV3BjRnRabEQ2UWVkQVRJUklUWHdSZ01ZcWQzT1pqcF9yTEtwRnpoa0pXbUZrY0tzZTlpOG1Wc2ozdFlfVk54YmR4d21rSEdTaEJYN3ZwbFYzRHl4d1JtSkhTSzhHS0s1eF95a2h3?oc=5",
+    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTXIyZ3FTY3JzMjRLMGhMSXRoQUZkQnhwTkZYaEtXcWVOd1lSZDJZMWN1bVU1aFZJbXlYX3lSSkIxenlfdU9ScW5iek5wVnFMbWpwb0QzRGZlWWVqTkFpaHFfUGdJekFnNlRqdndrQk9qRTVnVmpJZUxrMGIzX1dCME95ZWNFOXUtU1QwbU1DUWQwalN5NFZUREZmUGoyOURHZEtzNEJQSVFDNVpBYk1vbEptMk5KWEdwY0lFQVBNZjdjRGotQlROZk10WGhKN1ZHNTA0Unpn?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeDQ0M3pDVGUtOUdjRFRjWE9haEJ2TnJ0d3g5R3g0anBTWlZTNGJmaWZDSmw1QmJVQ3hEVmhWZV92VjBvcmNVMThaMlBiVmdhOHF3SHJjVjNDZEF6OVlLOGtWWF9zZnc3MXZvbmV2WWl1WWc5OUhMQmJxS01NdXZKNlhSUWFaTFJqZ1JEWkMtME51bm1KdkRKSkN2cjVLLXB0VjFLRTBWaDItVFpzV0M5UDZSTTJCckZmVktEaV9KRnFLdw?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxPR010ZGdkMEhnVVo5d1pIUkg4eGdiNVhRU0NMLU1RUUlCNVBJSDZ4a3p3TFhKdlBUM0trYXQwbTRjQk5STy1XS2hjaGlQb0w3bVphTjFVVW5NdG1yQWZSTEpOczJWM2UxeVdaRWVKdjViczZiNE1SeEhUbVBycllTdklHVGY0bDU3QmEzNC01Um45MUEyU09j0gGcAUFVX3lxTFBkVWtQLXNmMDBtaWU3SFMxc2E0U0lnaXcyekhGc2lyRVZSUERFM1lZOGNRSXVFdDlqSXpyc0xaT3BrZXlYMi1lM3l0bWk0ckU3Q2VycC1vS0ZNbFNOV2F4OHYyeG1iRk9UYXNMUDU2OUxXRS1saElXb3NKT3A5Q3oxRWNLRHR3SFlvN1dRMFJIaThXOTVUVFVOc3E5eg?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcWV5aHR0RmpzeWJzdnRudnpLYXJNN1JmTDVIdHJONmNlWFUtY3FRWEE0OGtxTS1oYVJUMkhBTWJLY3hRQnFoNnFoMV9SSzNqZGczWDc2QWVQM0ZGTXREdzBQSjc0dlo2RkcxbnlJTkxFTjVZbUQ1dExDLXlRaXJqd3VPbDFZRkJodXQ2T2NFajVfMG5xZXFJVmRBajEwUzRheDc3b3Rn0gGrAUFVX3lxTFBVVW8zcTRlMzJPNG5oSW13cGFtTlAybVNJYnNSdzdDNzRRelZIelozbEpFQUlsOTB4TU53c2ttUGZvUFlkTGNwSU9kY3M1TlBmTzA2LWozTG55RWlSNU1fRmltY0ZheEg3VktKRE4yQm9UaFhBTzViZHNtV0RXdlBtSE1Ba1U5SDd6bTdxY2pZTUR4RVNOX0RvT0RURXdFZVFZak00QXh3S2dudw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPc0puX1NRVG50eGxudnI2VW50VmxWbUtFTVo5U0cyTUJnNXUwRTBwRlFUMU9obVBHUkMwTEhlUGllQjNWVkM0aldyNVVwZjhrbldRRWkyd1ZaUDNSMm5FSm9ZNGJBRGF5X09jeDZMU0dGa1M0enJndVlSLTFqT3ZIclVTMnJKV2F0?oc=5",
+    "https://astanatimes.com/2026/10/republic-day-is-reminder-that-kazakhstan-belongs-to-its-people/",
+    "https://www.aa.com.tr/en/middle-east/decade-of-talks-with-houthis-failed-to-end-conflict-yemeni-foreign-minister/4099931",
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9XX053eXZ6SFUxeVlWZTJPM19yZlJOVnJsUzFfS2d4cVJoSl8tUTFRdXRUajdfdTZrYmJkRFUxcVlnQVB6VE9RYjQ4eTlMX1l2YkdYVXd4ank?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNDduZDZVSTBpa2NXLWtPY2JGVjlvRlJSVXBUSUY5SExkRTFVS2hSVmotZjNNQXNlaUNXUXY0UEVwTVR1clNiTGk5c3hiSXVWVmU4Si1YYTFfTDBLdUxReGlGUk9KcnlETVJQazRfRF9PU21aMU5XN1ZOaTM2SEhORi1VSkZ2dlRUNHNkQTM5Mm9laFhTa2RrSENmN0lZcE9mUmxmUA?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQX2VURkw5blRPTW1lY3diMTRHckFHRWpla0ZlM1YwZ0xKVTlvQVBSbmFfUGI2c1lyV2VaRFZwTXNWc3lORVJnTTNseUZYRHpZQ3VRLW9QdjlKY0UtZWVvSlVyWG9hSzFkeEtBYnNkM3BFQkZKR3FrT2VCSDd3WmpzOEpUcWpUbTNuSGpuV05uUGR2NUVKZU1GemU3d2gtQ3Y2aXJRbzNR?oc=5",
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTE54eWVhYU5RNTJHZFhqMDF6aTl0Z0ZjcnhMNHhyMlVBNXF5R0pGQjlsSWdjemdXVHdta2p2SllyVkZIRllQUEV1dGVHT1JPVjhO0gFQQVVfeXFMTnh5ZWFhTlE1MkdkWGowMXppOXRnRmNyeEw0eHIyVUE1cXlHSkZCOWxJZ2N6Z1dUd21ranZKWXJWRkhGWVBQRXV0ZUdPUk9WOE4?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZjJPNVlseUpvOWt6LUd1UlBrYnBhY3dDUks3Z2VEZHZFcExyQzBfWHZSdUxrLWVSY09DWHc4bEoybF9jVjBxaDFuR2ZuVW9LcDVhYkNHSGZIaUh5cTFGTlB2ajhva1dWM1ZSTUl4WDdFQjhXdjdOZFJ2LTYtMFRHR2w5ZHVIakxEVVRidDQ2bHRZQ2ZkaXBoRXdEQlUtdHozMTZpNA?oc=5",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZjdsQlA4dEtzRFdpNUx0NVZ6cFhvRlp1NWpDQnBPRVZaTkhtLXptY2h1NzJqd05MUnpaLXhmdzdXdUYwTG1ZOE1NWElucnVJazJGb1hNV1VudEFyZlo3YW5pRld3S2FYWExVMjJ5UkRSczh1ZVRZX0U1Qjk5SFQ4WTMzZzBpMDhJUzZ2XzdmR25vVFhDeHBnOGRGSUdNSE9Za3BrRFZHUENnSzZqSGM3a0tRYWZ1OHFuUWxYeERIeEswaWhFcTUyY3QwOHN4R0hsWU1n?oc=5",
+    "https://kz.kursiv.media/2026-10-25/svvo-tokaev-pozdravil-kazahstanczev-s-dnem-respubliki/?utm_source=rss&utm_medium=rss&utm_campaign=svvo-tokaev-pozdravil-kazahstanczev-s-dnem-respubliki",
+    "https://www.aljazeera.com/news/2026/10/25/bulgarians-vote-for-president-in-shadow-of-russias-war-in-ukraine?traffic_source=rss",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTzBaR3RZQlRjWkxFbDZJLWlMd0VUV294Mm1xZFFsM2t6WFN0WEpuTV9fLTg2aXJSUHRmV3Z5U3ppQ2pZb2xjSEpsakRSZERfX1U1YTNnY0F1YkRVX2t1Rl82dm42SFVrUVY4S2tpSm1OS3NlT2V5dkZPUHNFMjNTSXpRUTRsclJlWmY4STZBSjRMTFQyaHVyMWF4NGVjV2p3U0lHZUotNjJXYlJCN2lJVUxB0gG3AUFVX3lxTE9aRGRLRXRFN2VBNDVyOEZfRExlVTZ5ZG1fLUVlRnRJRDBPY2M4WXNkNVNlaHR2dDNWX3NRVzVLeWRGcmNmakNzV3pWcG50WExEYm9wZkJzNWU3NGpMTVZnTHd6QUk0X2xyaklZZzd5cWhlUU43ZmE3R0RQVkd0YzNvZktZWG80bUlKa1dpQVlUSHpwT1JQVC00SG95ZWIxOW5WS0VwYkhKbXpaNWZFM2NZWlVYVVBZTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUU5vcF8wMHZPcDVBclh5bUktMGpqWTZSY3lqcm91T0JEQjJ0dzBXMEdEa3R3TlBtYnNTY3FjYzQyM0FXYjdLRDJmVnhWbWhoUkN5Z293a2Q4R0VMa1BNN0MyV1o3VEFxRDVqX1ZFZlFoM0J3LVBvVnJnaVhfMjEtLVFkTWlmbTAwTXVSSFgzN3gyVzdDMVFWVGFqaWE5czdGb3JscTROcjVKQ0XSAasBQVVfeXFMTVFOb3BfMDB2T3A1QXJYeW1JLTBqalk2UmN5anJvdU9CREIydHcwVzBHRGt0d05QbWJzU2NxY2M0MjNBV2I3S0QyZlZ4Vm1oaFJDeWdvd2tkOEdFTGtQTTdDMldaN1RBcUQ1al9WRWZRaDNCdy1Qb1ZyZ2lYXzIxLS1RZE1pZm0wME11UkhYMzd4Mlc3QzFRVlRhamlhOXM3Rm9ybHE0TnI1SkNF?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNb1BlSDNYdVZHeTh0b1dqazk0MXdhLWM0bTFmU2lQWU9iWUxOMk5RaEJJRE9sX3RUZVN2VUlWZWUzd3kzRHZxcXZZd1ItZ1pSWUJqbnJ0T2Q2UHFvQTFDQUhoU2pwQTF2MFpXNEp4aUdhR1FBSXozeUJxak4tbGNYUUVHYW9PUXFhOGthenBSTGttU2M5VnpDRmoyMzZtQ0xfeWdPYlBxTGx5Mkd0aXVWU0x3?oc=5",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/iran-speaker-skip-delhi-brics-meet-due-unforeseen-circumstances"
   ],
   "recent": [
-    {
-      "tokens": [
-        "arabic",
-        "britai",
-        "charle",
-        "king",
-        "muhamm",
-        "oman",
-        "people",
-        "praise",
-        "prophe",
-        "quotes"
-      ],
-      "ts": 1792639845.8244116
-    },
     {
       "tokens": [
         "compli",
@@ -16089,30 +16116,36 @@
         "trump"
       ],
       "ts": 1792897307.9130137
+    },
+    {
+      "tokens": [
+        "agi",
+        "beyond",
+        "how",
+        "move",
+        "real",
+        "tasks",
+        "toward",
+        "world"
+      ],
+      "ts": 1792899051.904918
+    },
+    {
+      "tokens": [
+        "brics",
+        "circum",
+        "delhi",
+        "due",
+        "iran",
+        "meet",
+        "skip",
+        "speake",
+        "unfore"
+      ],
+      "ts": 1792899055.5479167
     }
   ],
   "recent_ru": [
-    {
-      "tokens": [
-        "iii",
-        "бен",
-        "велико",
-        "визито",
-        "госуда",
-        "карл",
-        "мухамм",
-        "омана",
-        "первым",
-        "прибыл",
-        "пророк",
-        "процит",
-        "султан",
-        "тарик",
-        "хайсам"
-      ],
-      "ts": 1792639845.824417,
-      "title": "Карл III процитировал Пророка Мухаммада"
-    },
     {
       "tokens": [
         "crowel",
@@ -27209,8 +27242,52 @@
       ],
       "ts": 1792897307.9130192,
       "title": "Трамп намерен прекратить устранение лидеров Ирана"
+    },
+    {
+      "tokens": [
+        "где",
+        "задачи",
+        "интелл",
+        "искусс",
+        "китае",
+        "конфер",
+        "обсуди",
+        "общему",
+        "прошла",
+        "развит",
+        "реальн",
+        "самост",
+        "систем",
+        "создан",
+        "технол",
+        "чунцин",
+        "экспер"
+      ],
+      "ts": 1792899051.904923,
+      "title": "В Китае обсудили развитие технологий искусственного интеллекта"
+    },
+    {
+      "tokens": [
+        "багер",
+        "брикс",
+        "визит",
+        "дели",
+        "иранск",
+        "калиба",
+        "мохамм",
+        "непред",
+        "нью",
+        "обстоя",
+        "отмени",
+        "парлам",
+        "приеде",
+        "спикер",
+        "форум"
+      ],
+      "ts": 1792899055.5479207,
+      "title": "Иранский спикер отменил визит в Нью-Дели"
     }
   ],
   "weather_date": "2026-10-25",
-  "last_run_ts": 1792897232.3779511
+  "last_run_ts": 1792899027.872119
 }
