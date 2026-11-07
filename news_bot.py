@@ -26,6 +26,7 @@ import html
 import time
 import json
 import calendar
+import hashlib
 from datetime import datetime, timezone, timedelta
 from urllib.parse import quote
 from concurrent.futures import ThreadPoolExecutor
@@ -106,6 +107,17 @@ def load_config():
         return yaml.safe_load(f)
 
 
+SEEN_KEY = re.compile(r"[0-9a-f]{16}")
+
+
+def seen_key(item_id):
+    """Короткий отпечаток адреса статьи для памяти «уже видел». Раньше
+    хранились сами адреса — ссылки Google News длиной по 200+ знаков:
+    state.json весил 4 МБ, сохранялся 38 раз в сутки, и репозиторий
+    к ноябрю 2026 вырос до 200 МБ. Отпечаток — 16 знаков."""
+    return hashlib.sha1(item_id.encode("utf-8")).hexdigest()[:16]
+
+
 def load_state():
     if os.path.exists(STATE_PATH):
         with open(STATE_PATH, encoding="utf-8") as f:
@@ -115,6 +127,9 @@ def load_state():
     state.setdefault("seen", [])
     state.setdefault("recent", [])     # оригинальные заголовки
     state.setdefault("recent_ru", [])  # русские заголовки после перевода
+    # старая память с полными адресами — переводим в отпечатки
+    keys = [k if SEEN_KEY.fullmatch(k) else seen_key(k) for k in state["seen"]]
+    state["seen"] = list(dict.fromkeys(keys))
     return state
 
 
@@ -124,7 +139,7 @@ def save_state(state, memory_hours):
     state["recent"] = [r for r in state["recent"] if r.get("ts", 0) > cutoff]
     state["recent_ru"] = [r for r in state["recent_ru"] if r.get("ts", 0) > cutoff]
     with open(STATE_PATH, "w", encoding="utf-8") as f:
-        json.dump(state, f, ensure_ascii=False, indent=2)
+        json.dump(state, f, ensure_ascii=False, indent=1)
 
 
 def check_telegram():
@@ -896,7 +911,7 @@ def ask_gemini(item, config, fix_note=""):
     return data
 
 
-def call_gemini(prompt, schema, temperature=0.2, models=None):
+def call_gemini(prompt, schema, temperature=0.2, models=None, timeout=60):
     """Обращение к Gemini. Если модель перегружена или ответ не
     разобрался — пробует следующую. Возвращает (ответ, модель)
     или (None, None) при сбое всех моделей."""
@@ -918,7 +933,7 @@ def call_gemini(prompt, schema, temperature=0.2, models=None):
         for attempt in range(2):
             try:
                 resp = requests.post(
-                    gemini_url(model), headers=headers, json=payload, timeout=60
+                    gemini_url(model), headers=headers, json=payload, timeout=timeout
                 )
             except Exception as e:
                 print(f"[GEMINI/{model}] сеть: {type(e).__name__}")
@@ -1062,8 +1077,11 @@ def rank_candidates(pool, recent_titles, config):
     рядовым сводкам ударов 9 вопреки правилам. Это одно обращение
     за запуск, бесплатного лимита хватает."""
     models = config.get("rank_models") or GEMINI_MODELS
+    # Запрос большой (60 кандидатов и 150 заголовков): за 60 секунд
+    # Flash иногда не успевал, и оценивал слабый Flash-Lite.
     data, model = call_gemini(build_rank_prompt(pool, recent_titles, config),
-                              RANK_SCHEMA, temperature=0.0, models=models)
+                              RANK_SCHEMA, temperature=0.0, models=models,
+                              timeout=config.get("rank_timeout", 120))
     if not isinstance(data, list):
         return None
     print(f"[ОЦЕНКА] оценивала модель {model}")
@@ -1732,7 +1750,7 @@ def main():
     unseen = []
     blocked_n = 0
     for i in items:
-        if i["id"] in seen:
+        if seen_key(i["id"]) in seen:
             continue
         if is_blocked(i, blocked_list) or is_blocked_url(i, url_parts):
             blocked_n += 1
@@ -1868,7 +1886,7 @@ def main():
         GitHub оборвёт запуск по времени, отправленное уже не уйдёт
         повторно."""
         snapshot = dict(state)
-        snapshot["seen"] = state["seen"] + new_ids
+        snapshot["seen"] = state["seen"] + [seen_key(x) for x in new_ids]
         save_state(snapshot, memory_hours)
 
     def unmark(it):
@@ -1939,7 +1957,8 @@ def main():
 
         if data.get("repeat"):
             ru_dups += 1
-            print(f"  повтор отправленного, не шлю: «{data.get('title_ru','')[:50]}»")
+            print(f"  повтор отправленного, не шлю: "
+                  f"«{(data.get('title_ru') or best['title'])[:60]}»")
             continue
 
         if not (data.get("send") and data.get("lead")):
@@ -2002,7 +2021,7 @@ def main():
             )
             persist()
 
-    state["seen"] = state["seen"] + new_ids
+    state["seen"] = state["seen"] + [seen_key(x) for x in new_ids]
     save_state(state, memory_hours)
     if out_of_time:
         print("Время запуска вышло — остальные новости в следующем запуске.")

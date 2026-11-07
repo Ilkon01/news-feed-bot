@@ -32,9 +32,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      # Версии на Node.js 24: v4 и v5 работали на устаревшем Node.js 20,
+      # и GitHub предупреждал, что скоро перестанет их поддерживать.
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
