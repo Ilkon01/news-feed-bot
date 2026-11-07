@@ -1685,6 +1685,22 @@ def main():
     kz_sent = 0
 
     send_limit = config.get("max_per_run", 0) or 10**9
+
+    # Не больше max_per_hour новостей за час. Запуски каждые 30 минут,
+    # поэтому при max_per_run 3 и max_per_hour 5 выходит 3 в начале
+    # часа и 2 в половине. Окно 55 минут, а не 60: запуск ровно через
+    # час после предыдущего иначе мог бы ещё «видеть» его новости.
+    per_hour = config.get("max_per_hour", 0)
+    if per_hour:
+        hour_ago = time.time() - 55 * 60
+        sent_hour = sum(1 for r in state["recent_ru"] if r.get("ts", 0) > hour_ago)
+        send_limit = max(0, min(send_limit, per_hour - sent_hour))
+        if send_limit == 0:
+            print(f"За последний час уже отправлено {sent_hour} — "
+                  f"лимит {per_hour} в час, этот запуск пропускаю.")
+            save_state(state, memory_hours)
+            return
+
     ai_limit = config.get("max_ai_calls_per_run", 30)
     max_age = config.get("max_age_hours", 4)
     pause = config.get("seconds_between_ai_calls", 5)
