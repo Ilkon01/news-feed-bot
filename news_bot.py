@@ -1054,6 +1054,13 @@ def build_rank_prompt(pool, recent_titles, config):
   0–4  — не присылать.
 Темы с уровнем «слабый интерес» — не выше 4, кроме очень крупных событий.
 
+ОДИН СЮЖЕТ — НЕ БОЛЬШЕ 3 НОВОСТЕЙ В СУТКИ. Посмотри в «УЖЕ
+ОТПРАВЛЕНО»: если по этому продолжающемуся сюжету (война, переговоры,
+скандал) там уже 3 и больше новостей, новой ставь не выше 5 — кроме
+настоящего поворота: перемирие, сделка подписана или сорвана, новый
+участник войны. Пример: 7.11.2026 о войне США и Ирана пришло около
+15 постов, посредничество Катара — трижды. Это перебор.
+
 repeat: true — новость о том же событии, что уже отправлено
 (список «УЖЕ ОТПРАВЛЕНО» ниже), и не сообщает ничего существенно
 нового. Другими словами, с другим изданием или на другом языке —
@@ -1734,6 +1741,14 @@ def main():
     blocked_list = config.get("blocked_sources", [])
     url_parts = config.get("blocked_url_parts", [])
     per_source = config.get("max_per_source_per_run", 0) or 10**9
+    # Лимит изданию за сутки: при лимите только на запуск Middle East
+    # Eye 7.11.2026 дал 17 новостей из 98.
+    per_source_day = config.get("max_per_source_per_day", 0) or 10**9
+    day_ago_ts = time.time() - 24 * 3600
+    src_day = {}
+    for r in state["recent_ru"]:
+        if r.get("src") and r.get("ts", 0) > day_ago_ts:
+            src_day[r["src"]] = src_day.get(r["src"], 0) + 1
     ru_dups = 0
     enriched = 0
     swapped = 0
@@ -1933,7 +1948,8 @@ def main():
         # Не больше N новостей одного издания за запуск: за 5 дней
         # Atameken, Guardian и Al Jazeera дали 60% канала.
         # Не помечаем как просмотренное — уйдёт в следующем запуске.
-        if src_sent.get(best["source"], 0) >= per_source:
+        if (src_sent.get(best["source"], 0) >= per_source
+                or src_day.get(best["source"], 0) >= per_source_day):
             src_skipped += 1
             continue
 
@@ -2017,8 +2033,9 @@ def main():
             # с уже отправленным
             state["recent_ru"].append(
                 {"tokens": sorted(ru_tokens), "ts": time.time(),
-                 "title": data.get("title_ru", "")}
+                 "title": data.get("title_ru", ""), "src": best["source"]}
             )
+            src_day[best["source"]] = src_day.get(best["source"], 0) + 1
             persist()
 
     state["seen"] = state["seen"] + [seen_key(x) for x in new_ids]
