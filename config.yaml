@@ -29,6 +29,8 @@
 #                          все её новости идут к ИИ без отсева по словам
 #   aggregate: true      — лента Google News, настоящий издатель
 #                          берётся из самой записи
+#   allowlist: true      — общая тематическая лента Google News: из неё
+#                          идут только издания из publisher_allowlist
 # =========================================================
 
 world_news_rss:
@@ -183,6 +185,7 @@ world_news_rss:
     url: "https://news.google.com/rss/search?q=Kazakhstan+when%3A1d&hl=ru&gl=KZ&ceid=KZ:ru"
   # --- Тематические подборки ---
   - name: "Новости про ИИ"
+    allowlist: true
     trust: 6
     aggregate: true
     url: "https://news.google.com/rss/search?q=artificial+intelligence+OR+OpenAI+OR+Anthropic+when%3A1d&hl=en-US&gl=US&ceid=US:en"
@@ -203,11 +206,13 @@ world_news_rss:
     skip_keywords: true
     url: "https://news.google.com/rss/search?q=site%3Apoliturco.com+when%3A7d&hl=en-US&gl=US&ceid=US:en"
   - name: "Мусульмане в мире"
+    allowlist: true
     trust: 5
     aggregate: true
     skip_keywords: true
     url: "https://news.google.com/rss/search?q=muslims+OR+%22muslim+minority%22+OR+islamophobia+OR+mosque+when%3A2d&hl=en-US&gl=US&ceid=US:en"
   - name: "Исламский мир"
+    allowlist: true
     trust: 5
     aggregate: true
     skip_keywords: true
@@ -221,27 +226,199 @@ world_news_rss:
     aggregate: true
     url: "https://news.google.com/rss/search?q=site%3Amiddleeastmonitor.com+when%3A2d&hl=en-US&gl=US&ceid=US:en"
   - name: "Центральная Азия"
+    allowlist: true
     trust: 5
     aggregate: true
     url: "https://news.google.com/rss/search?q=%22Central+Asia%22+when%3A2d&hl=en-US&gl=US&ceid=US:en"
   - name: "Мир (Google News)"
+    allowlist: true
     trust: 4
     aggregate: true
     url: "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en"
   - name: "Экономика (Google News)"
+    allowlist: true
     trust: 4
     aggregate: true
     url: "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-US&gl=US&ceid=US:en"
   - name: "Наука (Google News)"
+    allowlist: true
     trust: 4
     aggregate: true
     skip_keywords: true
     url: "https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=en-US&gl=US&ceid=US:en"
   - name: "Технологии (Google News)"
+    allowlist: true
     trust: 4
     aggregate: true
     skip_keywords: true
     url: "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en"
+
+# ---------- БЕЛЫЙ СПИСОК ИЗДАНИЙ ----------
+# Для лент с пометкой allowlist: true (общие тематические подборки
+# Google News, где издатель случайный) пропускаются только издания,
+# в названии или адресе которых есть одна из строк ниже. Добавлено
+# 08.11.2026: из этих лент шли SlashGear с подборкой седанов, колонка
+# The Good Men Project, индийский националистический Organiser,
+# американские Townhall и PJ Media. Ленты конкретных изданий, хаджа,
+# Хизмета и казахстанская работают без белого списка.
+# Нет в списке намеренно: проправительственные турецкие Yeni Şafak
+# и Daily Sabah (враждебны Хизмету), иранские государственные IQNA,
+# ABNA, Taghrib. Если хорошее издание не проходит — допишите его сюда.
+publisher_allowlist:
+  # Мировые агентства и издания
+  - reuters
+  - "ap news"
+  - "associated press"
+  - afp
+  - bloomberg
+  - bbc
+  - "al jazeera"
+  - "the guardian"
+  - "new york times"
+  - nytimes
+  - "washington post"
+  - wsj
+  - "wall street journal"
+  - "financial times"
+  - economist
+  - cnn
+  - "nbc news"
+  - "cbs news"
+  - "abc news"
+  - npr
+  - pbs
+  - politico
+  - axios
+  - "the independent"
+  - "the times"
+  - euronews
+  - "dw.com"
+  - "deutsche welle"
+  - "france 24"
+  - cnbc
+  - fortune
+  - forbes
+  - "business insider"
+  - marketwatch
+  - "the japan times"
+  - "japan today"
+  - "south china morning post"
+  - nikkei
+  - "the diplomat"
+  - "foreign policy"
+  - "channel newsasia"
+  - "straits times"
+  - cbc
+  - "los angeles times"
+  - "globe and mail"
+  - "kyiv independent"
+  - "kyiv post"
+  # Ближний Восток, Турция, исламский мир
+  - "arab news"
+  - "al arabiya"
+  - "the national"
+  - "gulf news"
+  - "khaleej times"
+  - "gulf times"
+  - "saudi gazette"
+  - "saudi press agency"
+  - "وكالة الأنباء السعودية"
+  - "صحيفة سبق"
+  - "qatar news agency"
+  - "middle east eye"
+  - "middle east monitor"
+  - "al-monitor"
+  - anadolu
+  - "turkish minute"
+  - "hürriyet daily news"
+  - "times of israel"
+  - haaretz
+  - ynetnews
+  - "jerusalem post"
+  - dawn
+  - "express tribune"
+  - "geo news"
+  - "the hindu"
+  - "hindustan times"
+  - "indian express"
+  - "times of india"
+  - ndtv
+  - "the wire"
+  - scroll
+  - theprint
+  - "outlook india"
+  - maktoob
+  - "clarion india"
+  - "the siasat daily"
+  - "dhaka tribune"
+  - bernama
+  - "malay mail"
+  - "new straits times"
+  - "nst online"
+  - "jakarta post"
+  - tempo
+  - kompas
+  - antara
+  - "premium times"
+  - "daily trust"
+  # Казахстан и Центральная Азия
+  - eurasianet
+  - "times of central asia"
+  - "astana times"
+  - kazinform
+  - qazinform
+  - tengrinews
+  - kursiv
+  - informburo
+  - vlast
+  - kapital
+  - inbusiness
+  - dknews
+  - "24.kg"
+  - akipress
+  - "radio free europe"
+  - rferl
+  - azattyq
+  - "настоящее время"
+  - "trend news agency"
+  - azernews
+  - "caspian post"
+  - intellinews
+  - pajhwok
+  - "khaama press"
+  - "8am media"
+  - tolonews
+  # Наука и технологии
+  - nature
+  - science
+  - phys
+  - "space"
+  - "new scientist"
+  - "scientific american"
+  - nasa
+  - "medical xpress"
+  - "live science"
+  - "universe today"
+  - "the verge"
+  - wired
+  - "ars technica"
+  - techcrunch
+  - engadget
+  - zdnet
+  - cnet
+  - "technology review"
+  - "tom's hardware"
+  - bleepingcomputer
+  - "the hacker news"
+  - 9to5mac
+  - 9to5google
+  - macrumors
+  - "android authority"
+  - phonearena
+  - gsmarena
+  - "the register"
+  - "ieee spectrum"
+  - venturebeat
 
 # ---------- БАЛАНС КАЗАХСТАН / МИР ----------
 # Доля казахстанских новостей. Очередь строится вперемешку:
@@ -1304,7 +1481,9 @@ writing_rules:
   - "Каждое предложение — законченное, с действием. Не пиши обрывков вроде «Мочамад Ирфан Юсуф и вице-министр финансов Юда Аганг.»"
   - "Заголовок не должен читаться двусмысленно: «Казахстанцам увеличат выплаты пострадавшим от преступлений», а не «Казахстанцам предложат большие выплаты за преступления». Перечитай заголовок глазами человека, который видит только его."
   - "Не обобщай: если в статье один музей, одна компания, один суд — так и пиши, а не «музеи США», «компании», «суды»."
-  - "Не усиливай и не упрощай смысл: «смягчил нефтяные санкции» — это не «отменил санкции», «рассматривает» — не «решил», «может» — не «будет». Заголовок должен быть точным, а не громким."
+  - "Не усиливай и не упрощай смысл: «смягчил нефтяные санкции» — это не «отменил санкции», «рассматривает» — не «решил», «может» — не «будет», «исследование показало, что взрыв может отклонить астероид» — не «ядерный взрыв спасёт Землю». Заголовок должен быть точным, а не громким."
+  - "Israeli settlers — это «израильские поселенцы», а не «колонисты», даже если в источнике (часто арабском) стоит «колонисты». Термины бери нейтральные, принятые в русскоязычных СМИ."
+  - "Заголовок должен говорить, кто что сделал. Плохо: «Защита мусульман от политических атак» — кто защищает, от кого, что случилось?"
   - "Идиомы и обороты не переводи дословно: «схватили оппозицию за горло» — «душат оппозицию»; «выступил панельным участником» — «выступил на форуме»."
 
 never_send:

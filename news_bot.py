@@ -290,6 +290,7 @@ def fetch_rss(src):
                 "trust": src.get("trust", 5),
                 "kz": bool(src.get("kz", False)),
                 "skip_keywords": bool(src.get("skip_keywords", False)),
+                "allowlist": bool(src.get("allowlist", False)),
                 "title": title,
                 "text": clean_html(entry.get("summary", "")),
                 "link": link,
@@ -349,6 +350,19 @@ def is_blocked_url(item, parts):
     и британская внутренняя политика у Guardian, Гонконг у SCMP."""
     link = (item.get("link") or "").lower()
     return any(p.lower() in link for p in parts if p.strip())
+
+
+def is_allowed_publisher(item, allow_list):
+    """Для общих тематических лент Google News (пометка allowlist: true)
+    издатель случайный: 8.11.2026 оттуда пришли SlashGear с подборкой
+    седанов, колонка The Good Men Project, националистический Organiser.
+    Из таких лент пропускаем только издания из белого списка. Сравнение
+    по части названия издания или адреса сайта."""
+    if not item.get("allowlist") or not allow_list:
+        return True
+    name = (item.get("source") or "").lower()
+    dom = domain_of(item.get("link", ""))
+    return any(a in name or (dom and a in dom) for a in allow_list)
 
 
 def decode_google_news(url):
@@ -830,7 +844,7 @@ def build_prompt(item, config):
    с текстом статьи.
 
 9. repeat — true, если эта новость о том же событии, что одна из уже
-   отправленных за последние сутки (список ниже), и не сообщает
+   отправленных за последние полтора дня (список ниже), и не сообщает
    ничего существенно нового. Другие слова в заголовке и другое
    издание не делают новость новой: «Обама раскритиковал Трампа
    за войну с Ираном» и «Обама обвинил Трампа в начале войны против
@@ -839,7 +853,7 @@ def build_prompt(item, config):
    Новый поворот того же сюжета (итог, решение, новые жертвы,
    ответ другой стороны) — не повтор.
 
-УЖЕ ОТПРАВЛЕНО ЗА СУТКИ:
+УЖЕ ОТПРАВЛЕНО ЗА ПОЛТОРА ДНЯ:
 {recent}
 
 САМОПРОВЕРКА ПЕРЕД ОТВЕТОМ:
@@ -1740,6 +1754,8 @@ def main():
     patterns = build_keyword_patterns(config.get("keywords", []))
     blocked_list = config.get("blocked_sources", [])
     url_parts = config.get("blocked_url_parts", [])
+    allow_list = [a.lower().strip() for a in config.get("publisher_allowlist", [])
+                  if a and a.strip()]
     per_source = config.get("max_per_source_per_run", 0) or 10**9
     # Лимит изданию за сутки: при лимите только на запуск Middle East
     # Eye 7.11.2026 дал 17 новостей из 98.
@@ -1767,7 +1783,8 @@ def main():
     for i in items:
         if seen_key(i["id"]) in seen:
             continue
-        if is_blocked(i, blocked_list) or is_blocked_url(i, url_parts):
+        if (is_blocked(i, blocked_list) or is_blocked_url(i, url_parts)
+                or not is_allowed_publisher(i, allow_list)):
             blocked_n += 1
             new_ids.append(i["id"])
             continue
@@ -1958,11 +1975,14 @@ def main():
         # когда слова в заголовках разные (сверка по словам этого
         # не умеет: «Обама раскритиковал Трампа за войну с Ираном» и
         # «Обама обвинил Трампа в начале войны против Ирана»).
-        day_ago = time.time() - 24 * 3600
+        # 36 часов, а не 24: 8.11.2026 «Трамп сменил главу администрации»
+        # повторил вчерашнюю новость, отправленную на минуту раньше
+        # суточной границы.
+        recent_from = time.time() - config.get("write_recent_hours", 36) * 3600
         best["_recent_titles"] = [
             r["title"] for r in state["recent_ru"]
-            if r.get("title") and r.get("ts", 0) > day_ago
-        ][-config.get("write_recent_titles", 120):]
+            if r.get("title") and r.get("ts", 0) > recent_from
+        ][-config.get("write_recent_titles", 160):]
 
         data = call_ai(best)
         new_ids.append(item["id"])
